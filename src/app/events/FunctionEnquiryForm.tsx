@@ -1,279 +1,244 @@
-"use client";
+import Banner from "../components/Home/Banner";
+import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
+import FoodCarousel from "../components/Home/FoodCarousel";
+import FunctionEnquiryForm from "./FunctionEnquiryForm";
 
-import { useState } from "react";
+export const metadata: Metadata = {
+  title: "Functions & Events | The Albion Rooftop",
+  description:
+    "Host unforgettable functions and events at The Albion Rooftop – VIP room, curated menus, premium beverages, décor and photography packages.",
+};
 
-export default function FunctionEnquiryForm() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    country: "Australia",
-    phoneNumber: "+61",
-    email: "",
-    preferredDate: "",
-    dateFlexible: "",
-    numberOfGuests: "",
-    eventStartTime: "",
-    interest: "",
-    hiringInfo: "",
-    celebrationDescription: "",
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-  };
-
+export default function Page() {
   return (
-    <section className="bg-blue py-12 md:py-20 px-4 md:px-8" aria-labelledby="function-enquiry-heading">
-      <div className="container-responsive max-w-4xl">
-        <header className="text-center mb-8 md:mb-12">
-          <h1 id="function-enquiry-heading" className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 md:mb-6">
-            FUNCTION ENQUIRY
+    <main style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}>
+      <section aria-label="Hero video banner">
+        <Banner />
+      </section>
+
+      <section className="py-16 md:py-24 lg:py-32" aria-labelledby="events-intro-heading">
+        <div className="container-responsive max-w-4xl text-center flex flex-col gap-4 md:gap-6">
+          <h1 id="events-intro-heading" className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold">
+            Functions & Events
           </h1>
-          <p className="text-white text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
-            Our experienced events team is here to bring your vision to life with tailored packages, 
-            premium service, and attention to every detail.
+          <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
+            From intimate gatherings to grand celebrations
           </p>
-          <div className="text-white space-y-1 md:space-y-2">
-            <p className="text-lg md:text-xl font-medium">(03) 9645 5277</p>
-            <p className="text-base md:text-lg">FUNCTIONS@ALBIONROOFTOP.COM.AU</p>
+          <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
+          <p className="text-center text-base md:text-lg leading-relaxed">
+            At The Albion, we understand the importance of creating a lasting
+            impression. Whether you&apos;re hosting an elegant cocktail evening, a
+            milestone celebration, or a refined business networking event, our
+            sophisticated spaces – including a stunning rooftop with panoramic
+            city views – provide the perfect backdrop. With curated menus,
+            premium beverages, and impeccable service, every detail is
+            thoughtfully executed to deliver a seamless and memorable experience
+            for you and your guests.
+          </p>
+          <p className="text-center text-base md:text-lg leading-relaxed mt-4">
+            Enhance your event with optional photography and bespoke décor hire – 
+            including arch walls, balloon garlands, and custom signage to elevate your celebration.
+          </p>
+          <div
+            className="flex w-full gap-4 md:gap-5 justify-center items-center mt-6"
+            role="group"
+            aria-label="Event enquiries"
+          >
+            <Link
+              href="/whatson"
+              className="py-3 px-6 md:px-10 hover:text-white text-blue bg-transparent border-2 border-brown hover:bg-brown transition-all duration-300 btn-hover rounded-md font-medium"
+              aria-label="See what&apos;s on"
+            >
+              What&apos;s On
+            </Link>
           </div>
-        </header>
+        </div>
+      </section>
 
-        <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
-          {/* Name Section */}
-          <div>
-            <label htmlFor="firstName" className="block text-white text-sm md:text-base font-medium mb-3">
-              Name (required)
-            </label>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleInputChange}
-                placeholder="First Name"
-                required
-                className="form-input"
-              />
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleInputChange}
-                placeholder="Last Name"
-                required
-                className="form-input"
-              />
-            </div>
+      <FunctionEnquiryForm />
+
+      <section
+        className="bg-blue py-16 md:py-24 lg:py-32"
+        aria-labelledby="spaces-heading"
+      >
+        <div className="container-responsive">
+          <h2 id="spaces-heading" className="text-center text-3xl md:text-5xl lg:text-6xl text-white font-bold mb-12 md:mb-16">
+            Event Spaces
+          </h2>
+          
+          <div className="space-y-16 md:space-y-20">
+            <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <figure className="order-2 lg:order-1">
+                <Image
+                  src="/events/VIP-Room-1.webp"
+                  alt="VIP Room at The Albion Rooftop"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-lg image-optimized"
+                />
+              </figure>
+              <div className="order-1 lg:order-2 flex flex-col gap-4 md:gap-6">
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">VIP Room</h3>
+                <p className="text-xl md:text-2xl text-white font-medium">Capacity: 40 guests standing</p>
+                <p className="text-white text-base md:text-lg leading-relaxed">
+                  The VIP Room hosts groups of up to 40 guests standing with mini
+                  bar, fireplace, private entrance and bathrooms. This elegant space
+                  is ideal for intimate birthday and hens celebrations, or indulging
+                  VIP guests for an exclusive closed-door event.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Mini Bar</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Fireplace</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Private Entrance</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Private Bathrooms</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <figure className="order-1">
+                <Image
+                  src="/events/VIP-Room-1.webp"
+                  alt="VIP Room seating and bar area"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-lg image-optimized"
+                />
+              </figure>
+              <div className="order-2 flex flex-col gap-4 md:gap-6">
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">Premium Experience</h3>
+                <p className="text-xl md:text-2xl text-white font-medium">Exclusive VIP Service</p>
+                <p className="text-white text-base md:text-lg leading-relaxed">
+                  Experience luxury like never before with our premium VIP service. 
+                  Dedicated staff, personalized attention, and exclusive amenities 
+                  ensure your event is nothing short of extraordinary.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Dedicated Staff</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Premium Service</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Exclusive Access</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <figure className="order-2 lg:order-1">
+                <Image
+                  src="/events/VIP-Room-1.webp"
+                  alt="Private VIP Room entrance and ambiance"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-lg image-optimized"
+                />
+              </figure>
+              <div className="order-1 lg:order-2 flex flex-col gap-4 md:gap-6">
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">Perfect for</h3>
+                <p className="text-xl md:text-2xl text-white font-medium">Intimate Celebrations</p>
+                <p className="text-white text-base md:text-lg leading-relaxed">
+                  Whether it&apos;s a milestone birthday, hens party, or corporate 
+                  celebration, our VIP space provides the perfect intimate setting 
+                  for your special occasion with unmatched privacy and elegance.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Birthday Parties</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Hens Celebrations</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Corporate Events</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Private Functions</span>
+                </div>
+              </div>
+            </article>
           </div>
+        </div>
+      </section>
 
-          {/* Phone Section */}
-          <div>
-            <label htmlFor="country" className="block text-white text-sm md:text-base font-medium mb-3">
-              Phone (required)
-            </label>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-              <select
-                id="country"
-                name="country"
-                value={formData.country}
-                onChange={handleInputChange}
-                className="form-input appearance-none cursor-pointer"
+      <section className="relative" aria-label="Social supper image">
+        <div className="w-full h-[50vh] md:h-[70vh] lg:h-screen">
+          <Image
+            src="/home/social_supper.webp"
+            className="object-cover"
+            fill
+            sizes="100vw"
+            alt="Social supper event at The Albion Rooftop"
+            priority
+          />
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 lg:py-32" aria-labelledby="decor-heading">
+        <div className="container-responsive max-w-4xl text-center flex flex-col gap-6 md:gap-8">
+          <h2 id="decor-heading" className="text-3xl md:text-5xl lg:text-6xl uppercase font-bold">
+            PHOTOGRAPHY & <br className="hidden md:block" /> EVENT DÉCOR HIRE
+          </h2>
+          <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">Elevate Your Event</p>
+          <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
+          <div className="space-y-4 text-base md:text-lg leading-relaxed">
+            <p>
+              Add the perfect finishing touches to your event at The Albion with
+              our optional photography and event décor packages. Capture every
+              moment with a professional photographer, ensuring memories from your
+              celebration are beautifully documented from start to finish.
+            </p>
+            <p>
+              Looking to elevate your styling? Our décor hire options
+              include elegant arch walls, custom welcome signs, statement balloon
+              garlands, floral arrangements, and more – designed to complement the
+              venue&apos;s sophisticated aesthetic. Whether you&apos;re after a subtle touch
+              of elegance or a full decorative setup, our team can help bring your
+              vision to life with seamless coordination and stand out
+              presentation.
+            </p>
+          </div>
+          <div className="flex w-full gap-4 md:gap-5 justify-center items-center mt-6">
+            <Link
+              href="/contact?type=decor"
+              className="py-3 px-6 md:px-10 text-white hover:text-blue bg-brown hover:bg-transparent border-2 border-brown transition-all duration-300 btn-hover rounded-md font-medium"
+              aria-label="Enquire about décor and photography packages"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="food-heading" className="py-16 md:py-24 lg:py-32">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left space-y-6">
+              <h2
+                id="food-heading"
+                className="text-4xl md:text-5xl lg:text-7xl uppercase font-bold"
               >
-                <option value="Australia">Australia</option>
-                <option value="New Zealand">New Zealand</option>
-                <option value="United States">United States</option>
-                <option value="United Kingdom">United Kingdom</option>
-              </select>
-              <input
-                type="tel"
-                id="phoneNumber"
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleInputChange}
-                placeholder="Number"
-                required
-                className="form-input"
-              />
+                Our Food
+              </h2>
+              <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
+                Head Chef: Elia Donati
+              </p>
+              <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
+              <p className="text-base md:text-lg leading-relaxed">
+                With an exciting new menu crafted by Elia Donati, The Albion
+                Rooftop brings a fresh take on elevated dining, where bold
+                flavours meet refined simplicity. Thoughtfully curated with
+                high-quality ingredients and expert technique, each dish is
+                designed to be both indulgent and effortlessly enjoyable.
+              </p>
+              <div className="flex justify-center lg:justify-start mt-8">
+                <Link
+                  href="/menu"
+                  className="uppercase px-8 md:px-12 py-3 md:py-4 bg-brown border-2 border-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover rounded-md font-medium"
+                  aria-label="View our menu"
+                >
+                  See Menu
+                </Link>
+              </div>
+            </div>
+            <div className="order-first lg:order-last">
+              <FoodCarousel />
             </div>
           </div>
-
-          {/* Email Section */}
-          <div>
-            <label htmlFor="email" className="block text-white text-sm md:text-base font-medium mb-3">
-              Email (required)
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              placeholder="Email address"
-              required
-              className="form-input"
-            />
-          </div>
-
-          {/* Preferred Date Section */}
-          <div>
-            <label htmlFor="preferredDate" className="block text-white text-sm md:text-base font-medium mb-3">
-              Preferred Date (required)
-            </label>
-            <input
-              type="date"
-              id="preferredDate"
-              name="preferredDate"
-              value={formData.preferredDate}
-              onChange={handleInputChange}
-              required
-              className="form-input"
-            />
-          </div>
-
-          {/* Date Flexibility Section */}
-          <div>
-            <label htmlFor="dateFlexible" className="block text-white text-sm md:text-base font-medium mb-3">
-              Is your date flexible? (required)
-            </label>
-            <select
-              id="dateFlexible"
-              name="dateFlexible"
-              value={formData.dateFlexible}
-              onChange={handleInputChange}
-              required
-              className="form-input appearance-none cursor-pointer"
-            >
-              <option value="">Select an option</option>
-              <option value="yes">Yes, I&apos;m flexible</option>
-              <option value="no">No, specific date only</option>
-              <option value="somewhat">Somewhat flexible</option>
-            </select>
-          </div>
-
-          {/* Number of Guests Section */}
-          <div>
-            <label htmlFor="numberOfGuests" className="block text-white text-sm md:text-base font-medium mb-3">
-              No. of Guests (required)
-            </label>
-            <input
-              type="number"
-              id="numberOfGuests"
-              name="numberOfGuests"
-              value={formData.numberOfGuests}
-              onChange={handleInputChange}
-              placeholder="Number of guests"
-              min="1"
-              required
-              className="form-input"
-            />
-          </div>
-
-          {/* Time of Event Section */}
-          <div>
-            <label htmlFor="eventStartTime" className="block text-white text-sm md:text-base font-medium mb-3">
-              Time of Event (Start)
-            </label>
-            <select
-              id="eventStartTime"
-              name="eventStartTime"
-              value={formData.eventStartTime}
-              onChange={handleInputChange}
-              className="form-input appearance-none cursor-pointer"
-            >
-              <option value="">Select an option</option>
-              <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
-              <option value="afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
-              <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
-              <option value="night">Night (9:00 PM - 12:00 AM)</option>
-              <option value="custom">Custom time</option>
-            </select>
-          </div>
-
-          {/* Interest Section */}
-          <div>
-            <label htmlFor="interest" className="block text-white text-sm md:text-base font-medium mb-3">
-              I'm interested in (required)
-            </label>
-            <select
-              id="interest"
-              name="interest"
-              value={formData.interest}
-              onChange={handleInputChange}
-              required
-              className="form-input appearance-none cursor-pointer"
-            >
-              <option value="">Select an option</option>
-              <option value="birthday">Birthday Celebration</option>
-              <option value="corporate">Corporate Event</option>
-              <option value="wedding">Wedding Reception</option>
-              <option value="anniversary">Anniversary</option>
-              <option value="graduation">Graduation Party</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          {/* Hiring Information Section */}
-          <div>
-            <label htmlFor="hiringInfo" className="block text-white text-sm md:text-base font-medium mb-3">
-              I would like hiring information for
-            </label>
-            <select
-              id="hiringInfo"
-              name="hiringInfo"
-              value={formData.hiringInfo}
-              onChange={handleInputChange}
-              className="form-input appearance-none cursor-pointer"
-            >
-              <option value="">Select an option</option>
-              <option value="photography">Photography Services</option>
-              <option value="decor">Event Décor</option>
-              <option value="catering">Catering</option>
-              <option value="entertainment">Entertainment</option>
-              <option value="all">All Services</option>
-            </select>
-          </div>
-
-          {/* Celebration Description Section */}
-          <div>
-            <label htmlFor="celebrationDescription" className="block text-white text-sm md:text-base font-medium mb-3">
-              Tell us about your celebration (required)
-            </label>
-            <textarea
-              id="celebrationDescription"
-              name="celebrationDescription"
-              value={formData.celebrationDescription}
-              onChange={handleInputChange}
-              placeholder="Please describe your event, special requirements, theme, or any other details..."
-              required
-              rows={4}
-              className="form-input resize-vertical min-h-[100px]"
-            />
-          </div>
-
-          {/* Submit Button */}
-          <div className="text-center pt-6 md:pt-8">
-            <button
-              type="submit"
-              className="bg-brown text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-medium uppercase hover:bg-opacity-90 transition-all duration-300 btn-hover focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue rounded-md"
-            >
-              SUBMIT
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
   );
 }
