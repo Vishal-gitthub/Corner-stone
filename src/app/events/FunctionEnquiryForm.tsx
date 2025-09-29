@@ -205,7 +205,7 @@ export default function FunctionEnquiryForm() {
           {/* Interest Section */}
           <div>
             <label htmlFor="interest" className="block text-white text-sm md:text-base font-medium mb-3">
-              I'm interested in (required)
+              I&apos;m interested in (required)
             </label>
             <select
               id="interest"
