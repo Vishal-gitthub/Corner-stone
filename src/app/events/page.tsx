@@ -29,7 +29,7 @@ export default function Page() {
           <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
           <p className="text-center text-base md:text-lg leading-relaxed">
             At The Albion, we understand the importance of creating a lasting
-            impression. Whether you're hosting an elegant cocktail evening, a
+            impression. Whether you&apos;re hosting an elegant cocktail evening, a
             milestone celebration, or a refined business networking event, our
             sophisticated spaces – including a stunning rooftop with panoramic
             city views – provide the perfect backdrop. With curated menus,
@@ -49,7 +49,7 @@ export default function Page() {
             <Link
               href="/whatson"
               className="py-3 px-6 md:px-10 hover:text-white text-blue bg-transparent border-2 border-brown hover:bg-brown transition-all duration-300 btn-hover rounded-md font-medium"
-              aria-label="See what's on"
+              aria-label="See what&apos;s on"
             >
               What&apos;s On
             </Link>
@@ -137,7 +137,7 @@ export default function Page() {
                 <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">Perfect for</h3>
                 <p className="text-xl md:text-2xl text-white font-medium">Intimate Celebrations</p>
                 <p className="text-white text-base md:text-lg leading-relaxed">
-                  Whether it's a milestone birthday, hens party, or corporate 
+                  Whether it&apos;s a milestone birthday, hens party, or corporate 
                   celebration, our VIP space provides the perfect intimate setting 
                   for your special occasion with unmatched privacy and elegance.
                 </p>
@@ -184,7 +184,7 @@ export default function Page() {
               Looking to elevate your styling? Our décor hire options
               include elegant arch walls, custom welcome signs, statement balloon
               garlands, floral arrangements, and more – designed to complement the
-              venue's sophisticated aesthetic. Whether you're after a subtle touch
+              venue&apos;s sophisticated aesthetic. Whether you&apos;re after a subtle touch
               of elegance or a full decorative setup, our team can help bring your
               vision to life with seamless coordination and stand out
               presentation.
