@@ -157,7 +157,7 @@ export default function FunctionEnquiryForm() {
               className="form-input appearance-none cursor-pointer"
             >
               <option value="">Select an option</option>
-              <option value="yes">Yes, I'm flexible</option>
+              <option value="yes">Yes, I&apos;m flexible</option>
               <option value="no">No, specific date only</option>
               <option value="somewhat">Somewhat flexible</option>
             </select>

@@ -120,9 +120,9 @@ export default function Page() {
                     <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
                     <div className="space-y-4 text-base md:text-lg text-blue leading-relaxed">
                       <p>
-                        Alumbra is a Saturday night experience that lives at the
+              Alumbra is a Saturday night experience that lives at the
                         intersection of music, lifestyle, couture, and bites. Rooted
-                        in culture and elevated by style, it's a space where
+              in culture and elevated by style, it&apos;s a space where
                         selectors, tastemakers, and trendsetters gather under one
                         roof.
                       </p>
@@ -130,7 +130,7 @@ export default function Page() {
                         With a soundtrack that moves through
                         House, RnB, and global rhythms, paired with rooftop views,
                         refined cocktails, and curated dining, Alumbra delivers more
-                        than a night out – it's a scene. Every Saturday at The
+                        than a night out – it&apos;s a scene. Every Saturday at The
                         Albion
                       </p>
                     </div>

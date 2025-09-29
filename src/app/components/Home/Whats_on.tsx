@@ -11,7 +11,7 @@ const WhatsOn = () => {
         style={{ backgroundImage: `url(${bgTexture.src})` }}
         className="py-32 text-center"
       >
-        <h3 className="text-7xl text-center">WHAT'S ON</h3>
+        <h3 className="text-7xl text-center">WHAT&apos;S ON</h3>
 
         <section className="">
           <div className="py-20">

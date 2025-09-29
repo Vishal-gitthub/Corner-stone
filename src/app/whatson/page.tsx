@@ -37,7 +37,7 @@ export default function Page() {
         <div className="container-responsive">
           <div className="text-center mb-12 md:mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl uppercase text-blue font-bold mb-4">
-              What's On
+              What&apos;s On
             </h1>
             <p className="text-lg md:text-xl text-brown font-medium">
               Discover our latest events and special offers

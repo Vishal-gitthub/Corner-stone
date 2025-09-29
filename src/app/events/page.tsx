@@ -51,7 +51,7 @@ export default function Page() {
               className="py-3 px-6 md:px-10 hover:text-white text-blue bg-transparent border-2 border-brown hover:bg-brown transition-all duration-300 btn-hover rounded-md font-medium"
               aria-label="See what's on"
             >
-              What's On
+              What&apos;s On
             </Link>
           </div>
         </div>
