@@ -21,8 +21,8 @@ const Navbar = () => {
   }, [toggleMenu]);
 
   return (
-    <nav className="bg-[#cac6c3c0] backdrop-blur-sm sticky top-0 z-50">
-      {/* fixed top navbar */}
+    <>
+    <nav className="bg-[#cac6c3c0] backdrop-blur-sm fixed top-0 left-0 right-0 z-50 w-full">
       <div className="container-responsive flex items-center justify-between py-3 md:py-4">
         {/* logo */}
         <div className="w-32 md:w-44 min-w-20">
@@ -75,13 +75,19 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* mobile sidebar overlay */}
-      <div className="hidden max-md:block">
+    </nav>
+
+    {/* mobile menu overlay with backdrop (outside nav to avoid clipping) */}
+    {toggleMenu && (
+      <div className="fixed inset-0 z-[60] flex h-screen overflow-hidden overscroll-contain">
+        {/* semi-transparent backdrop */}
         <div
-          className={`fixed inset-0 bg-white  transition-transform duration-300 z-50 flex flex-col items-center justify-center gap-8 ${
-            toggleMenu ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
+          className="absolute inset-0 bg-black bg-opacity-40"
+          onClick={() => setToggleMenu(false)}
+        ></div>
+
+        {/* sliding mobile menu */}
+        <div className="relative ml-auto w-4/5 max-w-sm h-full bg-white flex flex-col items-center justify-center gap-6 transition-transform transform overflow-y-auto px-6 py-16">
           <button
             className="absolute top-6 right-6 p-2 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300"
             onClick={() => setToggleMenu(false)}
@@ -102,12 +108,12 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-6 w-full">
             {navigation.map((item, i) => (
               <Link
                 key={i}
                 href={item.link}
-                className="text-2xl md:text-3xl text-blue font-medium hover:text-brown transition-colors duration-300"
+                className="text-2xl md:text-3xl text-blue font-medium hover:text-brown transition-colors duration-300 w-full text-center"
                 onClick={() => setToggleMenu(false)}
               >
                 {item.name}
@@ -115,7 +121,7 @@ const Navbar = () => {
             ))}
 
             <button
-              className="mt-4 py-3 px-12 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover text-lg"
+              className="mt-2 py-3 px-10 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover text-lg w-full max-w-xs"
               onClick={() => setToggleMenu(false)}
             >
               Reservation
@@ -123,7 +129,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    )}
+    </>
   );
 };
 
