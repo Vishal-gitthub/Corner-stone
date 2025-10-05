@@ -20,14 +20,14 @@ export default function Page() {
 
       <section className="py-16 md:py-24 lg:py-32" aria-labelledby="events-intro-heading">
         <div className="container-responsive max-w-4xl text-center flex flex-col gap-4 md:gap-6">
-          <h1 id="events-intro-heading" className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold">
+          <h1 id="events-intro-heading" className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold heading-aleo">
             Functions & Events
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
+          <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium heading-aleo">
             From intimate gatherings to grand celebrations
           </p>
           <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
-          <p className="text-center text-base md:text-lg leading-relaxed">
+          <p className="text-center text-base md:text-lg leading-relaxed text-lexend">
             At The Albion, we understand the importance of creating a lasting
             impression. Whether you&apos;re hosting an elegant cocktail evening, a
             milestone celebration, or a refined business networking event, our
@@ -37,7 +37,7 @@ export default function Page() {
             thoughtfully executed to deliver a seamless and memorable experience
             for you and your guests.
           </p>
-          <p className="text-center text-base md:text-lg leading-relaxed mt-4">
+          <p className="text-center text-base md:text-lg leading-relaxed mt-4 text-lexend">
             Enhance your event with optional photography and bespoke décor hire – 
             including arch walls, balloon garlands, and custom signage to elevate your celebration.
           </p>

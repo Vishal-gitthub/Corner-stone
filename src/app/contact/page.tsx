@@ -14,19 +14,19 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Info */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold">Contact</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">Contact</h1>
               <div className="space-y-4">
                 <div>
-                  <h2 className="text-white text-lg md:text-xl font-medium mb-2">Phone</h2>
-                  <p className="text-white text-base md:text-lg">(03) 9645 5277</p>
+                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">Phone</h2>
+                  <p className="text-white text-base md:text-lg text-lexend">(03) 9645 5277</p>
                 </div>
                 <div>
-                  <h2 className="text-white text-lg md:text-xl font-medium mb-2">Email</h2>
-                  <p className="text-white text-base md:text-lg">info@thealbion.bar</p>
+                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">Email</h2>
+                  <p className="text-white text-base md:text-lg text-lexend">info@thealbion.bar</p>
                 </div>
                 <div>
-                  <h2 className="text-white text-lg md:text-xl font-medium mb-2">Address</h2>
-                  <p className="text-white text-base md:text-lg">
+                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">Address</h2>
+                  <p className="text-white text-base md:text-lg text-lexend">
                     172 York Street,<br />
                     South Melbourne, VIC, 3205
                   </p>
@@ -36,7 +36,7 @@ export default function Page() {
                     href="https://www.google.com/maps?q=172+York+Street,+South+Melbourne,+VIC,+3205"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block text-brown hover:text-white transition-colors duration-300 text-base md:text-lg font-medium"
+                    className="inline-block text-brown hover:text-white transition-colors duration-300 text-base md:text-lg font-medium text-lexend"
                   >
                     View on Google Maps →
                   </a>
@@ -62,16 +62,16 @@ export default function Page() {
 
             {/* Enquiry Form */}
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold">Enquiry</h2>
+              <h2 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">Enquiry</h2>
               <form className="space-y-6">
                 {/* Name */}
                 <div>
-                  <label className="block text-white text-sm md:text-base font-medium mb-3">
+                  <label className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
                     Name <span className="text-brown">(Required)</span>
                   </label>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     <div>
-                      <label htmlFor="firstName" className="block text-white text-xs md:text-sm mb-1">
+                      <label htmlFor="firstName" className="block text-white text-xs md:text-sm mb-1 text-lexend">
                         First Name
                       </label>
                       <input
@@ -83,7 +83,7 @@ export default function Page() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-white text-xs md:text-sm mb-1">
+                      <label htmlFor="lastName" className="block text-white text-xs md:text-sm mb-1 text-lexend">
                         Last Name
                       </label>
                       <input
@@ -99,7 +99,7 @@ export default function Page() {
 
                 {/* Phone */}
                 <div>
-                  <label htmlFor="phone" className="block text-white text-sm md:text-base font-medium mb-3">
+                  <label htmlFor="phone" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
                     Phone <span className="text-brown">(Required)</span>
                   </label>
                   <input
@@ -113,7 +113,7 @@ export default function Page() {
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-white text-sm md:text-base font-medium mb-3">
+                  <label htmlFor="email" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
                     Email <span className="text-brown">(Required)</span>
                   </label>
                   <input
@@ -127,7 +127,7 @@ export default function Page() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-white text-sm md:text-base font-medium mb-3">
+                  <label htmlFor="message" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
                     Message
                   </label>
                   <textarea
@@ -142,7 +142,7 @@ export default function Page() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="bg-brown text-white uppercase py-3 px-8 rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover font-medium"
+                  className="bg-brown text-white uppercase py-3 px-8 rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover font-medium font-lexend"
                 >
                   Submit Enquiry
                 </button>

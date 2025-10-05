@@ -36,23 +36,23 @@ export default function FunctionEnquiryForm() {
     <section className="bg-blue py-12 md:py-20 px-4 md:px-8" aria-labelledby="function-enquiry-heading">
       <div className="container-responsive max-w-4xl">
         <header className="text-center mb-8 md:mb-12">
-          <h1 id="function-enquiry-heading" className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 md:mb-6">
+          <h1 id="function-enquiry-heading" className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 md:mb-6 heading-aleo">
             FUNCTION ENQUIRY
           </h1>
-          <p className="text-white text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed text-lexend">
             Our experienced events team is here to bring your vision to life with tailored packages, 
             premium service, and attention to every detail.
           </p>
           <div className="text-white space-y-1 md:space-y-2">
-            <p className="text-lg md:text-xl font-medium">(03) 9645 5277</p>
-            <p className="text-base md:text-lg">FUNCTIONS@ALBIONROOFTOP.COM.AU</p>
+            <p className="text-lg md:text-xl font-medium text-lexend">(03) 9645 5277</p>
+            <p className="text-base md:text-lg text-lexend">FUNCTIONS@ALBIONROOFTOP.COM.AU</p>
           </div>
         </header>
 
         <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
           {/* Name Section */}
           <div>
-            <label htmlFor="firstName" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="firstName" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               Name (required)
             </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
@@ -81,7 +81,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Phone Section */}
           <div>
-            <label htmlFor="country" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="country" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               Phone (required)
             </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
@@ -112,7 +112,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Email Section */}
           <div>
-            <label htmlFor="email" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="email" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               Email (required)
             </label>
             <input
@@ -129,7 +129,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Preferred Date Section */}
           <div>
-            <label htmlFor="preferredDate" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="preferredDate" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               Preferred Date (required)
             </label>
             <input
@@ -145,7 +145,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Date Flexibility Section */}
           <div>
-            <label htmlFor="dateFlexible" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="dateFlexible" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               Is your date flexible? (required)
             </label>
             <select
@@ -165,7 +165,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Number of Guests Section */}
           <div>
-            <label htmlFor="numberOfGuests" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="numberOfGuests" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               No. of Guests (required)
             </label>
             <input
@@ -183,7 +183,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Time of Event Section */}
           <div>
-            <label htmlFor="eventStartTime" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="eventStartTime" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               Time of Event (Start)
             </label>
             <select
@@ -204,7 +204,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Interest Section */}
           <div>
-            <label htmlFor="interest" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="interest" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               I&apos;m interested in (required)
             </label>
             <select
@@ -227,7 +227,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Hiring Information Section */}
           <div>
-            <label htmlFor="hiringInfo" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="hiringInfo" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               I would like hiring information for
             </label>
             <select
@@ -248,7 +248,7 @@ export default function FunctionEnquiryForm() {
 
           {/* Celebration Description Section */}
           <div>
-            <label htmlFor="celebrationDescription" className="block text-white text-sm md:text-base font-medium mb-3">
+            <label htmlFor="celebrationDescription" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
               Tell us about your celebration (required)
             </label>
             <textarea
@@ -267,7 +267,7 @@ export default function FunctionEnquiryForm() {
           <div className="text-center pt-6 md:pt-8">
             <button
               type="submit"
-              className="bg-brown text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-medium uppercase hover:bg-opacity-90 transition-all duration-300 btn-hover focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue rounded-md"
+              className="bg-brown text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-medium uppercase hover:bg-opacity-90 transition-all duration-300 btn-hover focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue rounded-md font-lexend"
             >
               SUBMIT
             </button>

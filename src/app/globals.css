@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Lexend+Deca:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-brown: #876843;
-  --color-white-cus:#f6f2ed;
-  --color-blue: #002342;
+  --color-brown: #a47a02;
+  --color-white-cus: #f8f8f8;
+  --color-blue: #133249;
+  --font-aleo: 'Aleo', serif;
+  --font-lexend: 'Lexend Deca', sans-serif;
 }
 
 /* Global Styles */
@@ -16,7 +19,7 @@ html {
 }
 
 body {
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-lexend), system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -137,13 +140,21 @@ body {
 
 /* Marquee Animations */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes marquee-reverse {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .animate-marquee-slow {
@@ -159,19 +170,19 @@ body {
   .mobile-padding {
     padding: 1rem;
   }
-  
+
   .mobile-text-sm {
     font-size: 0.875rem;
   }
-  
+
   .mobile-gap-sm {
     gap: 0.5rem;
   }
-  
+
   .mobile-gap-md {
     gap: 1rem;
   }
-  
+
   .mobile-gap-lg {
     gap: 1.5rem;
   }
@@ -186,4 +197,25 @@ body {
 /* Smooth transitions */
 .transition-smooth {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Font utilities */
+.font-aleo {
+  font-family: var(--font-aleo);
+}
+
+.font-lexend {
+  font-family: var(--font-lexend);
+}
+
+/* Typography scale with new fonts */
+.heading-aleo {
+  font-family: var(--font-aleo);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-lexend {
+  font-family: var(--font-lexend);
+  font-weight: 400;
 }

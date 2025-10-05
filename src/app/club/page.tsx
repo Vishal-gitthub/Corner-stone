@@ -32,7 +32,7 @@ export default function Page() {
         <div className="py-16 md:py-24 lg:py-32">
           <div className="container-responsive text-center">
             <p className="text-xl md:text-2xl lg:text-3xl uppercase text-brown font-medium mb-4">The Albion</p>
-            <h1 className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold leading-tight">
+            <h1 className="text-4xl md:text-6xl font-aleo lg:text-8xl uppercase font-bold leading-tight">
               Club Signature drinks, state-of-the-art sound, and nothing but
               good nights
             </h1>
@@ -46,7 +46,7 @@ export default function Page() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   {/* Content */}
                   <div className="text-center lg:text-left space-y-6">
-                    <h2 className="text-4xl md:text-5xl lg:text-7xl uppercase text-blue font-bold">
+                    <h2 className="text-4xl md:text-5xl font-aleo lg:text-7xl uppercase text-blue font-bold">
                       OYE LATINO MELBOURNE
                     </h2>
                     <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
@@ -111,22 +111,22 @@ export default function Page() {
 
                   {/* Content */}
                   <div className="text-center lg:text-left space-y-6">
-                    <h2 className="text-4xl md:text-5xl lg:text-7xl uppercase text-blue font-bold">
+                    <h2 className="text-4xl md:text-5xl lg:text-7xl heading-aleo uppercase text-blue font-bold">
                       Alumbra
                     </h2>
-                    <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
+                    <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium heading-aleo">
                       Every Saturday Night
                     </p>
                     <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
                     <div className="space-y-4 text-base md:text-lg text-blue leading-relaxed">
-                      <p>
+                      <p className="text-lexend">
               Alumbra is a Saturday night experience that lives at the
                         intersection of music, lifestyle, couture, and bites. Rooted
               in culture and elevated by style, it&apos;s a space where
                         selectors, tastemakers, and trendsetters gather under one
                         roof.
                       </p>
-                      <p>
+                      <p className="text-lexend">
                         With a soundtrack that moves through
                         House, RnB, and global rhythms, paired with rooftop views,
                         refined cocktails, and curated dining, Alumbra delivers more
@@ -135,7 +135,7 @@ export default function Page() {
                       </p>
                     </div>
                     <div className="flex justify-center lg:justify-start mt-8">
-                      <button className="uppercase px-8 md:px-12 py-3 md:py-4 font-semibold tracking-widest border-2 border-brown bg-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover rounded-md">
+                      <button className="uppercase px-8 md:px-12 py-3 md:py-4 font-semibold tracking-widest border-2 border-brown bg-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover rounded-md font-lexend">
                         Alumbra Website
                       </button>
                     </div>

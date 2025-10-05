@@ -42,13 +42,13 @@ const Navbar = () => {
             <Link
               key={i}
               href={item.link}
-              className="text-blue font-medium hover:text-brown transition-colors duration-300 relative group"
+              className="text-blue font-medium hover:text-brown transition-colors duration-300 relative group font-lexend"
             >
               {item.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brown transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
-          <button className="py-2 px-6 xl:px-9 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover">
+          <button className="py-2 px-6 xl:px-9 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover font-lexend">
             Reservation
           </button>
         </div>
@@ -113,7 +113,7 @@ const Navbar = () => {
               <Link
                 key={i}
                 href={item.link}
-                className="text-2xl md:text-3xl text-blue font-medium hover:text-brown transition-colors duration-300 w-full text-center"
+                className="text-2xl md:text-3xl text-blue font-medium hover:text-brown transition-colors duration-300 w-full text-center font-lexend"
                 onClick={() => setToggleMenu(false)}
               >
                 {item.name}
@@ -121,7 +121,7 @@ const Navbar = () => {
             ))}
 
             <button
-              className="mt-2 py-3 px-10 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover text-lg w-full max-w-xs"
+              className="mt-2 py-3 px-10 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover text-lg w-full max-w-xs font-lexend"
               onClick={() => setToggleMenu(false)}
             >
               Reservation

@@ -36,10 +36,10 @@ export default function Page() {
       <div className="py-12 md:py-20">
         <div className="container-responsive">
           <div className="text-center mb-12 md:mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl uppercase text-blue font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl uppercase text-blue font-bold mb-4 heading-aleo">
               What&apos;s On
             </h1>
-            <p className="text-lg md:text-xl text-brown font-medium">
+            <p className="text-lg md:text-xl text-brown font-medium heading-aleo">
               Discover our latest events and special offers
             </p>
             <div className="w-24 h-1 bg-brown mx-auto my-6"></div>
@@ -77,12 +77,12 @@ export default function Page() {
                     />
                   </div>
                   <div className="p-6 space-y-4">
-                    <h2 className="text-2xl md:text-3xl font-bold text-blue">{data.heading}</h2>
-                    <h3 className="text-lg md:text-xl text-brown font-medium">{data.subHead}</h3>
-                    <p className="text-sm md:text-base text-blue leading-relaxed">{data.desc}</p>
+                    <h2 className="text-2xl md:text-3xl font-bold text-blue heading-aleo">{data.heading}</h2>
+                    <h3 className="text-lg md:text-xl text-brown font-medium heading-aleo">{data.subHead}</h3>
+                    <p className="text-sm md:text-base text-blue leading-relaxed text-lexend">{data.desc}</p>
                     <a
                       href="#"
-                      className="inline-block py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium"
+                      className="inline-block py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium font-lexend"
                     >
                       View Event
                     </a>

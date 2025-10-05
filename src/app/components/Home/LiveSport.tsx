@@ -14,17 +14,17 @@ const LiveSport = () => {
         {/* Centered Content Box */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl px-6">
           <div className="bg-white-cus/80 text-center py-14 px-8 rounded shadow-lg">
-            <h1 className="text-5xl mb-6">Live Sport</h1>
-            <p className="mb-4 font-futura text-xl text-blue/90">
+            <h1 className="text-5xl mb-6 heading-aleo">Live Sport</h1>
+            <p className="mb-4 text-lexend text-xl text-blue/90">
               The Albion Rooftop offers an elevated viewing experience
               complemented by premium drinks and a vibrant atmosphere.
             </p>
-            <p className="mb-6 font-futura text-xl text-blue/90">
+            <p className="mb-6 text-lexend text-xl text-blue/90">
               From football and rugby to cricket and beyond, every major game is
               showcased across multiple screens, allowing you to enjoy the
               action in style.
             </p>
-            <button className="border-2 uppercase tracking-widest font-futura px-14 py-3 text-white hover:text-brown border-brown bg-brown hover:bg-transparent">
+            <button className="border-2 uppercase tracking-widest font-lexend px-14 py-3 text-white hover:text-brown border-brown bg-brown hover:bg-transparent">
               Book a table
             </button>
           </div>
@@ -38,16 +38,16 @@ const LiveSport = () => {
                     key={idx}
                     className="flex items-center whitespace-nowrap"
                   >
-                    <span className="font-semibold text-7xl uppercase font-futura tracking-wider text-white-cus">
+                    <span className="font-semibold text-7xl uppercase font-aleo tracking-wider text-white-cus">
                       Big Screens, &nbsp;
                     </span>
-                    <span className="font-semibold text-7xl uppercase font-futura tracking-wider text-white-cus">
+                    <span className="font-semibold text-7xl uppercase font-aleo tracking-wider text-white-cus">
                       Bigger Atmosphere &nbsp;
                     </span>
-                    <span className="font-semibold text-7xl uppercase font-futura tracking-wider text-white-cus">
+                    <span className="font-semibold text-7xl uppercase font-aleo tracking-wider text-white-cus">
                       Big Screens, &nbsp;
                     </span>
-                    <span className="font-semibold text-7xl uppercase font-futura tracking-wider text-white-cus">
+                    <span className="font-semibold text-7xl uppercase font-aleo tracking-wider text-white-cus">
                       Bigger Atmosphere &nbsp;
                     </span>
                   </div>
@@ -59,16 +59,16 @@ const LiveSport = () => {
                     key={idx}
                     className="flex items-center whitespace-nowrap"
                   >
-                    <span className="font-semibold text-7xl uppercase font-futura tracking-wider text-white-cus">
+                    <span className="font-semibold text-7xl uppercase font-aleo tracking-wider text-white-cus">
                       Big Screens, &nbsp;
                     </span>
-                    <span className="font-semibold text-7xl uppercase font-futura tracking-wider text-white-cus">
+                    <span className="font-semibold text-7xl uppercase font-aleo tracking-wider text-white-cus">
                       Bigger Atmosphere &nbsp;
                     </span>
-                    <span className="font-semibold text-7xl uppercase font-futura tracking-wider text-white-cus">
+                    <span className="font-semibold text-7xl uppercase font-aleo tracking-wider text-white-cus">
                       Big Screens, &nbsp;
                     </span>
-                    <span className="font-semibold text-7xl uppercase font-futura tracking-wider text-white-cus">
+                    <span className="font-semibold text-7xl uppercase font-aleo tracking-wider text-white-cus">
                       Bigger Atmosphere &nbsp;
                     </span>
                   </div>

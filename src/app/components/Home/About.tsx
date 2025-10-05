@@ -27,11 +27,11 @@ const AboutSec = () => {
     >
       {/* section 1 */}
       <div className="max-w-7xl m-auto px-32 max-md:px-16 max-sm:px-3 pb-32">
-        <span className="uppercase text-center text-2xl text-brown">
-          welcome to THE ALBION
+        <span className="uppercase text-center font-aleo text-2xl text-brown">
+          welcome to THE CORNER STONE
         </span>
-        <h2 className="text-[clamp(2rem,6vw,5rem)] font-semibold">
-          South Melbourne’s <span className="font-seasonOne"> premier </span>
+        <h2 className="heading-aleo text-[clamp(2rem,6vw,5rem)]">
+          South Melbourne's <span className="font-seasonOne"> premier </span>
           rooftop, event space and Nightclub.
         </h2>
       </div>
@@ -48,10 +48,10 @@ const AboutSec = () => {
                   alt=""
                 />
               </div>
-              <h3 className="py-6 text-5xl uppercase">Rooftop</h3>
+              <h3 className="py-6 text-5xl uppercase heading-aleo">Rooftop</h3>
               <a
                 href=""
-                className="uppercase underline text-brown text-lg font-semibold tracking-wider"
+                className="uppercase underline font-lexend text-brown text-lg font-semibold tracking-wider"
               >
                 See Rooftop
               </a>
@@ -67,10 +67,10 @@ const AboutSec = () => {
                   alt=""
                 />
               </div>
-              <h3 className="py-6 text-5xl uppercase">Events</h3>
+              <h3 className="py-6 text-5xl uppercase heading-aleo">Events</h3>
               <a
                 href=""
-                className="uppercase underline text-brown text-lg font-semibold tracking-wider"
+                className="uppercase font-lexend underline text-brown text-lg font-semibold tracking-wider"
               >
                 See Spaces
               </a>
@@ -86,10 +86,10 @@ const AboutSec = () => {
                   alt=""
                 />
               </div>
-              <h3 className="py-6 text-5xl uppercase">Nightlife</h3>
+              <h3 className="py-6 text-5xl uppercase heading-aleo">Nightlife</h3>
               <a
                 href=""
-                className="uppercase underline text-brown text-lg font-semibold tracking-wider"
+                className="uppercase font-lexend underline text-brown text-lg font-semibold tracking-wider"
               >
                 See club info
               </a>
@@ -109,10 +109,10 @@ const AboutSec = () => {
           />
         </div>
         <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
-          <h2 className="text-center text-7xl max-sm:text-5xl uppercase">
+          <h2 className="font-aleo text-center text-7xl max-sm:text-5xl uppercase">
             Rooftop
           </h2>
-          <p className="p-10 max-sm:p-4 text-center font-futura">
+          <p className="p-10 max-sm:p-4 text-center font-lexend">
             Perched above the city, our Rooftop offers the perfect setting for
             golden hour drinks or a seamless transition into the night. Join us
             Fridays and Saturdays from 3pm ‘til late, with curated
@@ -120,15 +120,15 @@ const AboutSec = () => {
             kitchen menu served from 4pm to midnight.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">
-            <button className="uppercase px-15 bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white">
+            <button className="uppercase px-15 bg-brown font-lexend py-1 border border-brown hover:bg-white-cus hover:text-brown text-white">
               Rooftop info
             </button>
-            <button className="uppercase px-15 hover:bg-brown py-1 border border-brown bg-white-cus text-brown hover:text-white">
+            <button className="uppercase px-15 hover:bg-brown font-lexend py-1 border border-brown bg-white-cus text-brown hover:text-white">
               RESERVATIONS
             </button>
           </div>
         </div>
-        <span className="text-[200px] max-lg:text-[150px] max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-white-cus/80 absolute bottom-5 left-0">
+        <span className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-white-cus/80 absolute bottom-5 left-0">
           ROOFTOP
         </span>
       </section>
@@ -136,13 +136,13 @@ const AboutSec = () => {
       {/* section 4 */}
       <section className="px-10 pb-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
         <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
-          <h2 className="text-center text-7xl max-sm:text-5xl uppercase">
+          <h2 className="font-aleo text-center text-7xl  max-sm:text-5xl uppercase">
             Our Food
           </h2>
-          <h3 className="text-center text-2xl pt-2 max-sm:text-xl uppercase">
+          <h3 className="text-center font-aleo text-2xl pt-2 max-sm:text-xl uppercase">
             HEAD CHEF: ELIA DONATI
           </h3>
-          <p className="p-10 max-sm:p-4 text-center font-futura">
+          <p className="p-10 max-sm:p-4 text-center font-lexend">
             With an exciting new menu crafted by Elia Donati, The Albion Rooftop
             brings a fresh take on elevated dining, where bold flavours meet
             refined simplicity. Thoughtfully curated with high-quality
@@ -206,13 +206,13 @@ const AboutSec = () => {
             />
           </div>
           <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
-            <h2 className="text-center text-7xl text-white-cus max-sm:text-5xl uppercase">
+            <h2 className="heading-aleo text-center text-7xl text-white-cus max-sm:text-5xl uppercase">
               Functions & Events
             </h2>
-            <h3 className="text-center text-2xl pt-2 text-white-cus max-sm:text-xl uppercase">
+            <h3 className="heading-aleo text-center text-2xl pt-2 text-white-cus max-sm:text-xl uppercase">
               CRAFTED FOR EVERY OCCASION
             </h3>
-            <p className="p-10 max-sm:p-4 text-center text-white-cus font-futura">
+            <p className="p-10 max-sm:p-4 text-center text-white-cus text-lexend">
               The Albion’s versatile design lends itself beautifully to
               everything from intimate gatherings to large-scale cocktail
               events. Our dedicated team is committed to delivering exceptional
@@ -221,7 +221,7 @@ const AboutSec = () => {
               seamless as it is memorable.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <button className="uppercase px-32 bg-brown py-5 font-semibold font-futura tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white">
+              <button className="uppercase px-32 bg-brown py-5 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white">
                 View spaces
               </button>
             </div>

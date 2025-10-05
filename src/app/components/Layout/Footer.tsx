@@ -24,10 +24,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 py-8">
           {/* Newsletter Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-xl md:text-2xl lg:text-3xl py-2 text-white font-medium">
+            <h3 className="text-xl md:text-2xl lg:text-3xl py-2 text-white font-medium heading-aleo">
               Subscribe to our mailing list to receive the latest news and events.
             </h3>
-            <button className="py-3 px-8 md:px-12 text-white bg-brown rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover mt-4">
+            <button className="py-3 px-8 md:px-12 text-white bg-brown rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover mt-4 font-lexend">
               Subscribe
             </button>
           </div>
@@ -35,19 +35,19 @@ export default function Footer() {
           {/* Contact Info */}
           <div className="flex flex-col gap-4 md:gap-6">
             <div>
-              <h3 className="text-lg md:text-xl text-white font-medium mb-2">
+              <h3 className="text-lg md:text-xl text-white font-medium mb-2 heading-aleo">
                 Visit Us
               </h3>
-              <p className="text-white">
+              <p className="text-white text-lexend">
                 172 York Street,<br />
                 South Melbourne, VIC, 3205
               </p>
             </div>
             <div>
-              <h3 className="text-lg md:text-xl text-white font-medium mb-2">
+              <h3 className="text-lg md:text-xl text-white font-medium mb-2 heading-aleo">
                 Contact
               </h3>
-              <p className="text-white">
+              <p className="text-white text-lexend">
                 (03) 9645 5277<br />
                 info@thealbion.bar
               </p>
@@ -72,20 +72,20 @@ export default function Footer() {
 
           {/* Opening Hours */}
           <div className="lg:col-span-1">
-            <h2 className="uppercase text-white font-semibold pb-3 text-lg md:text-xl">
+            <h2 className="uppercase text-white font-semibold pb-3 text-lg md:text-xl heading-aleo">
               Opening Hours
             </h2>
             <div className="text-white space-y-3">
               <div>
-                <p className="text-lg font-medium">FRIDAY</p>
-                <p className="text-sm md:text-base">
+                <p className="text-lg font-medium heading-aleo">FRIDAY</p>
+                <p className="text-sm md:text-base text-lexend">
                   Rooftop: 3pm - Late<br />
                   Club: 10pm - Late
                 </p>
               </div>
               <div>
-                <p className="text-lg font-medium">SATURDAY</p>
-                <p className="text-sm md:text-base">
+                <p className="text-lg font-medium heading-aleo">SATURDAY</p>
+                <p className="text-sm md:text-base text-lexend">
                   Rooftop: 3pm - Late<br />
                   Club: 9pm - Late
                 </p>
@@ -96,9 +96,9 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-white/20 py-6">
-          <p className="text-white text-center text-sm md:text-base">
-            © The Albion Rooftop, all rights reserved. | Website design by ARINON. | 
-            <a href="#" className="hover:text-brown transition-colors duration-300 ml-1">
+          <p className="text-white text-center text-sm md:text-base text-lexend">
+            © The Albion Rooftop, all rights reserved. | Designed by ARINON. | 
+            <a href="#" className="hover:text-brown transition-colors duration-300 ml-1 text-lexend">
               Privacy Policy
             </a>
           </p>
