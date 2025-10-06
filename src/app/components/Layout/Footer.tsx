@@ -5,7 +5,7 @@ import { FaTiktok } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer
-      className="bg-blue/90 border-t-2 border-white"
+      className="bg-blue border-t-2 border-white"
       style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
     >
       <div className="container-responsive">

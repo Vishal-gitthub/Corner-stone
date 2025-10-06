@@ -15,7 +15,7 @@ export default function Page() {
             {/* Contact Info */}
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
-                Contact
+                Cont<span className="text-brown">act</span>
               </h1>
               <div className="space-y-4">
                 <div>
@@ -74,7 +74,7 @@ export default function Page() {
             {/* Enquiry Form */}
             <div className="space-y-6">
               <h2 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
-                Enquiry
+              <span  className="text-brown">Enq</span>uiry
               </h2>
               <form className="space-y-6">
                 {/* Name */}
