@@ -18,9 +18,15 @@ export default function Page() {
         <Banner />
       </section>
 
-      <section className="py-16 md:py-24 lg:py-32" aria-labelledby="events-intro-heading">
+      <section
+        className="py-16 md:py-24 lg:py-32"
+        aria-labelledby="events-intro-heading"
+      >
         <div className="container-responsive max-w-4xl text-center flex flex-col gap-4 md:gap-6">
-          <h1 id="events-intro-heading" className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold heading-aleo">
+          <h1
+            id="events-intro-heading"
+            className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold heading-aleo"
+          >
             Functions & Events
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium heading-aleo">
@@ -28,18 +34,20 @@ export default function Page() {
           </p>
           <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
           <p className="text-center text-base md:text-lg leading-relaxed text-lexend">
-            At The Albion, we understand the importance of creating a lasting
-            impression. Whether you&apos;re hosting an elegant cocktail evening, a
-            milestone celebration, or a refined business networking event, our
-            sophisticated spaces – including a stunning rooftop with panoramic
-            city views – provide the perfect backdrop. With curated menus,
-            premium beverages, and impeccable service, every detail is
-            thoughtfully executed to deliver a seamless and memorable experience
-            for you and your guests.
+            At The Cornerstone, we make every event unforgettable. Whether
+            it&apos;s a milestone celebration, a stylish corporate gathering, or
+            a casual get-together, our versatile spaces - including a vibrant
+            outdoor area - offer the perfect setting. With carefully crafted
+            menus, premium drinks, and attentive service, every detail is
+            designed to create a seamless and memorable experience for you and
+            your guests. Take your event to the next level with optional décor,
+            photography, and bespoke touches - from elegant balloon displays to
+            custom signage - tailored to make your celebration truly unique.
           </p>
           <p className="text-center text-base md:text-lg leading-relaxed mt-4 text-lexend">
-            Enhance your event with optional photography and bespoke décor hire – 
-            including arch walls, balloon garlands, and custom signage to elevate your celebration.
+            Enhance your event with optional photography and bespoke décor hire
+            – including arch walls, balloon garlands, and custom signage to
+            elevate your celebration.
           </p>
           <div
             className="flex w-full gap-4 md:gap-5 justify-center items-center mt-6"
@@ -49,7 +57,7 @@ export default function Page() {
             <Link
               href="/whatson"
               className="py-3 px-6 md:px-10 hover:text-white text-blue bg-transparent border-2 border-brown hover:bg-brown transition-all duration-300 btn-hover rounded-md font-medium"
-              aria-label="See what&apos;s on"
+              aria-label="See what's on"
             >
               What&apos;s On
             </Link>
@@ -64,10 +72,13 @@ export default function Page() {
         aria-labelledby="spaces-heading"
       >
         <div className="container-responsive">
-          <h2 id="spaces-heading" className="text-center text-3xl md:text-5xl lg:text-6xl text-white font-bold mb-12 md:mb-16">
+          <h2
+            id="spaces-heading"
+            className="text-center text-3xl md:text-5xl lg:text-6xl text-white font-bold mb-12 md:mb-16"
+          >
             Event Spaces
           </h2>
-          
+
           <div className="space-y-16 md:space-y-20">
             <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <figure className="order-2 lg:order-1">
@@ -80,19 +91,32 @@ export default function Page() {
                 />
               </figure>
               <div className="order-1 lg:order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">VIP Room</h3>
-                <p className="text-xl md:text-2xl text-white font-medium">Capacity: 40 guests standing</p>
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">
+                  VIP Room
+                </h3>
+                <p className="text-xl md:text-2xl text-white font-medium">
+                  Capacity: 40 guests standing
+                </p>
                 <p className="text-white text-base md:text-lg leading-relaxed">
-                  The VIP Room hosts groups of up to 40 guests standing with mini
-                  bar, fireplace, private entrance and bathrooms. This elegant space
-                  is ideal for intimate birthday and hens celebrations, or indulging
-                  VIP guests for an exclusive closed-door event.
+                  The VIP Room hosts groups of up to 40 guests standing with
+                  mini bar, fireplace, private entrance and bathrooms. This
+                  elegant space is ideal for intimate birthday and hens
+                  celebrations, or indulging VIP guests for an exclusive
+                  closed-door event.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Mini Bar</span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Fireplace</span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Private Entrance</span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Private Bathrooms</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Mini Bar
+                  </span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Fireplace
+                  </span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Private Entrance
+                  </span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Private Bathrooms
+                  </span>
                 </div>
               </div>
             </article>
@@ -108,17 +132,28 @@ export default function Page() {
                 />
               </figure>
               <div className="order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">Premium Experience</h3>
-                <p className="text-xl md:text-2xl text-white font-medium">Exclusive VIP Service</p>
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">
+                  Premium Experience
+                </h3>
+                <p className="text-xl md:text-2xl text-white font-medium">
+                  Exclusive VIP Service
+                </p>
                 <p className="text-white text-base md:text-lg leading-relaxed">
-                  Experience luxury like never before with our premium VIP service. 
-                  Dedicated staff, personalized attention, and exclusive amenities 
-                  ensure your event is nothing short of extraordinary.
+                  Experience luxury like never before with our premium VIP
+                  service. Dedicated staff, personalized attention, and
+                  exclusive amenities ensure your event is nothing short of
+                  extraordinary.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Dedicated Staff</span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Premium Service</span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Exclusive Access</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Dedicated Staff
+                  </span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Premium Service
+                  </span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Exclusive Access
+                  </span>
                 </div>
               </div>
             </article>
@@ -134,18 +169,31 @@ export default function Page() {
                 />
               </figure>
               <div className="order-1 lg:order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">Perfect for</h3>
-                <p className="text-xl md:text-2xl text-white font-medium">Intimate Celebrations</p>
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">
+                  Perfect for
+                </h3>
+                <p className="text-xl md:text-2xl text-white font-medium">
+                  Intimate Celebrations
+                </p>
                 <p className="text-white text-base md:text-lg leading-relaxed">
-                  Whether it&apos;s a milestone birthday, hens party, or corporate 
-                  celebration, our VIP space provides the perfect intimate setting 
-                  for your special occasion with unmatched privacy and elegance.
+                  Whether it&apos;s a milestone birthday, hens party, or
+                  corporate celebration, our VIP space provides the perfect
+                  intimate setting for your special occasion with unmatched
+                  privacy and elegance.
                 </p>
                 <div className="flex flex-wrap gap-3 mt-4">
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Birthday Parties</span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Hens Celebrations</span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Corporate Events</span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">Private Functions</span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Birthday Parties
+                  </span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Hens Celebrations
+                  </span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Corporate Events
+                  </span>
+                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
+                    Private Functions
+                  </span>
                 </div>
               </div>
             </article>
@@ -166,27 +214,32 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 lg:py-32" aria-labelledby="decor-heading">
+      <section
+        className="py-16 md:py-24 lg:py-32"
+        aria-labelledby="decor-heading"
+      >
         <div className="container-responsive max-w-4xl text-center flex flex-col gap-6 md:gap-8">
-          <h2 id="decor-heading" className="text-3xl md:text-5xl lg:text-6xl uppercase font-bold">
+          <h2
+            id="decor-heading"
+            className="text-3xl md:text-5xl lg:text-6xl uppercase font-bold"
+          >
             PHOTOGRAPHY & <br className="hidden md:block" /> EVENT DÉCOR HIRE
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">Elevate Your Event</p>
+          <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
+            Elevate Your Event
+          </p>
           <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
           <div className="space-y-4 text-base md:text-lg leading-relaxed">
             <p>
-              Add the perfect finishing touches to your event at The Albion with
-              our optional photography and event décor packages. Capture every
-              moment with a professional photographer, ensuring memories from your
-              celebration are beautifully documented from start to finish.
-            </p>
-            <p>
-              Looking to elevate your styling? Our décor hire options
-              include elegant arch walls, custom welcome signs, statement balloon
-              garlands, floral arrangements, and more – designed to complement the
-              venue&apos;s sophisticated aesthetic. Whether you&apos;re after a subtle touch
-              of elegance or a full decorative setup, our team can help bring your
-              vision to life with seamless coordination and stand out
+              Add the perfect finishing touches to your event at The Cornerstone
+              with our optional photography and décor packages. Capture every
+              memory with a professional photographer, ensuring your celebration
+              is beautifully documented from start to finish. <br /> <br />{" "}
+              Enhance your styling with our décor hire options - including
+              elegant archways, custom signage, statement balloon displays,
+              floral arrangements, and more. Whether you prefer a subtle,
+              sophisticated touch or a full decorative setup, our team will help
+              bring your vision to life with flawless coordination and striking
               presentation.
             </p>
           </div>
@@ -202,7 +255,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section aria-labelledby="food-heading" className="py-16 md:py-24 lg:py-32">
+      <section
+        aria-labelledby="food-heading"
+        className="py-16 md:py-24 lg:py-32"
+      >
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left space-y-6">
@@ -217,11 +273,11 @@ export default function Page() {
               </p>
               <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
               <p className="text-base md:text-lg leading-relaxed">
-                With an exciting new menu crafted by Elia Donati, The Albion
-                Rooftop brings a fresh take on elevated dining, where bold
-                flavours meet refined simplicity. Thoughtfully curated with
-                high-quality ingredients and expert technique, each dish is
-                designed to be both indulgent and effortlessly enjoyable.
+                With a vibrant new menu crafted by Elia Donati, The Cornerstone
+                offers a modern twist on pub dining, where bold flavors meet
+                relaxed sophistication. Made with high-quality ingredients and
+                expert care, each dish is designed to be both satisfying and
+                effortlessly enjoyable.
               </p>
               <div className="flex justify-center lg:justify-start mt-8">
                 <Link

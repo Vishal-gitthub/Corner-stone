@@ -5,7 +5,7 @@ import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
-import { Scrollbar } from "swiper/modules";
+import { Scrollbar, Autoplay } from "swiper/modules";
 export default function Page() {
   const offerings = [
     {
@@ -33,7 +33,7 @@ export default function Page() {
       style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
       className="w-full min-h-screen bg-white/70"
     >
-      <div className="py-12 md:py-20">
+      <div className="py-12 md:py-20 mt-22 sm:mt-12">
         <div className="container-responsive">
           <div className="text-center mb-12 md:mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl uppercase text-blue font-bold mb-4 heading-aleo">
@@ -49,9 +49,14 @@ export default function Page() {
             scrollbar={{
               hide: true,
             }}
-            modules={[Scrollbar]}
+            modules={[Scrollbar, Autoplay]}
             className="mySwiper"
             spaceBetween={30}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
             breakpoints={{
               640: {
                 slidesPerView: 1,

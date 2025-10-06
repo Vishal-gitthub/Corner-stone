@@ -11,11 +11,11 @@ export default function Footer() {
       <div className="container-responsive">
         {/* Logo Section */}
         <div className="flex items-center py-8 justify-center">
-          <Image 
-            src="/logo.png" 
-            width={200} 
-            height={200} 
-            alt="The Albion Rooftop Logo" 
+          <Image
+            src="/logo.png"
+            width={200}
+            height={200}
+            alt="The Albion Rooftop Logo"
             className="w-48 md:w-64 h-auto"
           />
         </div>
@@ -25,7 +25,8 @@ export default function Footer() {
           {/* Newsletter Section */}
           <div className="lg:col-span-1">
             <h3 className="text-xl md:text-2xl lg:text-3xl py-2 text-white font-medium heading-aleo">
-              Subscribe to our mailing list to receive the latest news and events.
+              Subscribe to our mailing list to receive the latest news and
+              events.
             </h3>
             <button className="py-3 px-8 md:px-12 text-white bg-brown rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover mt-4 font-lexend">
               Subscribe
@@ -39,8 +40,7 @@ export default function Footer() {
                 Visit Us
               </h3>
               <p className="text-white text-lexend">
-                172 York Street,<br />
-                South Melbourne, VIC, 3205
+                <br />1 Crockford Street, Port Melbourne, 3207
               </p>
             </div>
             <div>
@@ -48,20 +48,23 @@ export default function Footer() {
                 Contact
               </h3>
               <p className="text-white text-lexend">
-                (03) 9645 5277<br />
-                info@thealbion.bar
+                (03) 9645 1405
+                <br />
+                <a href="mailto:bookings@cornerstonepub.com.au">
+                  bookings@cornerstonepub.com.au
+                </a>
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-brown hover:text-white transition-colors duration-300"
                 aria-label="Follow us on Instagram"
               >
                 <FaInstagram className="text-2xl md:text-3xl" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-brown hover:text-white transition-colors duration-300"
                 aria-label="Follow us on TikTok"
               >
@@ -77,17 +80,33 @@ export default function Footer() {
             </h2>
             <div className="text-white space-y-3">
               <div>
+                <p className="text-lg font-medium heading-aleo">WEDNESDAY</p>
+                <p className="text-sm md:text-base text-lexend">
+                  Midday – 11 PM
+                </p>
+              </div>
+              <div>
+                <p className="text-lg font-medium heading-aleo">THURSDAY</p>
+                <p className="text-sm md:text-base text-lexend">
+                  Midday – Midnight
+                </p>
+              </div>
+              <div>
                 <p className="text-lg font-medium heading-aleo">FRIDAY</p>
                 <p className="text-sm md:text-base text-lexend">
-                  Rooftop: 3pm - Late<br />
-                  Club: 10pm - Late
+                  Midday – Midnight
                 </p>
               </div>
               <div>
                 <p className="text-lg font-medium heading-aleo">SATURDAY</p>
                 <p className="text-sm md:text-base text-lexend">
-                  Rooftop: 3pm - Late<br />
-                  Club: 9pm - Late
+                  Midday – Midnight
+                </p>
+              </div>
+              <div>
+                <p className="text-lg font-medium heading-aleo">SUNDAY</p>
+                <p className="text-sm md:text-base text-lexend">
+                  Midday – 11 PM
                 </p>
               </div>
             </div>
@@ -97,8 +116,11 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-white/20 py-6">
           <p className="text-white text-center text-sm md:text-base text-lexend">
-            © The Albion Rooftop, all rights reserved. | Designed by ARINON. | 
-            <a href="#" className="hover:text-brown transition-colors duration-300 ml-1 text-lexend">
+            © The Cornerstone Pub, all rights reserved. | Designed by ARINON. |
+            <a
+              href="#"
+              className="hover:text-brown transition-colors duration-300 ml-1 text-lexend"
+            >
               Privacy Policy
             </a>
           </p>

@@ -18,11 +18,15 @@ export default function FunctionEnquiryForm() {
     celebrationDescription: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -33,26 +37,43 @@ export default function FunctionEnquiryForm() {
   };
 
   return (
-    <section className="bg-blue py-12 md:py-20 px-4 md:px-8" aria-labelledby="function-enquiry-heading">
+    <section
+      className="bg-blue py-12 md:py-20 px-4 md:px-8"
+      aria-labelledby="function-enquiry-heading"
+    >
       <div className="container-responsive max-w-4xl">
         <header className="text-center mb-8 md:mb-12">
-          <h1 id="function-enquiry-heading" className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 md:mb-6 heading-aleo">
+          <h1
+            id="function-enquiry-heading"
+            className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 md:mb-6 heading-aleo"
+          >
             FUNCTION ENQUIRY
           </h1>
           <p className="text-white text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed text-lexend">
-            Our experienced events team is here to bring your vision to life with tailored packages, 
-            premium service, and attention to every detail.
+            Our dedicated events team is ready to make your vision a reality,
+            offering customized packages, exceptional service, and meticulous
+            attention to every detail.
           </p>
           <div className="text-white space-y-1 md:space-y-2">
-            <p className="text-lg md:text-xl font-medium text-lexend">(03) 9645 5277</p>
-            <p className="text-base md:text-lg text-lexend">FUNCTIONS@ALBIONROOFTOP.COM.AU</p>
+            <p className="text-lg md:text-xl font-medium text-lexend">
+              (03) 9645 1405
+            </p>
+            <a
+              className="text-base md:text-lg text-lexend"
+              href="mailto:bookings@cornerstonepub.com.au"
+            >
+              bookings@cornerstonepub.com.au
+            </a>
           </div>
         </header>
 
         <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
           {/* Name Section */}
           <div>
-            <label htmlFor="firstName" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="firstName"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               Name (required)
             </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
@@ -81,7 +102,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Phone Section */}
           <div>
-            <label htmlFor="country" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="country"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               Phone (required)
             </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
@@ -112,7 +136,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Email Section */}
           <div>
-            <label htmlFor="email" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="email"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               Email (required)
             </label>
             <input
@@ -129,7 +156,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Preferred Date Section */}
           <div>
-            <label htmlFor="preferredDate" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="preferredDate"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               Preferred Date (required)
             </label>
             <input
@@ -145,7 +175,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Date Flexibility Section */}
           <div>
-            <label htmlFor="dateFlexible" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="dateFlexible"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               Is your date flexible? (required)
             </label>
             <select
@@ -165,7 +198,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Number of Guests Section */}
           <div>
-            <label htmlFor="numberOfGuests" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="numberOfGuests"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               No. of Guests (required)
             </label>
             <input
@@ -183,7 +219,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Time of Event Section */}
           <div>
-            <label htmlFor="eventStartTime" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="eventStartTime"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               Time of Event (Start)
             </label>
             <select
@@ -204,7 +243,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Interest Section */}
           <div>
-            <label htmlFor="interest" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="interest"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               I&apos;m interested in (required)
             </label>
             <select
@@ -227,7 +269,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Hiring Information Section */}
           <div>
-            <label htmlFor="hiringInfo" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="hiringInfo"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               I would like hiring information for
             </label>
             <select
@@ -248,7 +293,10 @@ export default function FunctionEnquiryForm() {
 
           {/* Celebration Description Section */}
           <div>
-            <label htmlFor="celebrationDescription" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+            <label
+              htmlFor="celebrationDescription"
+              className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+            >
               Tell us about your celebration (required)
             </label>
             <textarea

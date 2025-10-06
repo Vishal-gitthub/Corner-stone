@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import bgTexture from "../../../../public/home/BgTexture.jpg";
-import rooftop from "../../../../public/home/rooftop_image.webp";
+import rooftop from "../../../../public/home/outdoor.jpg";
 import Events from "../../../../public/home/Events.webp";
 import Nightlife from "../../../../public/home/nightlife.webp";
-import rooftopClub from "../../../../public/home/rooftopClub.webp";
+import rooftopClub from "../../../../public/home/rooftopClub.jpg";
 import sign from "../../../../public/home/Panoramic+Views.png";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import food_1 from "../../../../public/home/Food_1.webp";
 import food_2 from "../../../../public/home/Food_2.webp";
@@ -14,10 +15,9 @@ import food_3 from "../../../../public/home/Food_3.webp";
 import food_4 from "../../../../public/home/Food_4.webp";
 import food_5 from "../../../../public/home/Food_5.webp";
 import foodChepsign from "../../../../public/home/Food-chefSign.png";
-import RooftopImage from "../../../../public/home/Albion+Rooftop,+function+venue+spaces+(19).webp";
+import RooftopImage from "../../../../public/home/Albion+Rooftop,+function+venue+spaces+(19).jpg";
 import EventsSign from "../../../../public/home/EVENTS.png";
-import rooftopVenu from "../../../../public/home/rooftopVenu.webp";
-import { EffectFade } from "swiper/modules";
+import rooftopVenu from "../../../../public/home/rooftopVenu.jpg";
 import "swiper/css/effect-fade";
 const AboutSec = () => {
   return (
@@ -27,12 +27,14 @@ const AboutSec = () => {
     >
       {/* section 1 */}
       <div className="max-w-7xl m-auto px-32 max-md:px-16 max-sm:px-3 pb-32">
-        <span className="uppercase text-center font-aleo text-2xl text-brown">
-          welcome to THE CORNER STONE
+        <span className="uppercase text-center font-aleo text-5xl text-brown">
+          Welcome to The Cornerstone Pub
         </span>
-        <h2 className="heading-aleo text-[clamp(2rem,6vw,5rem)]">
-          South Melbourne's <span className="font-seasonOne"> premier </span>
-          rooftop, event space and Nightclub.
+        <h2 className="heading-aleo text-2xl">
+          Discover South Melbourne’s favourite destination for good times, great
+          food, and unforgettable events. Whether you’re here for a laid-back
+          afternoon in our outdoor space or a vibrant night out with music and
+          drinks, The Cornerstone sets the perfect scene for every occasion.
         </h2>
       </div>
 
@@ -48,12 +50,14 @@ const AboutSec = () => {
                   alt=""
                 />
               </div>
-              <h3 className="py-6 text-5xl uppercase heading-aleo">Rooftop</h3>
+              <h3 className="py-6 text-5xl uppercase heading-aleo">
+                Outdoor Space
+              </h3>
               <a
                 href=""
                 className="uppercase underline font-lexend text-brown text-lg font-semibold tracking-wider"
               >
-                See Rooftop
+                See Outdoor
               </a>
             </div>
           </div>
@@ -86,7 +90,9 @@ const AboutSec = () => {
                   alt=""
                 />
               </div>
-              <h3 className="py-6 text-5xl uppercase heading-aleo">Nightlife</h3>
+              <h3 className="py-6 text-5xl uppercase heading-aleo">
+                Nightlife
+              </h3>
               <a
                 href=""
                 className="uppercase font-lexend underline text-brown text-lg font-semibold tracking-wider"
@@ -110,26 +116,29 @@ const AboutSec = () => {
         </div>
         <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
           <h2 className="font-aleo text-center text-7xl max-sm:text-5xl uppercase">
-            Rooftop
+            Outdoor Space
           </h2>
           <p className="p-10 max-sm:p-4 text-center font-lexend">
-            Perched above the city, our Rooftop offers the perfect setting for
-            golden hour drinks or a seamless transition into the night. Join us
-            Fridays and Saturdays from 3pm ‘til late, with curated
+            Set in the heart of the city, our Outdoor area offers the perfect
+            setting for golden hour drinks or an easy transition into the night.
+            Join us Fridays and Saturdays from 3pm ‘til late, with curated
             entertainment, casual bookings available throughout, and a full
             kitchen menu served from 4pm to midnight.
           </p>
-          <div className="flex flex-col gap-12 justify-center items-center">
+          <div className="flex flex-col gap-5 justify-center items-center">
             <button className="uppercase px-15 bg-brown font-lexend py-1 border border-brown hover:bg-white-cus hover:text-brown text-white">
-              Rooftop info
+              Outdoor info
             </button>
-            <button className="uppercase px-15 hover:bg-brown font-lexend py-1 border border-brown bg-white-cus text-brown hover:text-white">
-              RESERVATIONS
-            </button>
+            <a
+              href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20websiteF"
+              className="uppercase  px-15 hover:bg-brown font-lexend py-1 border border-brown bg-white-cus text-brown hover:text-white"
+            >
+              Book a Table
+            </a>
           </div>
         </div>
-        <span className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-white-cus/80 absolute bottom-5 left-0">
-          ROOFTOP
+        <span className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-5 left-0">
+          OUTDOOR
         </span>
       </section>
 
@@ -143,11 +152,11 @@ const AboutSec = () => {
             HEAD CHEF: ELIA DONATI
           </h3>
           <p className="p-10 max-sm:p-4 text-center font-lexend">
-            With an exciting new menu crafted by Elia Donati, The Albion Rooftop
-            brings a fresh take on elevated dining, where bold flavours meet
-            refined simplicity. Thoughtfully curated with high-quality
-            ingredients and expert technique, each dish is designed to be both
-            indulgent and effortlessly enjoyable.
+            With a vibrant new menu led by Elia Donati, The Cornerstone brings a
+            fresh twist to modern pub dining - where bold flavours meet relaxed
+            sophistication. Every dish is thoughtfully prepared with quality
+            ingredients and a passion for simplicity, making each bite both
+            comforting and memorable.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">
             <button className="uppercase px-15 bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white">
@@ -156,7 +165,15 @@ const AboutSec = () => {
           </div>
         </div>
         <div className="max-w-1/2 max-md:max-w-full  ">
-          <Swiper modules={[EffectFade]} effect="fade">
+          <Swiper 
+            modules={[EffectFade, Autoplay]} 
+            effect="fade"
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+          >
             {[food_1, food_2, food_3, food_4, food_5].map((foodImage) => (
               <SwiperSlide key={foodImage.src}>
                 <Image
@@ -169,11 +186,9 @@ const AboutSec = () => {
           </Swiper>
         </div>
         <div className="">
-          <Image
-            src={foodChepsign}
-            className="absolute w-7/12 bottom-0 right-0 z-10 max-md:hidden"
-            alt=""
-          />
+          <h2 className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] z-2 max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-5 right-0">
+            FOOD
+          </h2>
         </div>
       </section>
 
@@ -199,30 +214,31 @@ const AboutSec = () => {
                 alt=""
               />
             </div>
-            <Image
-              src={EventsSign}
-              className="absolute  -top-10 max-md:hidden -left-10"
-              alt=""
-            />
+            <h2
+              className="absolute leading-1 uppercase top-0 max-md:hidden -left-10  
+            text-[150px] max-lg:text-[100px] font-aleo max-md:text-[80px] z-2 max-sm:text-[50px] max-sm:hidden text-brown
+            "
+            >
+              Events
+            </h2>
           </div>
           <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
             <h2 className="heading-aleo text-center text-7xl text-white-cus max-sm:text-5xl uppercase">
               Functions & Events
             </h2>
             <h3 className="heading-aleo text-center text-2xl pt-2 text-white-cus max-sm:text-xl uppercase">
-              CRAFTED FOR EVERY OCCASION
+              Crafted for Every Occasion
             </h3>
             <p className="p-10 max-sm:p-4 text-center text-white-cus text-lexend">
-              The Albion’s versatile design lends itself beautifully to
-              everything from intimate gatherings to large-scale cocktail
-              events. Our dedicated team is committed to delivering exceptional
-              experiences, offering thoughtfully curated canapés and premium
-              beverages tailored to your occasion – ensuring every event is as
-              seamless as it is memorable.
+              The Cornerstone’s versatile spaces are perfect for everything from
+              relaxed catch-ups to grand celebrations. Our dedicated team
+              ensures every event runs seamlessly, with carefully curated menus,
+              premium drinks, and warm hospitality - creating memorable moments
+              that bring people together.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
               <button className="uppercase px-32 bg-brown py-5 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white">
-                View spaces
+                View Spaces
               </button>
             </div>
           </div>

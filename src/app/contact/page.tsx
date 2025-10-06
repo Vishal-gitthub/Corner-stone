@@ -7,33 +7,44 @@ export default function Page() {
   return (
     <main className="bg-blue min-h-screen">
       <div
-        className="py-12 md:py-20"
+        className="py-12 mt-22 md:py-20"
         style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
       >
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Info */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">Contact</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
+                Contact
+              </h1>
               <div className="space-y-4">
                 <div>
-                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">Phone</h2>
-                  <p className="text-white text-base md:text-lg text-lexend">(03) 9645 5277</p>
-                </div>
-                <div>
-                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">Email</h2>
-                  <p className="text-white text-base md:text-lg text-lexend">info@thealbion.bar</p>
-                </div>
-                <div>
-                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">Address</h2>
+                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">
+                    Phone
+                  </h2>
                   <p className="text-white text-base md:text-lg text-lexend">
-                    172 York Street,<br />
-                    South Melbourne, VIC, 3205
+                    (03) 9645 1405
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">
+                    Email
+                  </h2>
+                  <p className="text-white text-base md:text-lg text-lexend">
+                    bookings@cornerstonepub.com.au
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">
+                    Address
+                  </h2>
+                  <p className="text-white text-base md:text-lg text-lexend">
+                    1 Crockford Street, <br /> Port Melbourne, 3207
                   </p>
                 </div>
                 <div>
                   <a
-                    href="https://www.google.com/maps?q=172+York+Street,+South+Melbourne,+VIC,+3205"
+                    href="https://maps.app.goo.gl/g97kv5vxhA6FeNdo6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block text-brown hover:text-white transition-colors duration-300 text-base md:text-lg font-medium text-lexend"
@@ -42,15 +53,15 @@ export default function Page() {
                   </a>
                 </div>
                 <div className="flex items-center gap-4 pt-4">
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-brown hover:text-white transition-colors duration-300"
                     aria-label="Follow us on Instagram"
                   >
                     <FaInstagram className="text-2xl md:text-3xl" />
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-brown hover:text-white transition-colors duration-300"
                     aria-label="Follow us on TikTok"
                   >
@@ -62,7 +73,9 @@ export default function Page() {
 
             {/* Enquiry Form */}
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">Enquiry</h2>
+              <h2 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
+                Enquiry
+              </h2>
               <form className="space-y-6">
                 {/* Name */}
                 <div>
@@ -71,7 +84,10 @@ export default function Page() {
                   </label>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     <div>
-                      <label htmlFor="firstName" className="block text-white text-xs md:text-sm mb-1 text-lexend">
+                      <label
+                        htmlFor="firstName"
+                        className="block text-white text-xs md:text-sm mb-1 text-lexend"
+                      >
                         First Name
                       </label>
                       <input
@@ -83,7 +99,10 @@ export default function Page() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-white text-xs md:text-sm mb-1 text-lexend">
+                      <label
+                        htmlFor="lastName"
+                        className="block text-white text-xs md:text-sm mb-1 text-lexend"
+                      >
                         Last Name
                       </label>
                       <input
@@ -99,7 +118,10 @@ export default function Page() {
 
                 {/* Phone */}
                 <div>
-                  <label htmlFor="phone" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+                  <label
+                    htmlFor="phone"
+                    className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+                  >
                     Phone <span className="text-brown">(Required)</span>
                   </label>
                   <input
@@ -113,7 +135,10 @@ export default function Page() {
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+                  <label
+                    htmlFor="email"
+                    className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+                  >
                     Email <span className="text-brown">(Required)</span>
                   </label>
                   <input
@@ -127,7 +152,10 @@ export default function Page() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-white text-sm md:text-base font-medium mb-3 text-lexend">
+                  <label
+                    htmlFor="message"
+                    className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
+                  >
                     Message
                   </label>
                   <textarea

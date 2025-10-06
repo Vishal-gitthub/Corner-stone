@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade } from "swiper/modules";
+import { EffectFade, Autoplay } from "swiper/modules";
 
 // Swiper core styles
 import "swiper/css";
@@ -16,7 +16,15 @@ import food_5 from "../../../../public/home/Food_5.webp";
 
 export default function FoodCarousel() {
   return (
-    <Swiper modules={[EffectFade]} effect="fade">
+    <Swiper 
+      modules={[EffectFade, Autoplay]} 
+      effect="fade"
+      autoplay={{
+        delay: 3500,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+    >
       {[food_1, food_2, food_3, food_4, food_5].map((foodImage) => (
         <SwiperSlide key={foodImage.src}>
           <Image

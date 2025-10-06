@@ -18,10 +18,10 @@ const Nightlife = () => {
               FRIDAYS & SATURDAYS
             </h3>
             <p className="p-10 max-sm:p-4 text-white-cus text-lexend">
-              As night falls, The Albion Rooftop comes to life. Fridays bring
-              the vibrant energy of OYE Latino, while Saturdays are reserved for
-              Alumbra Saturdays – a refined evening of music, lifestyle &
-              couture.
+              When the sun goes down, The Cornerstone lights up. Fridays set the
+              tone with lively beats and great company, while Saturdays bring a
+              mix of music, energy, and style - the perfect way to celebrate the
+              weekend.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
               <button className="uppercase px-32 py-5 font-semibold font-lexend tracking-widest border-2 border-brown bg-brown hover:bg-transparent hover:text-brown text-white">
@@ -44,13 +44,9 @@ const Nightlife = () => {
             </div>
 
             {/* Overlay signs */}
-            <Image
-              src="/home/CLUB_sign.png"
-              alt="Club sign"
-              width={300} // ~w-56
-              height={100}
-              className="absolute -top-10 -left-10 max-md:hidden"
-            />
+            <h2 className="absolute -top-32 -left-10 max-md:hidden text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-brown">
+              CLUB
+            </h2>
             <Image
               src="/home/Unforgettable+Nights_sign.png"
               alt="Unforgettable Nights sign"
