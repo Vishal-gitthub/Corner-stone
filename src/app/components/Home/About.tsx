@@ -40,9 +40,9 @@ const AboutSec = () => {
 
       {/* Section 2 */}
       <section className="border-t border-b ">
-        <div className="flex justify-around  flex-wrap">
+        <div className="flex justify-around max-md:flex-col max-md:justify-center items-center">
           <div className=" flex flex-col py-20 max-sm:py-5 items-center ">
-            <div>
+            <div className="flex flex-col items-center">
               <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
                   src={rooftop}
@@ -50,7 +50,7 @@ const AboutSec = () => {
                   alt=""
                 />
               </div>
-              <h3 className="py-6 text-5xl uppercase heading-aleo">
+              <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
                 Outdoor Space
               </h3>
               <a
@@ -63,7 +63,7 @@ const AboutSec = () => {
           </div>
           <div className="w-[1px] max-md:hidden bg-brown"></div>
           <div className=" flex flex-col py-20 max-sm:py-5 items-center ">
-            <div>
+            <div className="flex flex-col items-center">
               <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
                   src={Events}
@@ -71,7 +71,9 @@ const AboutSec = () => {
                   alt=""
                 />
               </div>
-              <h3 className="py-6 text-5xl uppercase heading-aleo">Events</h3>
+              <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
+                Events
+              </h3>
               <a
                 href=""
                 className="uppercase font-lexend underline text-brown text-lg font-semibold tracking-wider"
@@ -82,7 +84,7 @@ const AboutSec = () => {
           </div>
           <div className="w-[1px] max-md:hidden bg-brown"></div>
           <div className=" flex flex-col py-20 max-sm:py-5 items-center">
-            <div>
+            <div className="flex flex-col items-center">
               <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
                   src={Nightlife}
@@ -90,7 +92,7 @@ const AboutSec = () => {
                   alt=""
                 />
               </div>
-              <h3 className="py-6 text-5xl uppercase heading-aleo">
+              <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
                 Nightlife
               </h3>
               <a
@@ -126,12 +128,12 @@ const AboutSec = () => {
             kitchen menu served from 4pm to midnight.
           </p>
           <div className="flex flex-col gap-5 justify-center items-center">
-            <button className="uppercase px-15 bg-brown font-lexend py-1 border border-brown hover:bg-white-cus hover:text-brown text-white">
+            <button className="uppercase px-15 bg-brown font-lexend py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
               Outdoor info
             </button>
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20websiteF"
-              className="uppercase  px-15 hover:bg-brown font-lexend py-1 border border-brown bg-white-cus text-brown hover:text-white"
+              className="uppercase  px-15 hover:bg-brown font-lexend py-1 border border-brown bg-white-cus text-brown hover:text-white w-full max-w-xs text-center"
             >
               Book a Table
             </a>
@@ -159,14 +161,14 @@ const AboutSec = () => {
             comforting and memorable.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">
-            <button className="uppercase px-15 bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white">
+            <button className="uppercase px-15 bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
               SEE MENU
             </button>
           </div>
         </div>
         <div className="max-w-1/2 max-md:max-w-full  ">
-          <Swiper 
-            modules={[EffectFade, Autoplay]} 
+          <Swiper
+            modules={[EffectFade, Autoplay]}
             effect="fade"
             autoplay={{
               delay: 3500,
@@ -237,7 +239,7 @@ const AboutSec = () => {
               that bring people together.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <button className="uppercase px-32 bg-brown py-5 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white">
+              <button className="uppercase px-32 max-sm:px-22 bg-brown py-5 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white w-full max-w-xs">
                 View Spaces
               </button>
             </div>
