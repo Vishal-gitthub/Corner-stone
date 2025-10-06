@@ -32,7 +32,7 @@ const WhatsOn = () => {
                 <h5 className="text-2xl heading-aleo uppercase">
                   Every Thursday from 6pm
                 </h5>
-                <p className="text-xl w-3/4 max-md:w-full text-lexend text-blue/90">
+                <p className="text-xl w-3/4 max-md:w-full text-lexend text-blue">
                   Experience a unique dining experience in the heart of South
                   Melbourne every Thursday from 6pm to late.
                 </p>
@@ -54,7 +54,7 @@ const WhatsOn = () => {
                 <h5 className="text-2xl heading-aleo uppercase">
                   Saturdays 3-8pm
                 </h5>
-                <p className="text-xl w-3/4 max-md:w-full text-lexend text-blue/90">
+                <p className="text-xl w-3/4 max-md:w-full text-lexend text-blue">
                   Redeem this exclusive offer with your Saturday Reservation by
                   booking a $500 bar tab, and receive a $100 top up!
                 </p>
@@ -76,7 +76,7 @@ const WhatsOn = () => {
                 <h5 className="text-2xl heading-aleo uppercase">
                   Friday Nights from 3-6pm.
                 </h5>
-                <p className="text-xl w-3/4 max-md:w-full text-lexend text-blue/90">
+                <p className="text-xl w-3/4 max-md:w-full text-lexend text-blue">
                   Enjoy $10 Basics, House Wine & Sparkling plus $8 Tap Beers
                   Every Friday from 3-6pm.
                 </p>

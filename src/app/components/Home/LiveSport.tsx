@@ -15,11 +15,11 @@ const LiveSport = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl px-6">
           <div className="bg-white-cus/80 text-center py-14 px-8 rounded shadow-lg">
             <h1 className="text-5xl mb-6 heading-aleo">Unwind & Connect</h1>
-            <p className="mb-4 text-lexend text-xl text-blue/90">
+            <p className="mb-4 text-lexend text-xl text-blue">
               Relax with friends, enjoy great vibes, and make every moment
               memorable in our vibrant outdoor space.
             </p>
-            <p className="mb-6 text-lexend text-xl text-blue/90">
+            <p className="mb-6 text-lexend text-xl text-blue">
               space is designed for laughter, conversation, and unforgettable
               memories - the perfect place to celebrate life’s little moments or
               special occasions.

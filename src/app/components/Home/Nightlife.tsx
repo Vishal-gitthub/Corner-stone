@@ -5,7 +5,7 @@ const Nightlife = () => {
   return (
     <div>
       <div
-        className="bg-blue/90"
+        className="bg-blue"
         style={{ backgroundImage: `url(${bgTexture.src})` }}
       >
         <section className="px-10 py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">

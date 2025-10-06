@@ -204,7 +204,7 @@ const AboutSec = () => {
       </section>
 
       {/* section 6 */}
-      <div className="bg-blue/90">
+      <div className="bg-blue">
         <section className="px-10  py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
           <div className="max-w-1/2 relative  max-md:max-w-full  ">
             <div className="w-full">
