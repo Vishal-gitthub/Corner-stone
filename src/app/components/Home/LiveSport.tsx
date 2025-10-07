@@ -14,7 +14,9 @@ const LiveSport = () => {
         {/* Centered Content Box */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl px-6">
           <div className="bg-white-cus/80 text-center py-10 px-6 md:py-14 md:px-8 rounded shadow-lg">
-            <h1 className="text-4xl md:text-5xl mb-6 heading-aleo">Unwind & Connect</h1>
+            <h1 className="text-4xl md:text-5xl mb-6 heading-aleo">
+              Unwind & Connect
+            </h1>
             <p className="mb-4 text-lexend text-base md:text-xl text-blue">
               Relax with friends, enjoy great vibes, and make every moment
               memorable in our vibrant outdoor space.
@@ -27,13 +29,13 @@ const LiveSport = () => {
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
               target="_blank"
-              className="border-2 uppercase tracking-widest font-lexend px-10 md:px-14 py-3 text-white hover:text-brown border-brown bg-brown hover:bg-transparent inline-block text-center"
+              className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
             >
               Book a table
             </a>
           </div>
         </div>
-        <section className="mb-8 md:mb-16 absolute w-full overflow-x-hidden overflow-y-hidden bottom-8 md:bottom-16 left-0">
+        <section className="mb-8 md:mb-16  w-full absolute bottom-0">
           <div className="bg-gradient-to-r from-gold/10 via-gold/5 to-gold/10 rounded-2xl">
             <div className="relative flex overflow-hidden">
               <div className="flex gap-8 animate-marquee-slow">

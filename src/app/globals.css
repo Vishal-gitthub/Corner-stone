@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brown: #a47a02;
+  --color-brown:#A47A02;
   --color-white-cus: #f8f8f8;
   --color-blue: #133249;
   --font-aleo: 'Aleo', serif;
@@ -158,7 +158,7 @@ body {
 }
 
 .animate-marquee-slow {
-  animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .animate-marquee-slow-reverse {

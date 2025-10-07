@@ -15,7 +15,13 @@ export default function Page() {
   return (
     <main style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}>
       <section aria-label="Hero video banner">
-        <Banner />
+        <div>
+          <section className="">
+            <video autoPlay muted loop className="h-screen w-full object-cover">
+              <source src="/events/event.mp4" />
+            </video>
+          </section>
+        </div>
       </section>
 
       <section

@@ -14,9 +14,9 @@ import Image4 from "../../../public/club/_85A7873.webp";
 export default function Page() {
   return (
     <main style={{ backgroundImage: `url(/home/BgTexture.jpg)` }}>
-      <Swiper 
-        spaceBetween={30} 
-        effect={"fade"} 
+      <Swiper
+        spaceBetween={30}
+        effect={"fade"}
         modules={[EffectFade, Autoplay]}
         autoplay={{
           delay: 3000,
@@ -81,7 +81,7 @@ export default function Page() {
                       </p>
                     </div>
                     <div className="flex justify-center lg:justify-start mt-8">
-                      <button className="uppercase px-8 md:px-12 py-3 md:py-4 font-semibold tracking-widest border-2 border-brown bg-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover rounded-md">
+                      <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
                         See Event Info
                       </button>
                     </div>
@@ -143,9 +143,12 @@ export default function Page() {
                       </p>
                     </div>
                     <div className="flex justify-center lg:justify-start mt-8">
-                      <button className="uppercase px-8 md:px-12 py-3 md:py-4 font-semibold tracking-widest border-2 border-brown bg-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover rounded-md font-lexend">
+                      <a
+                        href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
+                        className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
+                      >
                         Book a Table
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

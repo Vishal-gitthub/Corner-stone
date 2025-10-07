@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Logo Section */}
         <div className="flex items-center py-8 justify-center">
           <Image
-            src="/logo.png"
+            src="/logo_gold.png"
             width={200}
             height={200}
             alt="The Albion Rooftop Logo"
@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 py-8">
           {/* Newsletter Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-xl md:text-2xl lg:text-3xl py-2 text-white font-medium heading-aleo">
+            <h3 className="text-lg md:text-xl lg:text-2xl py-2 text-white font-medium heading-aleo">
               Subscribe to our mailing list to receive the latest news and
               events.
             </h3>
@@ -116,7 +116,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-white/20 py-6">
           <p className="text-white text-center text-sm md:text-base text-lexend">
-            © The Cornerstone Pub, all rights reserved. | Designed by ARINON. |
+            © The Cornerstone Pub, all rights reserved |
             <a
               href="#"
               className="hover:text-brown transition-colors duration-300 ml-1 text-lexend"

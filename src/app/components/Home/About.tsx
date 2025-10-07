@@ -30,7 +30,7 @@ const AboutSec = () => {
         <span className="uppercase text-center font-aleo text-5xl text-brown">
           Welcome to The Cornerstone Pub
         </span>
-        <h2 className="heading-aleo text-2xl">
+        <h2 className="heading-aleo text-2xl pt-5 max-w-4xl text-center m-auto">
           Discover South Melbourne’s favourite destination for good times, great
           food, and unforgettable events. Whether you’re here for a laid-back
           afternoon in our outdoor space or a vibrant night out with music and
@@ -109,12 +109,12 @@ const AboutSec = () => {
       {/* section 3 */}
       <section className="px-10 py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
         <div className="max-w-1/2 max-md:max-w-full  ">
-          <Image src={rooftopClub} alt="" />
-          <Image
+          <Image src={rooftopClub} alt="" className="rounded-md" />
+          {/* <Image
             src={sign}
             className="absolute max-w-3xs top-32 max-md:hidden left-[45%]"
             alt=""
-          />
+          /> */}
         </div>
         <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
           <h2 className="font-aleo text-center text-7xl max-sm:text-5xl uppercase">
@@ -128,18 +128,18 @@ const AboutSec = () => {
             kitchen menu served from 4pm to midnight.
           </p>
           <div className="flex flex-col gap-5 justify-center items-center">
-            <button className="uppercase px-15 bg-brown font-lexend py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
+            <button className="uppercase px-10 transition-all duration-300 rounded-md bg-brown font-lexend py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
               Outdoor info
             </button>
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20websiteF"
-              className="uppercase  px-15 hover:bg-brown font-lexend py-1 border border-brown bg-white-cus text-brown hover:text-white w-full max-w-xs text-center"
+              className="uppercase  px-10 rounded-md transition-all duration-300 hover:bg-brown font-lexend py-1 border border-brown bg-white-cus text-brown hover:text-white w-full max-w-xs text-center"
             >
               Book a Table
             </a>
           </div>
         </div>
-        <span className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-5 left-0">
+        <span className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-10 left-9">
           OUTDOOR
         </span>
       </section>
@@ -161,7 +161,7 @@ const AboutSec = () => {
             comforting and memorable.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">
-            <button className="uppercase px-15 bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
+            <button className="uppercase transition-all duration-300 px-10 rounded-md bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
               SEE MENU
             </button>
           </div>
@@ -181,14 +181,14 @@ const AboutSec = () => {
                 <Image
                   src={foodImage}
                   alt="Food"
-                  className="w-full rounded-lg"
+                  className="w-full rounded-md"
                 />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
         <div className="">
-          <h2 className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] z-2 max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-5 right-0">
+          <h2 className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] z-2 max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-10 right-9">
             FOOD
           </h2>
         </div>
@@ -239,7 +239,7 @@ const AboutSec = () => {
               that bring people together.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <button className="uppercase px-32 max-sm:px-22 bg-brown py-5 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white w-full max-w-xs">
+              <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-2 font-semibold font-lexend transition-all duration-300 tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
                 View Spaces
               </button>
             </div>

@@ -11,7 +11,9 @@ const WhatsOn = () => {
         style={{ backgroundImage: `url(${bgTexture.src})` }}
         className="py-32 text-center"
       >
-        <h3 className="text-5xl max-sm:text-4xl text-center heading-aleo">WHAT&apos;S ON</h3>
+        <h3 className="text-5xl max-sm:text-4xl text-center heading-aleo">
+          WHAT&apos;S ON
+        </h3>
 
         <section className="">
           <div className="py-20">
@@ -85,7 +87,7 @@ const WhatsOn = () => {
           </div>
         </section>
         <div>
-          <button className="uppercase px-24 max-sm:px-12 bg-brown py-3 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white w-full max-w-xs">
+          <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
             See all Events
           </button>
         </div>
