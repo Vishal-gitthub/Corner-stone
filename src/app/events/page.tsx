@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}>
+    <main className="font-lexend" style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}>
       <section aria-label="Hero video banner">
         <div>
           <section className="">
@@ -62,7 +62,7 @@ export default function Page() {
           >
             <Link
               href="/whatson"
-              className="py-3 px-6 md:px-10 hover:text-white text-blue bg-transparent border-2 border-brown hover:bg-brown transition-all duration-300 btn-hover rounded-md font-medium"
+              className="py-3 px-6 md:px-10 hover:text-white font-aleo text-blue bg-transparent border-2 border-brown hover:bg-brown transition-all duration-300 btn-hover rounded-md font-medium"
               aria-label="See what's on"
             >
               What&apos;s On
@@ -73,14 +73,14 @@ export default function Page() {
 
       <FunctionEnquiryForm />
 
-      <section
+      {/* <section
         className="bg-blue py-16 md:py-24 lg:py-32"
         aria-labelledby="spaces-heading"
       >
         <div className="container-responsive">
           <h2
             id="spaces-heading"
-            className="text-center text-3xl md:text-5xl lg:text-6xl text-white font-bold mb-12 md:mb-16"
+            className="text-center text-3xl md:text-5xl lg:text-6xl text-white font-bold mb-12 md:mb-16 heading-aleo"
           >
             Event Spaces
           </h2>
@@ -97,7 +97,7 @@ export default function Page() {
                 />
               </figure>
               <div className="order-1 lg:order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold heading-aleo">
                   VIP Room
                 </h3>
                 <p className="text-xl md:text-2xl text-white font-medium">
@@ -138,7 +138,7 @@ export default function Page() {
                 />
               </figure>
               <div className="order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold heading-aleo">
                   Premium Experience
                 </h3>
                 <p className="text-xl md:text-2xl text-white font-medium">
@@ -175,7 +175,7 @@ export default function Page() {
                 />
               </figure>
               <div className="order-1 lg:order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold">
+                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold heading-aleo">
                   Perfect for
                 </h3>
                 <p className="text-xl md:text-2xl text-white font-medium">
@@ -205,12 +205,12 @@ export default function Page() {
             </article>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="relative" aria-label="Social supper image">
         <div className="w-full h-[50vh] md:h-[70vh] lg:h-screen">
           <Image
-            src="/home/social_supper.webp"
+            src="/events/12760.jpg"
             className="object-cover"
             fill
             sizes="100vw"
@@ -227,7 +227,7 @@ export default function Page() {
         <div className="container-responsive max-w-4xl text-center flex flex-col gap-6 md:gap-8">
           <h2
             id="decor-heading"
-            className="text-3xl md:text-5xl lg:text-6xl uppercase font-bold"
+            className="text-3xl md:text-5xl lg:text-6xl uppercase font-bold heading-aleo"
           >
             PHOTOGRAPHY & <br className="hidden md:block" /> EVENT DÉCOR HIRE
           </h2>
@@ -252,7 +252,7 @@ export default function Page() {
           <div className="flex w-full gap-4 md:gap-5 justify-center items-center mt-6">
             <Link
               href="/contact?type=decor"
-              className="py-3 px-6 md:px-10 text-white hover:text-blue bg-brown hover:bg-transparent border-2 border-brown transition-all duration-300 btn-hover rounded-md font-medium"
+              className="py-3 px-6 md:px-10 text-white hover:text-blue font-aleo bg-brown hover:bg-transparent border-2 border-brown transition-all duration-300 btn-hover rounded-md font-medium"
               aria-label="Enquire about décor and photography packages"
             >
               Learn More
@@ -270,16 +270,16 @@ export default function Page() {
             <div className="text-center lg:text-left space-y-6">
               <h2
                 id="food-heading"
-                className="text-4xl md:text-5xl lg:text-7xl uppercase font-bold"
+                className="text-4xl md:text-5xl lg:text-7xl uppercase font-bold heading-aleo"
               >
                 Our Food
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
-                Head Chef: Elia Donati
+                Head Chef: STUART RUSS
               </p>
               <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
               <p className="text-base md:text-lg leading-relaxed">
-                With a vibrant new menu crafted by Elia Donati, The Cornerstone
+                With a vibrant new menu crafted by Stuart Russ, The Cornerstone
                 offers a modern twist on pub dining, where bold flavors meet
                 relaxed sophistication. Made with high-quality ingredients and
                 expert care, each dish is designed to be both satisfying and
@@ -288,7 +288,7 @@ export default function Page() {
               <div className="flex justify-center lg:justify-start mt-8">
                 <Link
                   href="/menu"
-                  className="uppercase px-8 md:px-12 py-3 md:py-4 bg-brown border-2 border-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover rounded-md font-medium"
+                  className="uppercase px-8 md:px-12 py-3 md:py-4 bg-brown border-2 border-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover font-aleo rounded-md font-medium"
                   aria-label="View our menu"
                 >
                   See Menu

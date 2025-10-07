@@ -24,7 +24,7 @@ const Nightlife = () => {
               weekend.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
+              <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 font-aleo transition-all duration-300 font-semibold tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
                 See Club info
               </button>
             </div>

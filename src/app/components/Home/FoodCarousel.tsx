@@ -8,11 +8,11 @@ import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-import food_1 from "../../../../public/home/Food_1.webp";
-import food_2 from "../../../../public/home/Food_2.webp";
-import food_3 from "../../../../public/home/Food_3.webp";
-import food_4 from "../../../../public/home/Food_4.webp";
-import food_5 from "../../../../public/home/Food_5.webp";
+import food_1 from "../../../../public/home/Food_1.jpg";
+import food_2 from "../../../../public/home/Food_2.jpg";
+import food_3 from "../../../../public/home/Food_3.jpg";
+import food_4 from "../../../../public/home/Food_4.jpg";
+import food_5 from "../../../../public/home/Food_5.jpg";
 
 export default function FoodCarousel() {
   return (

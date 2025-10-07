@@ -9,13 +9,13 @@ import sign from "../../../../public/home/Panoramic+Views.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
-import food_1 from "../../../../public/home/Food_1.webp";
-import food_2 from "../../../../public/home/Food_2.webp";
-import food_3 from "../../../../public/home/Food_3.webp";
-import food_4 from "../../../../public/home/Food_4.webp";
-import food_5 from "../../../../public/home/Food_5.webp";
+import food_1 from "../../../../public/home/Food_1.jpg";
+import food_2 from "../../../../public/home/Food_2.jpg";
+import food_3 from "../../../../public/home/Food_3.jpg";
+import food_4 from "../../../../public/home/Food_4.jpg";
+import food_5 from "../../../../public/home/Food_5.jpg";
 import foodChepsign from "../../../../public/home/Food-chefSign.png";
-import RooftopImage from "../../../../public/home/Albion+Rooftop,+function+venue+spaces+(19).jpg";
+import RooftopImage from "../../../../public/home/chefImage.jpg";
 import EventsSign from "../../../../public/home/EVENTS.png";
 import rooftopVenu from "../../../../public/home/rooftopVenu.jpg";
 import "swiper/css/effect-fade";
@@ -45,9 +45,11 @@ const AboutSec = () => {
             <div className="flex flex-col items-center">
               <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
-                  src={rooftop}
+                  src="/logo.png"
                   className="w-full rounded-[50%] aspect-square"
                   alt=""
+                  width={256}
+                  height={142}
                 />
               </div>
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
@@ -66,9 +68,11 @@ const AboutSec = () => {
             <div className="flex flex-col items-center">
               <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
-                  src={Events}
+                  src="/logo_gold.png"
                   className="w-full rounded-[50%] aspect-square"
                   alt=""
+                  width={256}
+                  height={142}
                 />
               </div>
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
@@ -76,7 +80,7 @@ const AboutSec = () => {
               </h3>
               <a
                 href=""
-                className="uppercase font-lexend underline text-brown text-lg font-semibold tracking-wider"
+                className="uppercase font-aleo underline text-brown text-lg font-semibold tracking-wider"
               >
                 See Spaces
               </a>
@@ -87,9 +91,11 @@ const AboutSec = () => {
             <div className="flex flex-col items-center">
               <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
-                  src={Nightlife}
+                  src="/logo_lg.png"
                   className="w-full rounded-[50%] aspect-square"
                   alt=""
+                  width={256}
+                  height={142}
                 />
               </div>
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
@@ -97,7 +103,7 @@ const AboutSec = () => {
               </h3>
               <a
                 href=""
-                className="uppercase font-lexend underline text-brown text-lg font-semibold tracking-wider"
+                className="uppercase font-aleo underline text-brown text-lg font-semibold tracking-wider"
               >
                 See club info
               </a>
@@ -128,12 +134,12 @@ const AboutSec = () => {
             kitchen menu served from 4pm to midnight.
           </p>
           <div className="flex flex-col gap-5 justify-center items-center">
-            <button className="uppercase px-10 transition-all duration-300 rounded-md bg-brown font-lexend py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
+            <button className="uppercase px-10 transition-all duration-300 rounded-md bg-brown font-aleo py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
               Outdoor info
             </button>
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20websiteF"
-              className="uppercase  px-10 rounded-md transition-all duration-300 hover:bg-brown font-lexend py-1 border border-brown bg-white-cus text-brown hover:text-white w-full max-w-xs text-center"
+              className="uppercase  px-10 rounded-md transition-all duration-300 hover:bg-brown font-aleo py-1 border border-brown bg-white-cus text-brown hover:text-white w-full max-w-xs text-center"
             >
               Book a Table
             </a>
@@ -151,17 +157,17 @@ const AboutSec = () => {
             Our Food
           </h2>
           <h3 className="text-center font-aleo text-2xl pt-2 max-sm:text-xl uppercase">
-            HEAD CHEF: ELIA DONATI
+            HEAD CHEF: STUART RUSS
           </h3>
           <p className="p-10 max-sm:p-4 text-center font-lexend">
-            With a vibrant new menu led by Elia Donati, The Cornerstone brings a
+            With a vibrant new menu led by Stuart Russ, The Cornerstone brings a
             fresh twist to modern pub dining - where bold flavours meet relaxed
             sophistication. Every dish is thoughtfully prepared with quality
             ingredients and a passion for simplicity, making each bite both
             comforting and memorable.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">
-            <button className="uppercase transition-all duration-300 px-10 rounded-md bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
+            <button className="uppercase transition-all duration-300 px-10 rounded-md bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs font-aleo">
               SEE MENU
             </button>
           </div>
@@ -196,7 +202,7 @@ const AboutSec = () => {
 
       {/* section 5 */}
       <section>
-        <div className="h-[80vh]">
+        <div className="h-screen">
           <Image
             src={RooftopImage}
             className="w-full h-full object-cover"
@@ -239,7 +245,7 @@ const AboutSec = () => {
               that bring people together.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-2 font-semibold font-lexend transition-all duration-300 tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
+              <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-2 font-semibold transition-all duration-300 tracking-widest border-2 border-brown hover:bg-transparent font-aleo hover:text-brown text-white ">
                 View Spaces
               </button>
             </div>

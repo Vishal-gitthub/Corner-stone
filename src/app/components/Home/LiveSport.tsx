@@ -5,7 +5,7 @@ const LiveSport = () => {
     <div>
       <div className="min-h-[80vh] md:h-screen relative w-full">
         <Image
-          src="/home/Crowd-picture.webp"
+          src="/home/Crowd-picture.jpg"
           className="w-full object-cover h-full"
           alt=""
           fill
@@ -22,14 +22,14 @@ const LiveSport = () => {
               memorable in our vibrant outdoor space.
             </p>
             <p className="mb-6 text-lexend text-base md:text-xl text-blue">
-              space is designed for laughter, conversation, and unforgettable
+              Space is designed for laughter, conversation, and unforgettable
               memories - the perfect place to celebrate life’s little moments or
               special occasions.
             </p>
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
               target="_blank"
-              className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
+              className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
             >
               Book a table
             </a>

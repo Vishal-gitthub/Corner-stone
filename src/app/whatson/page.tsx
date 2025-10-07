@@ -9,25 +9,37 @@ import { Scrollbar, Autoplay } from "swiper/modules";
 export default function Page() {
   const offerings = [
     {
-      path: "/home/Food_1.webp",
+      path: "/home/rooftopVenu.jpg",
+      heading: "Midweek Mingle",
+      subHead: "Wednesdays | Midday – 11 PM",
+      desc: "Unwind midweek with refreshing cocktails, comfort food, and live beats — the perfect way to recharge before the weekend!",
+    },
+    {
+      path: "/home/social_supper.webp",
+      heading: "Social Supper",
+      subHead: "Thursdays | Midday – Midnight",
+      desc: "Gather your friends for an unforgettable dining experience every Thursday evening, featuring chef specials and great vibes till late.",
+    },
+    {
+      path: "/home/happy_hour.jpg",
+      heading: "Happy Hour Fridays",
+      subHead: "Fridays | 3–6 PM",
+      desc: "Kick off your weekend early with $10 basics, $8 tap beers, and house wines. Stay on as the night rolls into great music and energy till midnight.",
+    },
+    {
+      path: "/whatson/saturdaysinsky.jpg",
       heading: "Saturdays in the Sky",
-      subHead: "Saturdays 3-8pm",
-      desc: "Redeem this exclusive offer with your Saturday Reservation by booking a $500 bar tab, and receive a $100 top up!",
+      subHead: "Saturdays | 3–8 PM",
+      desc: "Book a $500 bar tab and get a $100 top-up! Celebrate your Saturday with skyline views, curated drinks, and the best crowd in town.",
     },
     {
-      path: "/home/Food_2.webp",
-      heading: "Happy Hour Specials",
-      subHead: "Weekdays 4-6pm",
-      desc: "Join us for our signature happy hour with premium cocktails, craft beers, and delicious bar snacks at unbeatable prices.",
-    },
-    {
-      path: "/home/Food_3.webp",
-      heading: "Live Music Nights",
-      subHead: "Every Thursday",
-      desc: "Experience the best local talent with our weekly live music sessions featuring acoustic sets and intimate performances.",
+      path: "/whatson/SundayChillSessions.jpg",
+      heading: "Sunday Chill Sessions",
+      subHead: "Sundays | Midday – 11 PM",
+      desc: "Relax and recover with smooth tunes, tasty bites, and sunset sips — your perfect weekend wind-down.",
     },
   ];
-  
+
   return (
     <main
       style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
@@ -44,7 +56,7 @@ export default function Page() {
             </p>
             <div className="w-24 h-1 bg-brown mx-auto my-6"></div>
           </div>
-          
+
           <Swiper
             scrollbar={{
               hide: true,
@@ -82,9 +94,15 @@ export default function Page() {
                     />
                   </div>
                   <div className="p-6 space-y-4">
-                    <h2 className="text-2xl md:text-3xl font-bold text-blue heading-aleo">{data.heading}</h2>
-                    <h3 className="text-lg md:text-xl text-brown font-medium heading-aleo">{data.subHead}</h3>
-                    <p className="text-sm md:text-base text-blue leading-relaxed text-lexend">{data.desc}</p>
+                    <h2 className="text-2xl md:text-3xl font-bold text-blue heading-aleo">
+                      {data.heading}
+                    </h2>
+                    <h3 className="text-lg md:text-xl text-brown font-medium heading-aleo">
+                      {data.subHead}
+                    </h3>
+                    <p className="text-sm md:text-base text-blue leading-relaxed text-lexend">
+                      {data.desc}
+                    </p>
                     <a
                       href="#"
                       className="inline-block py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium font-lexend"

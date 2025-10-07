@@ -28,7 +28,7 @@ export default function Footer() {
               Subscribe to our mailing list to receive the latest news and
               events.
             </h3>
-            <button className="py-3 px-8 md:px-12 text-white bg-brown rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover mt-4 font-lexend">
+            <button className="py-3 px-8 md:px-12 text-white bg-brown rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover mt-4 font-aleo">
               Subscribe
             </button>
           </div>

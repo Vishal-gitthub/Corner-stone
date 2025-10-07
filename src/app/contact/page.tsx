@@ -170,7 +170,7 @@ export default function Page() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="bg-brown text-white uppercase py-3 px-8 rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover font-medium font-lexend"
+                  className="bg-brown text-white uppercase py-3 px-8 rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover font-medium font-aleo"
                 >
                   Submit Enquiry
                 </button>

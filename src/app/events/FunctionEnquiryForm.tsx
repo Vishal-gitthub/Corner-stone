@@ -315,7 +315,7 @@ export default function FunctionEnquiryForm() {
           <div className="text-center pt-6 md:pt-8">
             <button
               type="submit"
-              className="bg-brown text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-medium uppercase hover:bg-opacity-90 transition-all duration-300 btn-hover focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue rounded-md font-lexend"
+              className="bg-brown font-aleo text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-medium uppercase hover:bg-opacity-90 transition-all duration-300 btn-hover focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue rounded-md"
             >
               SUBMIT
             </button>

@@ -42,7 +42,7 @@ const Navbar = () => {
               <Link
                 key={i}
                 href={item.link}
-                className="text-blue font-medium hover:text-brown transition-colors duration-300 relative group font-lexend"
+                className="text-blue font-medium hover:text-brown transition-colors duration-300 relative group font-aleo"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brown transition-all duration-300 group-hover:w-full"></span>
@@ -50,7 +50,7 @@ const Navbar = () => {
             ))}
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
-              className="py-2 px-6 xl:px-9 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover font-lexend"
+              className="py-2 px-6 xl:px-9 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover font-aleo"
               target="_blank"
             >
               Book a Table
@@ -123,12 +123,13 @@ const Navbar = () => {
                 </Link>
               ))}
 
-              <button
-                className="mt-2 py-3 px-10 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover text-lg w-full max-w-xs font-lexend"
+              <a
+                href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
+                className="mt-2 py-3 px-10 bg-brown text-white rounded-md hover:bg-opacity-90 transition-all duration-300 btn-hover text-lg w-full max-w-xs font-aleo"
                 onClick={() => setToggleMenu(false)}
               >
-                Reservation
-              </button>
+                Book a Table
+              </a>
             </div>
           </div>
         </div>

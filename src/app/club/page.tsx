@@ -81,7 +81,7 @@ export default function Page() {
                       </p>
                     </div>
                     <div className="flex justify-center lg:justify-start mt-8">
-                      <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
+                      <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
                         See Event Info
                       </button>
                     </div>
@@ -145,7 +145,7 @@ export default function Page() {
                     <div className="flex justify-center lg:justify-start mt-8">
                       <a
                         href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
-                        className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-lexend tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
+                        className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
                       >
                         Book a Table
                       </a>
