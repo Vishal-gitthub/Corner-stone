@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import bgTexture from "../../../../public/home/BgTexture.jpg";
-import rooftop from "../../../../public/home/outdoor.jpg";
+import cs_outdoor from "../../../../public/home/cs_outside.jpg";
 import Events from "../../../../public/home/Events.webp";
 import Nightlife from "../../../../public/home/nightlife.webp";
 import rooftopClub from "../../../../public/home/rooftopClub.jpg";
@@ -15,7 +15,7 @@ import food_3 from "../../../../public/home/Food_3.jpg";
 import food_4 from "../../../../public/home/Food_4.jpg";
 import food_5 from "../../../../public/home/Food_5.jpg";
 import foodChepsign from "../../../../public/home/Food-chefSign.png";
-import RooftopImage from "../../../../public/home/chefImage.jpg";
+import FoodImage from "../../../../public/home/chefImage.jpg";
 import EventsSign from "../../../../public/home/EVENTS.png";
 import rooftopVenu from "../../../../public/home/rooftopVenu.jpg";
 import "swiper/css/effect-fade";
@@ -43,13 +43,13 @@ const AboutSec = () => {
         <div className="flex justify-around max-md:flex-col max-md:justify-center items-center">
           <div className=" flex flex-col py-20 max-sm:py-5 items-center ">
             <div className="flex flex-col items-center">
-              <div className="w-96 max-md:w-72 max-sm:w-52">
+              <div className="w-96  max-md:w-72 max-sm:w-52">
                 <Image
-                  src="/logo.png"
+                  src={cs_outdoor}
                   className="w-full rounded-[50%] aspect-square"
                   alt=""
-                  width={256}
-                  height={142}
+                  width={500}
+                  height={500}
                 />
               </div>
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
@@ -66,13 +66,13 @@ const AboutSec = () => {
           <div className="w-[1px] max-md:hidden bg-brown"></div>
           <div className=" flex flex-col py-20 max-sm:py-5 items-center ">
             <div className="flex flex-col items-center">
-              <div className="w-96 max-md:w-72 max-sm:w-52">
+              <div className="w-96  max-md:w-72 max-sm:w-52">
                 <Image
-                  src="/logo_gold.png"
+                  src="/home/eventsImage.jpg"
                   className="w-full rounded-[50%] aspect-square"
                   alt=""
-                  width={256}
-                  height={142}
+                  width={500}
+                  height={500}
                 />
               </div>
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
@@ -89,13 +89,13 @@ const AboutSec = () => {
           <div className="w-[1px] max-md:hidden bg-brown"></div>
           <div className=" flex flex-col py-20 max-sm:py-5 items-center">
             <div className="flex flex-col items-center">
-              <div className="w-96 max-md:w-72 max-sm:w-52">
+              <div className="w-96  max-md:w-72 max-sm:w-52">
                 <Image
-                  src="/logo_lg.png"
+                  src="/home/nightlife.jpg"
                   className="w-full rounded-[50%] aspect-square"
                   alt=""
-                  width={256}
-                  height={142}
+                  width={500}
+                  height={500}
                 />
               </div>
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
@@ -204,7 +204,7 @@ const AboutSec = () => {
       <section>
         <div className="h-screen">
           <Image
-            src={RooftopImage}
+            src={FoodImage}
             className="w-full h-full object-cover"
             alt=""
           />
