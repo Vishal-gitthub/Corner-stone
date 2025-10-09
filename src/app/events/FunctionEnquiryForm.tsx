@@ -30,10 +30,43 @@ export default function FunctionEnquiryForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+
+    try {
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("Your enquiry has been sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          country: "Australia",
+          phoneNumber: "+61",
+          email: "",
+          preferredDate: "",
+          dateFlexible: "",
+          numberOfGuests: "",
+          eventStartTime: "",
+          interest: "",
+          hiringInfo: "",
+          celebrationDescription: "",
+        });
+      } else {
+        alert("Failed to send enquiry: " + result.message);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   return (
@@ -190,7 +223,7 @@ export default function FunctionEnquiryForm() {
               className="form-input appearance-none cursor-pointer"
             >
               <option value="">Select an option</option>
-              <option value="yes">Yes, I&apos;m flexible</option>
+              <option value="yes">Yes, I'm flexible</option>
               <option value="no">No, specific date only</option>
               <option value="somewhat">Somewhat flexible</option>
             </select>
@@ -247,7 +280,7 @@ export default function FunctionEnquiryForm() {
               htmlFor="interest"
               className="block text-white text-sm md:text-base font-medium mb-3 text-lexend"
             >
-              I&apos;m interested in (required)
+              I'm interested in (required)
             </label>
             <select
               id="interest"
