@@ -15,16 +15,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Cornerstone Pub | South Melbourne’s Favourite Destination",
+  title: "The Cornerstone Pub | South Melbourne's Favourite Destination",
   description:
-    "Discover South Melbourne’s go-to spot for great food, premium drinks, and unforgettable events. The Cornerstone offers vibrant outdoor spaces, crafted menus, and a welcoming atmosphere for every occasion.",
+    "Discover South Melbourne's go-to spot for great food, premium drinks, and unforgettable events. The Cornerstone offers vibrant outdoor spaces, crafted menus, and a welcoming atmosphere for every occasion.",
   keywords:
     "South Melbourne pub, outdoor bar, events, dining, cocktails, venue hire, nightlife",
   authors: [{ name: "The Cornerstone Pub" }],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
-    title: "The Cornerstone Pub | South Melbourne’s Favourite Destination",
+    title: "The Cornerstone Pub | South Melbourne's Favourite Destination",
     description:
       "Enjoy vibrant outdoor dining, premium drinks, and memorable events at The Cornerstone Pub in South Melbourne.",
     type: "website",

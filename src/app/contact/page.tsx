@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Page() {
   return (
@@ -54,18 +54,20 @@ export default function Page() {
                 </div>
                 <div className="flex items-center gap-4 pt-4">
                   <a
-                    href="#"
+                    href="https://www.instagram.com/cornerstone.melb?igsh=NnZpcW4yaHAwZmp4&utm_source=qr"
                     className="text-brown hover:text-white transition-colors duration-300"
                     aria-label="Follow us on Instagram"
+                    target="_blank"
                   >
                     <FaInstagram className="text-2xl md:text-3xl" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/share/1LUEPjPXML/?mibextid=wwXIfr"
                     className="text-brown hover:text-white transition-colors duration-300"
-                    aria-label="Follow us on TikTok"
+                    aria-label="Follow us on Facebook"
+                    target="_blank"
                   >
-                    <FaTiktok className="text-2xl md:text-3xl" />
+                    <FaFacebook className="text-2xl md:text-3xl" />
                   </a>
                 </div>
               </div>
