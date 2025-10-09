@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,15 +11,17 @@ export default function Footer() {
     >
       <div className="container-responsive">
         {/* Logo Section */}
-        <div className="flex items-center py-8 justify-center">
-          <Image
-            src="/logo_gold.png"
-            width={200}
-            height={200}
-            alt="The Albion Rooftop Logo"
-            className="w-48 md:w-64 h-auto"
-          />
-        </div>
+        <Link href="/">
+          <div className="flex items-center py-8 justify-center">
+            <Image
+              src="/logo_gold.png"
+              width={200}
+              height={200}
+              alt="The Albion Rooftop Logo"
+              className="w-48 md:w-64 h-auto"
+            />
+          </div>
+        </Link>
 
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 py-8">

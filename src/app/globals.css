@@ -44,10 +44,10 @@ body {
 }
 
 /* Focus styles for accessibility */
-*:focus {
+/* *:focus {
   outline: 2px solid var(--color-brown);
   outline-offset: 2px;
-}
+} */
 
 /* Button hover effects */
 .btn-hover {

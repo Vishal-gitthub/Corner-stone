@@ -25,8 +25,8 @@ export async function POST(req: Request) {
     port: 465, // Use 465 for secure (SSL)
     secure: true,
     auth: {
-      user: "admin@cornerstonepub.com.au", // Your Hostinger email
-      pass: "Corner@0702", // Your email password or app password
+      user: process.env.EMAIL_USER, // Your Hostinger email
+      pass: process.env.EMAIL_PASS, // Your email password or app password
     },
   });
 

@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Navbar = () => {
   const navigation = [
-    { link: "/", name: "Home" },
     { link: "/club", name: "Club" },
+    { link: "/menus", name: "Menu" },
     { link: "/events", name: "Events" },
     { link: "/whatson", name: "Whats-on" },
     { link: "/contact", name: "Contact" },
@@ -25,16 +25,18 @@ const Navbar = () => {
       <nav className="bg-[#cac6c3c0] backdrop-blur-sm fixed top-0 left-0 right-0 z-50 w-full">
         <div className="container-responsive flex items-center justify-between py-3 md:py-4">
           {/* logo */}
-          <div className="w-32 md:w-44 min-w-20">
-            <Image
-              src="/logo.png"
-              alt="The Albion Rooftop Logo"
-              width={176}
-              height={64}
-              priority
-              className="w-full h-auto"
-            />
-          </div>
+          <Link href="/">
+            <div className="w-32 md:w-44 min-w-20">
+              <Image
+                src="/logo.png"
+                alt="The Albion Rooftop Logo"
+                width={176}
+                height={64}
+                priority
+                className="w-full h-auto"
+              />
+            </div>
+          </Link>
 
           {/* desktop navigation */}
           <div className="hidden lg:flex gap-6 xl:gap-8 items-center">
