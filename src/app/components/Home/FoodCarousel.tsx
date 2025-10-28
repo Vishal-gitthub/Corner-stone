@@ -16,8 +16,8 @@ import food_5 from "../../../../public/home/Food_5.jpg";
 
 export default function FoodCarousel() {
   return (
-    <Swiper 
-      modules={[EffectFade, Autoplay]} 
+    <Swiper
+      modules={[EffectFade, Autoplay]}
       effect="fade"
       autoplay={{
         delay: 3500,
@@ -27,15 +27,15 @@ export default function FoodCarousel() {
     >
       {[food_1, food_2, food_3, food_4, food_5].map((foodImage) => (
         <SwiperSlide key={foodImage.src}>
-          <Image
-            src={foodImage}
-            alt="Dish from The Albion Rooftop menu"
-            className="w-full rounded-lg"
-          />
+          <div className="h-[80vh] w-full">
+            <Image
+              src={foodImage}
+              alt="Dish from The Albion Rooftop menu"
+              className="w-full rounded-lg h-full object-contain"
+            />
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>
   );
 }
-
-

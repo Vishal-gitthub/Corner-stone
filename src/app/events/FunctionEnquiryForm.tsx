@@ -73,6 +73,7 @@ export default function FunctionEnquiryForm() {
     <section
       className="bg-blue py-12 md:py-20 px-4 md:px-8"
       aria-labelledby="function-enquiry-heading"
+      id="enquire-section"
     >
       <div className="container-responsive max-w-4xl">
         <header className="text-center mb-8 md:mb-12">

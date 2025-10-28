@@ -1,19 +1,37 @@
+"use client";
+
 import Banner from "../components/Home/Banner";
 import Image from "next/image";
+
 import Link from "next/link";
 import type { Metadata } from "next";
 import FoodCarousel from "../components/Home/FoodCarousel";
 import FunctionEnquiryForm from "./FunctionEnquiryForm";
 
-export const metadata: Metadata = {
-  title: "Functions & Events | The Albion Rooftop",
-  description:
-    "Host unforgettable functions and events at The Albion Rooftop – VIP room, curated menus, premium beverages, décor and photography packages.",
-};
+// export const metadata: Metadata = {
+//   title: "Functions & Events | The Albion Rooftop",
+//   description:
+//     "Host unforgettable functions and events at The Albion Rooftop – VIP room, curated menus, premium beverages, décor and photography packages.",
+// };
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import { useState } from "react";
 
 export default function Page() {
+  const [popUp, setPopUp] = useState(false);
+  const toggle = () => {
+    setPopUp(!popUp);
+  };
   return (
-    <main className="font-lexend" style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}>
+    <main
+      className="font-lexend"
+      style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
+    >
       <section aria-label="Hero video banner">
         <div>
           <section className="">
@@ -36,24 +54,25 @@ export default function Page() {
             Functions & Events
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium heading-aleo">
-            From intimate gatherings to grand celebrations
+            Melbourne’s versatile function venue for every celebration
           </p>
           <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
           <p className="text-center text-base md:text-lg leading-relaxed text-lexend">
-            At The Cornerstone, we make every event unforgettable. Whether
-            it&apos;s a milestone celebration, a stylish corporate gathering, or
-            a casual get-together, our versatile spaces - including a vibrant
-            outdoor area - offer the perfect setting. With carefully crafted
-            menus, premium drinks, and attentive service, every detail is
-            designed to create a seamless and memorable experience for you and
-            your guests. Take your event to the next level with optional décor,
-            photography, and bespoke touches - from elegant balloon displays to
-            custom signage - tailored to make your celebration truly unique.
+            At <strong>The Cornerstone</strong>, every occasion becomes
+            unforgettable. From milestone birthdays and engagements to corporate
+            functions and private parties, our stylish spaces — including a
+            vibrant outdoor area — provide the perfect backdrop for any event.
           </p>
-          <p className="text-center text-base md:text-lg leading-relaxed mt-4 text-lexend">
-            Enhance your event with optional photography and bespoke décor hire
-            – including arch walls, balloon garlands, and custom signage to
-            elevate your celebration.
+          <p className="text-center text-base md:text-lg leading-relaxed text-lexend mt-4">
+            We cater for up to <strong>100 guests cocktail-style</strong> or
+            <strong> 60 seated</strong>, offering chef-crafted menus, premium
+            drinks, and seamless service to make your celebration effortless and
+            memorable.
+          </p>
+          <p className="text-center text-base md:text-lg leading-relaxed text-lexend mt-4">
+            Elevate your event with optional décor and photography packages —
+            including custom signage, balloon garlands, and floral styling —
+            brought together by our dedicated events team.
           </p>
           <div
             className="flex w-full gap-4 md:gap-5 justify-center items-center mt-6"
@@ -287,7 +306,7 @@ export default function Page() {
               </p>
               <div className="flex justify-center lg:justify-start mt-8">
                 <Link
-                  href="/menu"
+                  href="/menus"
                   className="uppercase px-8 md:px-12 py-3 md:py-4 bg-brown border-2 border-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover font-aleo rounded-md font-medium"
                   aria-label="View our menu"
                 >
@@ -301,6 +320,67 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <div className="fixed right-5 bottom-5">
+        <button className=" animate-bounce">
+          <a
+            href="/menu/events_menu/Cornerstone Event Menus.pdf"
+            download="Cornerstone_Events_Menu.pdf"
+            className="py-4 px-12 text-white font-semibold  bg-brown"
+          >
+            Explore the Menu
+          </a>
+        </button>
+      </div>
+      <div className={`${popUp ? "hidden" : "block"}`}>
+        <div className="fixed inset-0 bg-opacity-95 flex items-center justify-center z-50 overflow-auto">
+          <div className="max-w-5xl w-full bg-white p-4 flex relative justify-center rounded-lg">
+            <Swiper
+              spaceBetween={30}
+              navigation={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Navigation, Pagination]}
+            >
+              <SwiperSlide>
+                <img
+                  src="/menu/events_menu/Cornerstone Event Menus_page-0001.jpg"
+                  alt="Cornerstone Event Menu"
+                  className="w-full max-h-[80vh] object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/menu/events_menu/Cornerstone Event Menus_page-0002.jpg"
+                  alt="Cornerstone Event Menu"
+                  className="w-full max-h-[80vh] object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/menu/events_menu/Cornerstone Event Menus_page-0003.jpg"
+                  alt="Cornerstone Event Menu"
+                  className="w-full max-h-[80vh] object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/menu/events_menu/Cornerstone Event Menus_page-0004.jpg"
+                  alt="Cornerstone Event Menu"
+                  className="w-full max-h-[80vh] object-contain"
+                />
+              </SwiperSlide>
+            </Swiper>
+
+            <button
+              onClick={toggle}
+              className="absolute bg-brown m-4 text-white z-2 top-0 px-4 py-2 rounded-lg right-0"
+            >
+              CLOSE
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

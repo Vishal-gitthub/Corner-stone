@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   const navigation = [
-    { link: "/club", name: "Club" },
+    { link: "/venue", name: "Venue" },
     { link: "/menus", name: "Menu" },
     { link: "/events", name: "Events" },
     { link: "/whatson", name: "Whats-on" },

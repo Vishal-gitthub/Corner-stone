@@ -2,10 +2,10 @@
 import Image from "next/image";
 import bgTexture from "../../../../public/home/BgTexture.jpg";
 import cs_outdoor from "../../../../public/home/cs_outside.jpg";
-import Events from "../../../../public/home/Events.webp";
-import Nightlife from "../../../../public/home/nightlife.webp";
-import rooftopClub from "../../../../public/home/rooftopClub.jpg";
-import sign from "../../../../public/home/Panoramic+Views.png";
+// import Events from "../../../../public/home/Events.webp";
+// import Nightlife from "../../../../public/home/nightlife.webp";
+// import rooftopClub from "../../../../public/home/rooftopClub.jpg";
+// import sign from "../../../../public/home/Panoramic+Views.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -14,9 +14,9 @@ import food_2 from "../../../../public/home/Food_2.jpg";
 import food_3 from "../../../../public/home/Food_3.jpg";
 import food_4 from "../../../../public/home/Food_4.jpg";
 import food_5 from "../../../../public/home/Food_5.jpg";
-import foodChepsign from "../../../../public/home/Food-chefSign.png";
+// import foodChepsign from "../../../../public/home/Food-chefSign.png";
 import FoodImage from "../../../../public/home/chefImage.jpg";
-import EventsSign from "../../../../public/home/EVENTS.png";
+// import EventsSign from "../../../../public/home/EVENTS.png";
 import rooftopVenu from "../../../../public/home/rooftopVenu.jpg";
 import "swiper/css/effect-fade";
 const AboutSec = () => {
@@ -39,7 +39,7 @@ const AboutSec = () => {
       </div>
 
       {/* Section 2 */}
-      <section className="border-t border-b ">
+      <section className="border-t border-b " id="spaces">
         <div className="flex justify-around max-md:flex-col max-md:justify-center items-center">
           <div className=" flex flex-col py-20 max-sm:py-5 items-center ">
             <div className="flex flex-col items-center">
@@ -68,8 +68,8 @@ const AboutSec = () => {
             <div className="flex flex-col items-center">
               <div className="w-96  max-md:w-72 max-sm:w-52">
                 <Image
-                  src="/home/eventsImage.jpg"
-                  className="w-full rounded-[50%] aspect-square"
+                  src="/home/Food_5.jpg"
+                  className="w-full rounded-[50%] aspect-square object-cover object-left"
                   alt=""
                   width={500}
                   height={500}
@@ -115,7 +115,7 @@ const AboutSec = () => {
       {/* section 3 */}
       <section className="px-10 py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
         <div className="max-w-1/2 max-md:max-w-full  ">
-          <Image src={rooftopClub} alt="" className="rounded-md" />
+          <img src="/home/corner-outside.jpg" alt="" className="rounded-md" />
           {/* <Image
             src={sign}
             className="absolute max-w-3xs top-32 max-md:hidden left-[45%]"
@@ -134,9 +134,9 @@ const AboutSec = () => {
             kitchen menu served from 4pm to midnight.
           </p>
           <div className="flex flex-col gap-5 justify-center items-center">
-            <button className="uppercase px-10 transition-all duration-300 rounded-md bg-brown font-aleo py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
+            {/* <button className="uppercase px-10 transition-all duration-300 rounded-md bg-brown font-aleo py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
               Outdoor info
-            </button>
+            </button> */}
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20websiteF"
               className="uppercase  px-10 rounded-md transition-all duration-300 hover:bg-brown font-aleo py-1 border border-brown bg-white-cus text-brown hover:text-white w-full max-w-xs text-center"
@@ -245,9 +245,9 @@ const AboutSec = () => {
               that bring people together.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-2 font-semibold transition-all duration-300 tracking-widest border-2 border-brown hover:bg-transparent font-aleo hover:text-brown text-white ">
+              <a href="#spaces" className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-2 font-semibold transition-all duration-300 tracking-widest border-2 border-brown hover:bg-transparent font-aleo hover:text-brown text-white ">
                 View Spaces
-              </button>
+              </a>
             </div>
           </div>
         </section>

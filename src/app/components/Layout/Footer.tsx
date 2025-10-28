@@ -88,13 +88,13 @@ export default function Footer() {
               <div>
                 <p className="text-lg font-medium heading-aleo">WEDNESDAY</p>
                 <p className="text-sm md:text-base text-lexend">
-                  Midday – 11 PM
+                  Midday – 10 PM
                 </p>
               </div>
               <div>
                 <p className="text-lg font-medium heading-aleo">THURSDAY</p>
                 <p className="text-sm md:text-base text-lexend">
-                  Midday – Midnight
+                  Midday – 10
                 </p>
               </div>
               <div>
@@ -112,7 +112,7 @@ export default function Footer() {
               <div>
                 <p className="text-lg font-medium heading-aleo">SUNDAY</p>
                 <p className="text-sm md:text-base text-lexend">
-                  Midday – 11 PM
+                  Midday – 10 PM
                 </p>
               </div>
             </div>

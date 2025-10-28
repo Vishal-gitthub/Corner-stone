@@ -1,12 +1,15 @@
 "use client";
 export default function Banner() {
   return (
-    <div>
-      <section className="">
+    <div className="h-auto">
+      {/* <section className="">
         <video autoPlay muted loop className="h-screen w-full object-cover">
           <source src="/home/showReel.mp4" />
         </video>
-      </section>
+      </section> */}
+      <div className="w-full h-screen">
+        <img src="/home/corner-outside.jpg" className="object-cover w-full object-top h-full" alt="" />
+      </div>
     </div>
   );
 }

@@ -1,14 +1,19 @@
-import bgTexture from "../../../../public/home/white-bg-texture.jpg";
+"use client";
+// import bgTexture from "../../../../public/home/white-bg-texture.jpg";
 import Social_supper from "../../../../public/home/social_supper.webp";
-import Saturday from "../../../../public/home/saturday.webp";
+import Saturday from "../../../../public/home/Food_5.jpg";
 import rooftop from "../../../../public/home/happy_hour.jpg";
 import Image from "next/image";
-
+import { useState } from "react";
 const WhatsOn = () => {
+  const [popUp, setPopUp] = useState(false);
+  const toggle = () => {
+    setPopUp(!popUp);
+  };
   return (
     <div>
       <div
-        style={{ backgroundImage: `url(${bgTexture.src})` }}
+        // style={{ backgroundImage: `url(${bgTexture.src})` }}
         className="py-32 text-center"
       >
         <h3 className="text-5xl max-sm:text-4xl text-center heading-aleo">
@@ -51,14 +56,14 @@ const WhatsOn = () => {
                   />
                 </div>
                 <h3 className="py-3 heading-aleo text-3xl max-sm:text-2xl uppercase">
-                  Social Supper
+                  Trivia nights
                 </h3>
                 <h5 className="text-2xl max-sm:text-xl heading-aleo uppercase">
-                  Thursdays | Midday – Midnight
+                  Wednesday | 6:30 PM – 10 PM
                 </h5>
                 <p className="text-lg max-sm:text-base w-3/4 max-md:w-full text-lexend text-blue">
                   Gather your friends for an unforgettable dining experience
-                  every Thursday evening, featuring chef specials and great
+                  every Wednesday evening, featuring chef specials and great
                   vibes till late.
                 </p>
               </div>
@@ -74,16 +79,42 @@ const WhatsOn = () => {
                   />
                 </div>
                 <h3 className="py-3 heading-aleo text-3xl max-sm:text-2xl uppercase">
-                  Happy Hour Fridays
+                  Happy Hours
                 </h3>
                 <h5 className="text-2xl max-sm:text-xl heading-aleo uppercase">
-                  Fridays | 3–6 PM
+                  Weekdays | 5-7 PM
                 </h5>
                 <p className="text-lg max-sm:text-base w-3/4 max-md:w-full text-lexend text-blue">
-                  Kick off your weekend early with $10 basics, $8 tap beers, and
-                  house wines. Stay on as the night rolls into great music and
-                  energy till midnight.
+                  Make Weekdays Feel Like the Weekend! Unwind from 5–7pm with $5
+                  pots, $10 pints, $8 wines, and $8 spirits at Cornerstone Port
+                  Melbourne. Raise a glass to good company, great drinks, and
+                  the perfect midweek break.
                 </p>
+                <button
+                  onClick={toggle}
+                  className="uppercase px-5 max-sm:px-6 rounded-md bg-brown py-1 transition-all duration-300 font-semibold font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
+                >
+                  Happy Hour Menu
+                </button>
+
+                <div className={`${popUp ? "hidden" : "block"}`}>
+                  <div className="fixed inset-0 bg-opacity-95 flex items-center justify-center z-50 overflow-auto">
+                    <div className="max-w-5xl w-full bg-white p-4 flex relative justify-center rounded-lg">
+                      <img
+                        src="/menu/happy_hour_Menu/Happy hour counter display_page-0001.jpg"
+                        alt="Cornerstone Event Menu"
+                        className="w-full max-h-[80vh] object-contain"
+                      />
+
+                      <button
+                        onClick={toggle}
+                        className="absolute bg-brown m-4 text-white z-2 top-0 px-4 py-2 rounded-lg right-0"
+                      >
+                        CLOSE
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
