@@ -5,6 +5,7 @@ import Saturday from "../../../../public/home/Food_5.jpg";
 import rooftop from "../../../../public/home/happy_hour.jpg";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 const WhatsOn = () => {
   const [popUp, setPopUp] = useState(false);
   const toggle = () => {
@@ -29,7 +30,7 @@ const WhatsOn = () => {
                   <Image
                     src={Social_supper}
                     className="rounded-[50%] object-cover"
-                    alt=""
+                    alt="Midweek Mingle at Cornerstone Pub - Wednesdays from midday to 11 PM with cocktails, comfort food, and live music"
                     fill
                   />
                 </div>
@@ -51,7 +52,7 @@ const WhatsOn = () => {
                   <Image
                     src={Saturday}
                     className="rounded-[50%] object-cover"
-                    alt=""
+                    alt="Trivia nights at Cornerstone Pub - Wednesday evenings from 6:30 PM to 10 PM with chef specials and great dining experience"
                     fill
                   />
                 </div>
@@ -74,7 +75,7 @@ const WhatsOn = () => {
                   <Image
                     src={rooftop}
                     className="rounded-[50%] object-cover"
-                    alt=""
+                    alt="Happy Hours at Cornerstone Pub Port Melbourne - Weekdays 5-7 PM with discounted drinks including $5 pots, $10 pints, $8 wines and spirits"
                     fill
                   />
                 </div>
@@ -102,7 +103,7 @@ const WhatsOn = () => {
                     <div className="max-w-5xl w-full bg-white p-4 flex relative justify-center rounded-lg">
                       <img
                         src="/menu/happy_hour_Menu/Happy hour counter display_page-0001.jpg"
-                        alt="Cornerstone Event Menu"
+                        alt="Cornerstone Pub Happy Hour menu - weekday specials from 5-7 PM featuring discounted drinks, $5 pots, $10 pints, $8 wines and spirits"
                         className="w-full max-h-[80vh] object-contain"
                       />
 
@@ -120,9 +121,9 @@ const WhatsOn = () => {
           </div>
         </section>
         <div>
-          <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
+          <Link href='/events' className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
             See all Events
-          </button>
+          </Link>
         </div>
       </div>
     </div>

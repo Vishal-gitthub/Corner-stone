@@ -15,7 +15,7 @@ export default function Page() {
       desc: "Unwind midweek with refreshing cocktails, comfort food, and live beats — the perfect way to recharge before the weekend!",
     },
     {
-      path: "/home/social_supper.webp",
+      path: "/home/social_supper.jpg",
       heading: "Trivia nights",
       subHead: "Wednesday | 6:30 PM – 10 PM",
       desc: "Gather your friends for an unforgettable dining experience every Wednesday evening, featuring chef specials and great vibes till late.",

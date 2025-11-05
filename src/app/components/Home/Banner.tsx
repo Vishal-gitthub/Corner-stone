@@ -8,7 +8,7 @@ export default function Banner() {
         </video>
       </section> */}
       <div className="w-full h-screen">
-        <img src="/home/corner-outside.jpg" className="object-cover w-full object-top h-full" alt="" />
+        <img src="/home/corner-outside.jpg" className="object-cover w-full object-top h-full" alt="The Cornerstone Pub outdoor terrace and dining area in Port Melbourne, showcasing modern pub atmosphere and welcoming space" />
       </div>
     </div>
   );

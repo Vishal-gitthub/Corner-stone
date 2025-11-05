@@ -25,12 +25,12 @@ export default function FoodCarousel() {
       }}
       loop={true}
     >
-      {[food_1, food_2, food_3, food_4, food_5].map((foodImage) => (
+      {[food_1, food_2, food_3, food_4, food_5].map((foodImage, index) => (
         <SwiperSlide key={foodImage.src}>
           <div className="h-[80vh] w-full">
             <Image
               src={foodImage}
-              alt="Dish from The Albion Rooftop menu"
+              alt={`Cornerstone Pub signature dish by Head Chef Stuart Russ - modern Australian pub cuisine with bold flavors and seasonal ingredients in Port Melbourne`}
               className="w-full rounded-lg h-full object-contain"
             />
           </div>

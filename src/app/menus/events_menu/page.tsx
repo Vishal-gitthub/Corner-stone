@@ -7,15 +7,15 @@ export default function page() {
       <div className="w-[70vw] max-md:w-[80vw] max-sm:w-[95vw] m-auto">
         <img
           src="/menu/events_menu/Cornerstone Event Menus_page-0002.jpg"
-          alt=""
+          alt="Cornerstone Pub events menu page 2 - catering packages and function dining options for celebrations and corporate events in Port Melbourne"
         />
         <img
           src="/menu/events_menu/Cornerstone Event Menus_page-0003.jpg"
-          alt=""
+          alt="Cornerstone Pub events menu page 3 - canapé selections, grazing tables, and event catering menus for functions"
         />
         <img
           src="/menu/events_menu/Cornerstone Event Menus_page-0004.jpg"
-          alt=""
+          alt="Cornerstone Pub events menu page 4 - complete event catering menu with beverage packages and dining options for functions"
         />
       </div>
       <div className="fixed right-5 bottom-5">

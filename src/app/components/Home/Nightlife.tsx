@@ -1,3 +1,4 @@
+import Link from "next/link";
 import bgTexture from "../../../../public/home/BgTexture.jpg";
 import Image from "next/image";
 
@@ -24,9 +25,9 @@ const Nightlife = () => {
               weekend.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <button className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 font-aleo transition-all duration-300 font-semibold tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
+              <Link href="/venue" className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 font-aleo transition-all duration-300 font-semibold tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
                 Check Venue Details
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -36,7 +37,7 @@ const Nightlife = () => {
             <div className="relative w-full h-[95vh]">
               <Image
                 src="/home/nightlife_2.webp"
-                alt="Nightlife"
+                alt="Cornerstone Pub nightlife scene on Fridays and Saturdays with vibrant atmosphere, live music, cocktails, and social gathering in Port Melbourne"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

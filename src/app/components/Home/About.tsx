@@ -47,7 +47,7 @@ const AboutSec = () => {
                 <Image
                   src={cs_outdoor}
                   className="w-full rounded-[50%] aspect-square"
-                  alt=""
+                  alt="Cornerstone Pub outdoor space in Port Melbourne with seating and vibrant atmosphere"
                   width={500}
                   height={500}
                 />
@@ -70,7 +70,7 @@ const AboutSec = () => {
                 <Image
                   src="/home/Food_5.jpg"
                   className="w-full rounded-[50%] aspect-square object-cover object-left"
-                  alt=""
+                  alt="Cornerstone Pub events and functions venue showcasing celebration and dining experience"
                   width={500}
                   height={500}
                 />
@@ -93,7 +93,7 @@ const AboutSec = () => {
                 <Image
                   src="/home/nightlife.jpg"
                   className="w-full rounded-[50%] aspect-square"
-                  alt=""
+                  alt="Cornerstone Pub nightlife scene with vibrant atmosphere, music, and social gathering on Friday and Saturday nights"
                   width={500}
                   height={500}
                 />
@@ -115,7 +115,7 @@ const AboutSec = () => {
       {/* section 3 */}
       <section className="px-10 py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
         <div className="max-w-1/2 max-md:max-w-full  ">
-          <img src="/home/corner-outside.jpg" alt="" className="rounded-md" />
+          <img src="/home/corner-outside.jpg" alt="Cornerstone Pub outdoor terrace area with seating, perfect for golden hour drinks and evening dining in Port Melbourne" className="rounded-md" />
           {/* <Image
             src={sign}
             className="absolute max-w-3xs top-32 max-md:hidden left-[45%]"
@@ -182,11 +182,11 @@ const AboutSec = () => {
             }}
             loop={true}
           >
-            {[food_1, food_2, food_3, food_4, food_5].map((foodImage) => (
+            {[food_1, food_2, food_3, food_4, food_5].map((foodImage, index) => (
               <SwiperSlide key={foodImage.src}>
                 <Image
                   src={foodImage}
-                  alt="Food"
+                  alt={`Cornerstone Pub signature dish by Head Chef Stuart Russ - modern pub dining with bold flavors and quality ingredients`}
                   className="w-full rounded-md"
                 />
               </SwiperSlide>
@@ -206,7 +206,7 @@ const AboutSec = () => {
           <Image
             src={FoodImage}
             className="w-full h-full object-cover"
-            alt=""
+            alt="Head Chef Stuart Russ at The Cornerstone Pub creating signature dishes with fresh ingredients and culinary expertise"
           />
         </div>
       </section>
@@ -219,7 +219,7 @@ const AboutSec = () => {
               <Image
                 src={rooftopVenu}
                 className="h-[95vh] object-cover w-full"
-                alt=""
+                alt="Cornerstone Pub rooftop venue space perfect for functions, events, and celebrations in Port Melbourne"
               />
             </div>
             <h2

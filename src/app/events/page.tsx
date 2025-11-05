@@ -32,7 +32,7 @@ export default function Page() {
       className="font-lexend"
       style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
     >
-      <section aria-label="Hero video banner">
+      {/* <section aria-label="Hero video banner">
         <div>
           <section className="">
             <video autoPlay muted loop className="h-screen w-full object-cover">
@@ -40,7 +40,7 @@ export default function Page() {
             </video>
           </section>
         </div>
-      </section>
+      </section> */}
 
       <section
         className="py-16 md:py-24 lg:py-32"
@@ -233,7 +233,7 @@ export default function Page() {
             className="object-cover"
             fill
             sizes="100vw"
-            alt="Social supper event at The Albion Rooftop"
+            alt="Social supper event at The Cornerstone Pub featuring guests enjoying dining, drinks, and social gathering in Port Melbourne"
             priority
           />
         </div>
@@ -345,28 +345,28 @@ export default function Page() {
               <SwiperSlide>
                 <img
                   src="/menu/events_menu/Cornerstone Event Menus_page-0001.jpg"
-                  alt="Cornerstone Event Menu"
+                  alt="Cornerstone Pub events menu page 1 - function and event catering packages with canapés, grazing tables, and dining options for celebrations in Port Melbourne"
                   className="w-full max-h-[80vh] object-contain"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   src="/menu/events_menu/Cornerstone Event Menus_page-0002.jpg"
-                  alt="Cornerstone Event Menu"
+                  alt="Cornerstone Pub events menu page 2 - event catering menu featuring chef-crafted dishes and beverage packages for functions and corporate events"
                   className="w-full max-h-[80vh] object-contain"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   src="/menu/events_menu/Cornerstone Event Menus_page-0003.jpg"
-                  alt="Cornerstone Event Menu"
+                  alt="Cornerstone Pub events menu page 3 - complete event menu with canapé selections, mains, desserts, and premium beverage options for celebrations"
                   className="w-full max-h-[80vh] object-contain"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   src="/menu/events_menu/Cornerstone Event Menus_page-0004.jpg"
-                  alt="Cornerstone Event Menu"
+                  alt="Cornerstone Pub events menu page 4 - final page of event catering menu with additional options, pricing, and booking information for functions"
                   className="w-full max-h-[80vh] object-contain"
                 />
               </SwiperSlide>

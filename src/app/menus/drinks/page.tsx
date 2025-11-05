@@ -5,8 +5,8 @@ export default function page() {
       style={{ backgroundImage: "url(/menu/menuBg.png)" }}
     >
       <div className="w-[70vw] max-md:w-[80vw] max-sm:w-[95vw] m-auto">
-        <img src="/menu/DrinkMenu/CornerDrinks1.jpg" alt="" />
-        <img src="/menu/DrinkMenu/CornerDrinks2.jpg" alt="" />
+        <img src="/menu/DrinkMenu/CornerDrinks1.jpg" alt="Cornerstone Pub drinks menu page 1 - featuring cocktails, wines, beers, and premium beverages available at Port Melbourne location" />
+        <img src="/menu/DrinkMenu/CornerDrinks2.jpg" alt="Cornerstone Pub drinks menu page 2 - complete beverage selection including spirits, cocktails, and specialty drinks" />
       </div>
       <div className="fixed right-5 bottom-5">
         <button className=" animate-bounce">

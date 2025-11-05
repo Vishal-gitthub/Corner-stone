@@ -7,7 +7,7 @@ const LiveSport = () => {
         <Image
           src="/home/Crowd-picture.jpg"
           className="w-full object-cover h-full"
-          alt=""
+          alt="Cornerstone Pub vibrant outdoor space with guests enjoying live sports on big screens, socializing, and dining in Port Melbourne"
           fill
         />
 

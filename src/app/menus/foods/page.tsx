@@ -4,7 +4,7 @@ export default function page() {
   return (
     <div className="pt-24 max-md:pt-16">
       <div>
-        <img src="/menu/FoodsMenu/CornerFoodsMenu.jpg" alt="" />
+        <img src="/menu/FoodsMenu/CornerFoodsMenu.jpg" alt="Cornerstone Pub food menu by Head Chef Stuart Russ - modern Australian pub cuisine with share plates, mains, and seasonal dishes in Port Melbourne" />
       </div>
       <div className="fixed right-5 bottom-5">
         <button className=" animate-bounce">
