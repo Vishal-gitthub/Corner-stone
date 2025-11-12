@@ -8,6 +8,7 @@ const Navbar = () => {
     { link: "/venue", name: "Venue" },
     { link: "/menus", name: "Menu" },
     { link: "/events", name: "Events" },
+    { link: "/e-gifts", name: "Gift Vouchers" },
     { link: "/whatson", name: "Whats-on" },
     { link: "/contact", name: "Contact" },
   ];
