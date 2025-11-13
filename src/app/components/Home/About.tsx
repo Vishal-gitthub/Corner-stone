@@ -27,10 +27,10 @@ const AboutSec = () => {
     >
       {/* section 1 */}
       <div className="max-w-7xl m-auto px-32 max-md:px-16 max-sm:px-3 pb-32">
-        <span className="uppercase text-center font-aleo text-5xl text-brown">
+        <span className="uppercase text-center font-aleo max-md:text-3xl text-5xl text-brown">
           Welcome to The Cornerstone Pub
         </span>
-        <h2 className="heading-aleo text-2xl pt-5 max-w-4xl text-center m-auto">
+        <h2 className="heading-aleo text-2xl max-md:text-lg pt-5 max-w-4xl text-center m-auto">
           Discover South Melbourne’s favourite destination for good times, great
           food, and unforgettable events. Whether you’re here for a laid-back
           afternoon in our outdoor space or a vibrant night out with music and
@@ -40,7 +40,7 @@ const AboutSec = () => {
 
       {/* Section 2 */}
       <section className="border-t border-b " id="spaces">
-        <div className="flex justify-around max-md:flex-col max-md:justify-center items-center">
+        <div className="flex flex-wrap justify-around max-md:flex-col max-md:justify-center items-center">
           <div className=" flex flex-col py-20 max-sm:py-5 items-center ">
             <div className="flex flex-col items-center">
               <div className="w-96  max-md:w-72 max-sm:w-52">

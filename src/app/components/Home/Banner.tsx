@@ -1,5 +1,16 @@
 "use client";
+
+import { useEffect, useState } from "react";
+
 export default function Banner() {
+  const [widthState, setWidthState] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setWidthState(true);
+    } else {
+      setWidthState(false);
+    }
+  }, [widthState]);
   return (
     <div className="h-auto">
       {/* <section className="">
@@ -8,7 +19,19 @@ export default function Banner() {
         </video>
       </section> */}
       <div className="w-full h-screen">
-        <img src="/home/corner-outside.jpg" className="object-cover w-full object-top h-full" alt="The Cornerstone Pub outdoor terrace and dining area in Port Melbourne, showcasing modern pub atmosphere and welcoming space" />
+        {widthState ? (
+          <img
+            src="/home/corner-outside-vertical.jpg"
+            className="object-cover w-full object-top h-full"
+            alt="The Cornerstone Pub outdoor terrace and dining area in Port Melbourne, showcasing modern pub atmosphere and welcoming space"
+          />
+        ) : (
+          <img
+            src="/home/corner-outside.jpg"
+            className="object-cover w-full object-top h-full"
+            alt="The Cornerstone Pub outdoor terrace and dining area in Port Melbourne, showcasing modern pub atmosphere and welcoming space"
+          />
+        )}
       </div>
     </div>
   );
