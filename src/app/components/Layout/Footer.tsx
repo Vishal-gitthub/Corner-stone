@@ -94,7 +94,7 @@ export default function Footer() {
               <div>
                 <p className="text-lg font-medium heading-aleo">THURSDAY</p>
                 <p className="text-sm md:text-base text-lexend">
-                  Midday – 10
+                  Midday – 10 PM
                 </p>
               </div>
               <div>
