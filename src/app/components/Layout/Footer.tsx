@@ -86,6 +86,18 @@ export default function Footer() {
             </h2>
             <div className="text-white space-y-3">
               <div>
+                <p className="text-lg font-medium heading-aleo">MONDAY</p>
+                <p className="text-sm md:text-base text-lexend">
+                  Midday – 10 PM
+                </p>
+              </div>
+              <div>
+                <p className="text-lg font-medium heading-aleo">TUESDAY</p>
+                <p className="text-sm md:text-base text-lexend">
+                  Midday – 10 PM
+                </p>
+              </div>
+              <div>
                 <p className="text-lg font-medium heading-aleo">WEDNESDAY</p>
                 <p className="text-sm md:text-base text-lexend">
                   Midday – 10 PM
