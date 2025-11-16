@@ -10,15 +10,9 @@ export default function Page() {
   const offerings = [
     {
       path: "/home/rooftopVenu.jpg",
-      heading: "Midweek Mingle",
-      subHead: "Wednesdays | Midday – 11 PM",
-      desc: "Unwind midweek with refreshing cocktails, comfort food, and live beats — the perfect way to recharge before the weekend!",
-    },
-    {
-      path: "/home/social_supper.jpg",
-      heading: "Trivia nights",
-      subHead: "Wednesday | 6:30 PM – 10 PM",
-      desc: "Gather your friends for an unforgettable dining experience every Wednesday evening, featuring chef specials and great vibes till late.",
+      heading: "Now Open 7 Days",
+      subHead: "Every Day | Midday – 10 PM",
+      desc: "We're now open all week long! Enjoy refreshing cocktails, comfort food, and great vibes — your go-to spot any day of the week.",
     },
     {
       path: "/home/happy_hour.jpg",
@@ -26,16 +20,36 @@ export default function Page() {
       subHead: "Weekdays | 5-7 PM",
       desc: "Make Weekdays Feel Like the Weekend! Unwind from 5–7pm with $5 pots, $10 pints, $8 wines, and $8 spirits at Cornerstone Port Melbourne. Raise a glass to good company, great drinks, and the perfect midweek break.",
     },
-    // {
-    //   path: "/whatson/saturdaysinsky.jpg",
-    //   heading: "Saturdays in the Sky",
-    //   subHead: "Saturdays | 3–8 PM",
-    //   desc: "Book a $500 bar tab and get a $100 top-up! Celebrate your Saturday with skyline views, curated drinks, and the best crowd in town.",
-    // },
+    {
+      path: "/home/social_supper.jpg",
+      heading: "Trivia nights",
+      subHead: "Wednesday | 7 PM",
+      desc: "Gather your friends for an unforgettable dining experience every Wednesday evening, featuring chef specials and great vibes till late.",
+    },
+    {
+      path: "/whatson/8.jpg",
+      heading: "Friday night sessions",
+      subHead: "FRIDAYS | 8PM to 11PM live tunes.",
+      desc: "Ease into the weekend with rotating bands, smooth rhythms, tasty bites, and good vibes — the perfect Friday night out.",
+      buttonText: "View Event",
+    },
+    {
+      path: "/whatson/10948067.jpg",
+      heading: "Saturday groove sessions",
+      subHead: "SATURDAYS | 6PM to 9PM live tunes.",
+      desc: "Settle into your Saturday evening with live tunes, great food, and laid-back ambience — your ideal weekend unwind.",
+      buttonText: "View Event",
+    },
+    {
+      path: "/whatson/192828.jpg",
+      heading: "DJ's Saturday nights",
+      subHead: "SATURDAYS | Coming soon",
+      desc: "Get ready for high-energy DJ sets, vibrant beats, and late-night vibes — the perfect way to elevate your Saturday nights.",
+    },
     {
       path: "/whatson/SundayChillSessions.jpg",
-      heading: "Sunday Chill Sessions",
-      subHead: "Sundays | Midday – 11 PM",
+      heading: "Sunday chill sessions",
+      subHead: "SUNDAYS | 3PM to 6PM live tunes.",
       desc: "Relax and recover with smooth tunes, tasty bites, and sunset sips — your perfect weekend wind-down.",
     },
   ];
@@ -103,12 +117,12 @@ export default function Page() {
                     <p className="text-sm md:text-base text-blue leading-relaxed text-lexend">
                       {data.desc}
                     </p>
-                    <a
+                    {/* <a
                       href="#"
                       className="inline-block py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium font-lexend"
                     >
                       View Event
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </SwiperSlide>
