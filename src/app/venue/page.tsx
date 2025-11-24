@@ -114,14 +114,14 @@ export default function Page() {
 
             {/* TEXT */}
             <div className="text-center lg:text-left space-y-6">
-              <h2 className="text-4xl md:text-5xl lg:text-7xl heading-aleo uppercase text-blue font-bold">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl heading-aleo uppercase text-blue font-bold">
                 Functions & Events
               </h2>
               <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium heading-aleo">
                 Melbourne’s versatile venue for every celebration
               </p>
               <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
-              <div className="space-y-4 text-base md:text-lg text-blue leading-relaxed">
+              <div className="space-y-4 text-sm md:text-base text-blue leading-relaxed">
                 <p>
                   At <strong>The Cornerstone</strong>, every occasion is made
                   memorable. From birthdays and engagements to corporate events
@@ -161,30 +161,30 @@ export default function Page() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* TEXT */}
               <div className="text-center lg:text-left space-y-6">
-                <h2 className="text-4xl md:text-5xl lg:text-7xl heading-aleo uppercase text-blue font-bold">
-                  Cornerstone Function Space
+                <h2 className="text-3xl md:text-4xl lg:text-5xl heading-aleo uppercase text-blue font-bold">
+                  Cornerstone Cigar Room
                 </h2>
                 <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
-                  Port Melbourne’s hidden gem for unforgettable celebrations
+                  Port Melbourne’s refined retreat for those who appreciate the
+                  art of a fine cigar.
                 </p>
                 <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
-                <div className="space-y-4 text-base md:text-lg text-blue leading-relaxed">
+                <div className="space-y-4 text-sm md:text-base text-blue leading-relaxed">
                   <p>
-                    Nestled above The Cornerstone Pub, our Function Space offers
-                    a stunning blend of warmth, style, and flexibility. Large
-                    windows fill the room with natural light by day, while soft
-                    ambient lighting transforms the space for evening events.
+                    Tucked away within The Cornerstone, our Cigar Room blends
+                    old-world charm with modern comfort. Rich tones, plush
+                    seating, and warm ambient lighting create a relaxed yet
+                    sophisticated atmosphere designed for unwinding.
                   </p>
                   <p>
-                    The venue features a <strong>private bar</strong>,
-                    <strong> dedicated amenities</strong>, and adaptable setups
-                    - from relaxed lounge configurations to formal seated
-                    dining.
+                    Enjoy a curated selection of quality cigars, premium
+                    whiskies, and hand-crafted cocktails — all served with the
+                    attentive hospitality we’re known for.
                   </p>
                   <p>
-                    With our chef-crafted menus, curated beverage packages, and
-                    attentive staff, your celebration will be as effortless as
-                    it is memorable.
+                    Whether it’s quiet reflection, conversation among friends,
+                    or a post-dinner indulgence, this is where moments are meant
+                    to be savored.
                   </p>
                 </div>
                 <div className="flex justify-center lg:justify-start mt-8">
@@ -201,10 +201,10 @@ export default function Page() {
               <div className="order-first lg:order-last">
                 <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh]">
                   <Image
-                    src="/club/Untitled-design-22.webp"
+                    src="/events/12760.jpg"
                     alt="Cornerstone Function Space setup"
                     fill
-                    className="object-cover rounded-lg image-optimized"
+                    className="object-contain rounded-lg image-optimized"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>

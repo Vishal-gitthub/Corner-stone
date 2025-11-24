@@ -19,6 +19,7 @@ import FoodImage from "../../../../public/home/chefImage.jpg";
 // import EventsSign from "../../../../public/home/EVENTS.png";
 import rooftopVenu from "../../../../public/home/rooftopVenu.jpg";
 import "swiper/css/effect-fade";
+import Link from "next/link";
 const AboutSec = () => {
   return (
     <div
@@ -41,7 +42,7 @@ const AboutSec = () => {
       {/* Section 2 */}
       <section className="border-t border-b " id="spaces">
         <div className="flex flex-wrap justify-around max-md:flex-col max-md:justify-center items-center">
-          <div className=" flex flex-col py-20 max-sm:py-5 items-center ">
+          <div className=" flex flex-col justify-center py-20 max-sm:py-5 items-center ">
             <div className="flex flex-col items-center">
               <div className="w-96  max-md:w-72 max-sm:w-52">
                 <Image
@@ -101,12 +102,12 @@ const AboutSec = () => {
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
                 Nightlife
               </h3>
-              <a
-                href=""
+              <Link
+                href="/whatson"
                 className="uppercase font-aleo underline text-brown text-lg font-semibold tracking-wider"
               >
                 See club info
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -114,15 +115,33 @@ const AboutSec = () => {
 
       {/* section 3 */}
       <section className="px-10 py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
-        <div className="max-w-1/2 max-md:max-w-full  ">
-          <img src="/home/corner-outside.jpg" alt="Cornerstone Pub outdoor terrace area with seating, perfect for golden hour drinks and evening dining in Port Melbourne" className="rounded-md" />
+        <div className="max-w-1/2 max-md:max-w-full relative ">
+          <img
+            src="/home/corner-outside-scaled.png"
+            alt="Cornerstone Pub outdoor terrace area with seating, perfect for golden hour drinks and evening dining in Port Melbourne"
+            className="rounded-md"
+          />
           {/* <Image
             src={sign}
             className="absolute max-w-3xs top-32 max-md:hidden left-[45%]"
             alt=""
           /> */}
+          <span
+            className="
+    font-aleo
+    text-brown
+    absolute
+    -bottom-10
+    left-0
+    text-[120px]
+    max-md:hidden
+   
+  "
+          >
+            OUTDOOR
+          </span>
         </div>
-        <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
+        <div className="max-w-1/2  max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
           <h2 className="font-aleo text-center text-7xl max-sm:text-5xl uppercase">
             Outdoor Space
           </h2>
@@ -145,9 +164,6 @@ const AboutSec = () => {
             </a>
           </div>
         </div>
-        <span className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-10 left-9">
-          OUTDOOR
-        </span>
       </section>
 
       {/* section 4 */}
@@ -167,9 +183,9 @@ const AboutSec = () => {
             comforting and memorable.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">
-            <button className="uppercase transition-all duration-300 px-10 rounded-md bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs font-aleo">
+            <Link href="/menus" className="uppercase transition-all duration-300 px-10 rounded-md bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs font-aleo">
               SEE MENU
-            </button>
+            </Link>
           </div>
         </div>
         <div className="max-w-1/2 max-md:max-w-full  ">
@@ -182,15 +198,17 @@ const AboutSec = () => {
             }}
             loop={true}
           >
-            {[food_1, food_2, food_3, food_4, food_5].map((foodImage, index) => (
-              <SwiperSlide key={foodImage.src}>
-                <Image
-                  src={foodImage}
-                  alt={`Cornerstone Pub signature dish by Head Chef Stuart Russ - modern pub dining with bold flavors and quality ingredients`}
-                  className="w-full rounded-md"
-                />
-              </SwiperSlide>
-            ))}
+            {[food_1, food_2, food_3, food_4, food_5].map(
+              (foodImage, index) => (
+                <SwiperSlide key={foodImage.src}>
+                  <Image
+                    src={foodImage}
+                    alt={`Cornerstone Pub signature dish by Head Chef Stuart Russ - modern pub dining with bold flavors and quality ingredients`}
+                    className="w-full rounded-md"
+                  />
+                </SwiperSlide>
+              )
+            )}
           </Swiper>
         </div>
         <div className="">
@@ -245,9 +263,12 @@ const AboutSec = () => {
               that bring people together.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <a href="#spaces" className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-2 font-semibold transition-all duration-300 tracking-widest border-2 border-brown hover:bg-transparent font-aleo hover:text-brown text-white ">
+              <Link
+                href="/events"
+                className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-2 font-semibold transition-all duration-300 tracking-widest border-2 border-brown hover:bg-transparent font-aleo hover:text-brown text-white "
+              >
                 View Spaces
-              </a>
+              </Link>
             </div>
           </div>
         </section>

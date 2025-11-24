@@ -43,7 +43,7 @@ export default function Footer() {
                 Visit Us
               </h3>
               <p className="text-white text-lexend">
-                <br />1 Crockford Street, Port Melbourne, 3207
+                1 Crockford Street, Port Melbourne, 3207
               </p>
             </div>
             <div>
@@ -72,7 +72,6 @@ export default function Footer() {
                 className="text-brown hover:text-white transition-colors duration-300"
                 aria-label="Follow us on Facebook"
                 target="_blank"
-
               >
                 <FaFacebook className="text-2xl md:text-3xl" />
               </a>
@@ -84,49 +83,56 @@ export default function Footer() {
             <h2 className="uppercase text-white font-semibold pb-3 text-lg md:text-xl heading-aleo">
               Opening Hours
             </h2>
-            <div className="text-white space-y-3">
+
+            {/* Days Grid */}
+            <div className="grid grid-cols-2 gap-x-10 gap-y-4 text-white">
               <div>
                 <p className="text-lg font-medium heading-aleo">MONDAY</p>
                 <p className="text-sm md:text-base text-lexend">
                   Midday – 10 PM
                 </p>
               </div>
+
               <div>
                 <p className="text-lg font-medium heading-aleo">TUESDAY</p>
                 <p className="text-sm md:text-base text-lexend">
                   Midday – 10 PM
                 </p>
               </div>
+
               <div>
                 <p className="text-lg font-medium heading-aleo">WEDNESDAY</p>
                 <p className="text-sm md:text-base text-lexend">
                   Midday – 10 PM
                 </p>
               </div>
+
               <div>
                 <p className="text-lg font-medium heading-aleo">THURSDAY</p>
                 <p className="text-sm md:text-base text-lexend">
                   Midday – 10 PM
                 </p>
               </div>
+
               <div>
                 <p className="text-lg font-medium heading-aleo">FRIDAY</p>
                 <p className="text-sm md:text-base text-lexend">
                   Midday – Midnight
                 </p>
               </div>
+
               <div>
                 <p className="text-lg font-medium heading-aleo">SATURDAY</p>
                 <p className="text-sm md:text-base text-lexend">
                   Midday – Midnight
                 </p>
               </div>
-              <div>
-                <p className="text-lg font-medium heading-aleo">SUNDAY</p>
-                <p className="text-sm md:text-base text-lexend">
-                  Midday – 10 PM
-                </p>
-              </div>
+            </div>
+
+            {/* Sunday */}
+            <div className="mt-4 text-center text-white">
+              <p className="text-lg font-medium heading-aleo">SUNDAY</p>
+              <p className="text-sm md:text-base text-lexend">Midday – 10 PM</p>
             </div>
           </div>
         </div>

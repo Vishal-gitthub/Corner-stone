@@ -51,8 +51,8 @@ export default function page() {
             className=" hover:scale-[1.07] transition-all duration-300 outline-1 hover:p-1"
           >
             <div
-              style={{ backgroundImage: "url(/home/FOOD_3.jpg)" }}
-              className="w-96 h-96 max-sm:w-64 max-sm:h-64 flex items-center justify-center object-cover bg-center bg-cover bg-no-repeat"
+              style={{ backgroundImage: "url(/events/12760.jpg)" }}
+              className="w-96 h-96 max-sm:w-64 max-sm:h-64 flex items-center justify-center object-cover bg-right bg-cover bg-no-repeat"
             >
               <div className="bg-black/20 h-full w-full flex items-center justify-center  text-white max-sm:text-3xl font-aleo text-6xl">
                 EVENTS MENU

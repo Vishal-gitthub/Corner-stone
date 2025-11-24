@@ -41,9 +41,9 @@ const EVENTS: EventCard[] = [
     title: "Happy Hours",
     schedule: "Weekdays | 5-7 PM",
     description:
-      "Turn weekdays into weekends! Join us 5–7pm for $5 pots, $10 pints, $8 wines & spirits at Cornerstone Port Melbourne. Great drinks, better company.",
+      "Turn weekdays into weekends! Join us 5–7pm for $5 pots, $10 pints, $8 wines & spirits at Cornerstone. Great drinks, better company.",
     alt: "Happy Hours at Cornerstone Pub Port Melbourne - Weekdays 5-7 PM with discounted drinks including $5 pots, $10 pints, $8 wines and spirits",
-    hasMenuButton: true,
+    hasMenuButton: false,
   },
 ];
 

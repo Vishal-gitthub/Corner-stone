@@ -25,7 +25,10 @@ const Nightlife = () => {
               weekend.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
-              <Link href="/venue" className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 font-aleo transition-all duration-300 font-semibold tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white ">
+              <Link
+                href="/venue"
+                className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 font-aleo transition-all duration-300 font-semibold tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
+              >
                 Check Venue Details
               </Link>
             </div>
@@ -44,11 +47,7 @@ const Nightlife = () => {
               />
             </div>
             {/* Overlay signs */}
-            <h2
-              className="absolute leading-1 uppercase top-0 max-md:hidden -left-10  
-text-[150px] max-lg:text-[100px] font-aleo max-md:text-[80px] z-2 max-sm:text-[50px] max-sm:hidden text-brown
-"
-            >
+            <h2 className="absolute leading-1 uppercase top-0 max-md:hidden -left-10  text-[150px] max-lg:text-[100px] font-aleo max-md:text-[80px] z-2 max-sm:text-[50px] max-sm:hidden text-brown">
               {/* CLUB */}
             </h2>
             <Image

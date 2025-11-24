@@ -28,7 +28,7 @@ export default function Page() {
     },
     {
       path: "/whatson/8.jpg",
-      heading: "Friday night sessions",
+      heading: "Friday Band Night",
       subHead: "FRIDAYS | 8PM to 11PM live tunes.",
       desc: "Ease into the weekend with rotating bands, smooth rhythms, tasty bites, and good vibes — the perfect Friday night out.",
       buttonText: "View Event",
@@ -43,7 +43,7 @@ export default function Page() {
     {
       path: "/whatson/192828.jpg",
       heading: "DJ's Saturday nights",
-      subHead: "SATURDAYS | Coming soon",
+      subHead: "SATURDAYS | 9PM - Onwards",
       desc: "Get ready for high-energy DJ sets, vibrant beats, and late-night vibes — the perfect way to elevate your Saturday nights.",
     },
     {
@@ -51,6 +51,13 @@ export default function Page() {
       heading: "Sunday chill sessions",
       subHead: "SUNDAYS | 3PM to 6PM live tunes.",
       desc: "Relax and recover with smooth tunes, tasty bites, and sunset sips — your perfect weekend wind-down.",
+    },
+    {
+      path: "/home/Food_4.jpg",
+      heading: "$15 Lunch Menu",
+      subHead: "Every Day of the Week",
+      desc: "Tasty, quick, and unbeatable value — your new go-to lunch is here for just $12.",
+      btn: "View Menu",
     },
   ];
 
@@ -117,12 +124,16 @@ export default function Page() {
                     <p className="text-sm md:text-base text-blue leading-relaxed text-lexend">
                       {data.desc}
                     </p>
-                    {/* <a
-                      href="#"
-                      className="inline-block py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium font-lexend"
-                    >
-                      View Event
-                    </a> */}
+                    {data && (
+                      <a
+                        href="#"
+                        className={`${
+                          data && data.btn ? "inline-block" : "hidden"
+                        } py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium font-lexend`}
+                      >
+                        {data.btn}
+                      </a>
+                    )}
                   </div>
                 </div>
               </SwiperSlide>
