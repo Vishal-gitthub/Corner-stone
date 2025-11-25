@@ -28,10 +28,11 @@ export default function Page() {
     },
     {
       path: "/whatson/8.jpg",
-      heading: "Friday Band Night",
+      heading: "Friday Big Band Nights",
       subHead: "FRIDAYS | 8PM to 11PM live tunes.",
       desc: "Ease into the weekend with rotating bands, smooth rhythms, tasty bites, and good vibes — the perfect Friday night out.",
       buttonText: "View Event",
+      
     },
     {
       path: "/whatson/10948067.jpg",
@@ -58,6 +59,7 @@ export default function Page() {
       subHead: "Every Day of the Week",
       desc: "Tasty, quick, and unbeatable value — your new go-to lunch is here for just $12.",
       btn: "View Menu",
+      imgSrc: "https://cornerstonepub.com.au/menu/happy_hour_Menu/15_dollar_menu.pdf_page-0001.jpg",
     },
   ];
 
@@ -126,7 +128,8 @@ export default function Page() {
                     </p>
                     {data && (
                       <a
-                        href="#"
+                        href={data.imgSrc}
+                        target="_blank"
                         className={`${
                           data && data.btn ? "inline-block" : "hidden"
                         } py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium font-lexend`}

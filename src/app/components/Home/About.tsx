@@ -183,7 +183,10 @@ const AboutSec = () => {
             comforting and memorable.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">
-            <Link href="/menus" className="uppercase transition-all duration-300 px-10 rounded-md bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs font-aleo">
+            <Link
+              href="/menus"
+              className="uppercase transition-all duration-300 px-10 rounded-md bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs font-aleo"
+            >
               SEE MENU
             </Link>
           </div>
