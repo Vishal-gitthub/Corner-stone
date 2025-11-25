@@ -1,5 +1,5 @@
 "use client";
-
+import IGGrid from "../components/whats-on/IGGrid";
 import Image from "next/image";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
@@ -32,7 +32,6 @@ export default function Page() {
       subHead: "FRIDAYS | 8PM to 11PM live tunes.",
       desc: "Ease into the weekend with rotating bands, smooth rhythms, tasty bites, and good vibes — the perfect Friday night out.",
       buttonText: "View Event",
-      
     },
     {
       path: "/whatson/10948067.jpg",
@@ -42,7 +41,7 @@ export default function Page() {
       buttonText: "View Event",
     },
     {
-      path: "/whatson/192828.jpg",
+      path: "/whatson/dj.jpg",
       heading: "DJ's Saturday nights",
       subHead: "SATURDAYS | 9PM - Onwards",
       desc: "Get ready for high-energy DJ sets, vibrant beats, and late-night vibes — the perfect way to elevate your Saturday nights.",
@@ -59,7 +58,8 @@ export default function Page() {
       subHead: "Every Day of the Week",
       desc: "Tasty, quick, and unbeatable value — your new go-to lunch is here for just $12.",
       btn: "View Menu",
-      imgSrc: "https://cornerstonepub.com.au/menu/happy_hour_Menu/15_dollar_menu.pdf_page-0001.jpg",
+      imgSrc:
+        "https://cornerstonepub.com.au/menu/happy_hour_Menu/15_dollar_menu.pdf_page-0001.jpg",
     },
   ];
 
@@ -144,6 +144,7 @@ export default function Page() {
           </Swiper>
         </div>
       </div>
+      <IGGrid />
     </main>
   );
 }

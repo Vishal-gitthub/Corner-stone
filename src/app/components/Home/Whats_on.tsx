@@ -127,7 +127,7 @@ const WhatsOn = () => {
 
         <div>
           <Link
-            href="/events"
+            href="/whatson"
             className={`${BUTTON_BASE_CLASSES} px-12 max-sm:px-6 py-3`}
           >
             See all Events

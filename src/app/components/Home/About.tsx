@@ -158,6 +158,7 @@ const AboutSec = () => {
             </button> */}
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20websiteF"
+              target="_blank"
               className="uppercase  px-10 rounded-md transition-all duration-300 hover:bg-brown font-aleo py-1 border border-brown bg-white-cus text-brown hover:text-white w-full max-w-xs text-center"
             >
               Book a Table
