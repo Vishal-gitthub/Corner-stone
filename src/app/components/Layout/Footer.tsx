@@ -141,12 +141,12 @@ export default function Footer() {
         <div className="border-t border-white/20 py-6">
           <p className="text-white text-center text-sm md:text-base text-lexend">
             © The Cornerstone Pub, all rights reserved |
-            <a
-              href="#"
+            <Link
+              href="/privacy-policy"
               className="hover:text-brown transition-colors duration-300 ml-1 text-lexend"
             >
               Privacy Policy
-            </a>
+            </Link>
           </p>
         </div>
       </div>
