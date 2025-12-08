@@ -5,14 +5,25 @@ import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
 
-import Image1 from "../../../public/club/LoungePhoto2.jpg";
-import Image2 from "../../../public/club/_85A7725.webp";
-import Image3 from "../../../public/club/_85A7735.webp";
-import Image4 from "../../../public/club/_85A7873.webp";
+import Image1 from "../../../public/Venue/img-1.jpg";
+import Image2 from "../../../public/Venue/img-2.jpg";
+import Image3 from "../../../public/Venue/cigar-lounge.jpg";
+import Image4 from "../../../public/Venue/img-3.jpg";
+import Image5 from "../../../public/Venue/img-4.jpg";
+import Image6 from "../../../public/Venue/img-5.jpg";
 import FoodCarousel from "../components/Home/FoodCarousel";
 
 export default function Page() {
+  const images: StaticImageData[] = [
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+  ];
   return (
     <main style={{ backgroundImage: `url(/home/BgTexture.jpg)` }}>
       {/* HERO SWIPER */}
@@ -26,7 +37,7 @@ export default function Page() {
         }}
         loop={true}
       >
-        {[Image1, Image2, Image3, Image4].map((slideImage, index) => (
+        {images.map((slideImage, index) => (
           <SwiperSlide key={`cornerstone-slide-${index}`}>
             <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-screen">
               <Image

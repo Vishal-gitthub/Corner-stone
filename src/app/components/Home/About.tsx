@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import bgTexture from "../../../../public/home/BgTexture.jpg";
-import cs_outdoor from "../../../../public/home/cs_outside.jpg";
+import cs_outdoor from "../../../../public/home/cs-outside-space.jpg";
 // import Events from "../../../../public/home/Events.webp";
 // import Nightlife from "../../../../public/home/nightlife.webp";
 // import rooftopClub from "../../../../public/home/rooftopClub.jpg";
@@ -17,7 +17,7 @@ import food_5 from "../../../../public/home/Food_5.jpg";
 // import foodChepsign from "../../../../public/home/Food-chefSign.png";
 import FoodImage from "../../../../public/home/chefImage.jpg";
 // import EventsSign from "../../../../public/home/EVENTS.png";
-import rooftopVenu from "../../../../public/home/rooftopVenu.jpg";
+import functions_events from "../../../../public/home/pub_area.jpg";
 import "swiper/css/effect-fade";
 import Link from "next/link";
 const AboutSec = () => {
@@ -47,7 +47,7 @@ const AboutSec = () => {
               <div className="w-96  max-md:w-72 max-sm:w-52">
                 <Image
                   src={cs_outdoor}
-                  className="w-full rounded-[50%] aspect-square"
+                  className="w-full rounded-[50%] aspect-square object-cover object-left"
                   alt="Cornerstone Pub outdoor space in Port Melbourne with seating and vibrant atmosphere"
                   width={500}
                   height={500}
@@ -239,7 +239,7 @@ const AboutSec = () => {
           <div className="max-w-1/2 relative  max-md:max-w-full  ">
             <div className="w-full">
               <Image
-                src={rooftopVenu}
+                src={functions_events}
                 className="h-[95vh] object-cover w-full"
                 alt="Cornerstone Pub rooftop venue space perfect for functions, events, and celebrations in Port Melbourne"
               />

@@ -5,7 +5,7 @@ const LiveSport = () => {
     <div>
       <div className="min-h-[80vh] md:h-screen relative w-full">
         <Image
-          src="/home/Crowd-picture.jpg"
+          src="/home/tables.jpg"
           className="w-full object-cover h-full"
           alt="Cornerstone Pub vibrant outdoor space with guests enjoying live sports on big screens, socializing, and dining in Port Melbourne"
           fill
