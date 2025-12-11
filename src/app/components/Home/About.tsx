@@ -2,31 +2,32 @@
 import Image from "next/image";
 import bgTexture from "../../../../public/home/BgTexture.jpg";
 import cs_outdoor from "../../../../public/home/cs-outside-space.jpg";
-// import Events from "../../../../public/home/Events.webp";
-// import Nightlife from "../../../../public/home/nightlife.webp";
-// import rooftopClub from "../../../../public/home/rooftopClub.jpg";
-// import sign from "../../../../public/home/Panoramic+Views.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay } from "swiper/modules";
+import { EffectFade, EffectCube, Autoplay } from "swiper/modules";
+import "swiper/css/effect-cube";
+import "swiper/css/effect-fade";
 import "swiper/css";
 import food_1 from "../../../../public/home/Food_1.jpg";
 import food_2 from "../../../../public/home/Food_2.jpg";
 import food_3 from "../../../../public/home/Food_3.jpg";
 import food_4 from "../../../../public/home/Food_4.jpg";
 import food_5 from "../../../../public/home/Food_5.jpg";
-// import foodChepsign from "../../../../public/home/Food-chefSign.png";
 import FoodImage from "../../../../public/home/chefImage.jpg";
-// import EventsSign from "../../../../public/home/EVENTS.png";
 import functions_events from "../../../../public/home/pub_area.jpg";
-import "swiper/css/effect-fade";
 import Link from "next/link";
+
+import OutdoorImage1 from "../../../../public/cs_outside_images/outside-1.jpg";
+import OutdoorImage2 from "../../../../public/cs_outside_images/outside-2.jpg";
+import OutdoorImage3 from "../../../../public/cs_outside_images/outside-3.jpg";
+import { useState } from "react";
+
 const AboutSec = () => {
+  const [togglePopup, setTogglePopup] = useState(false);
   return (
     <div
       style={{ backgroundImage: `url(${bgTexture.src})` }}
       className="pt-32 text-center"
     >
-      {/* section 1 */}
       <div className="max-w-7xl m-auto px-32 max-md:px-16 max-sm:px-3 pb-32">
         <span className="uppercase text-center font-aleo max-md:text-3xl text-5xl text-brown">
           Welcome to The Cornerstone Pub
@@ -39,16 +40,15 @@ const AboutSec = () => {
         </h2>
       </div>
 
-      {/* Section 2 */}
-      <section className="border-t border-b " id="spaces">
+      <section className="border-t relative border-b " id="spaces">
         <div className="flex flex-wrap justify-around max-md:flex-col max-md:justify-center items-center">
-          <div className=" flex flex-col justify-center py-20 max-sm:py-5 items-center ">
+          <div className="flex flex-col justify-center py-20 max-sm:py-5 items-center ">
             <div className="flex flex-col items-center">
-              <div className="w-96  max-md:w-72 max-sm:w-52">
+              <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
                   src={cs_outdoor}
-                  className="w-full rounded-[50%] aspect-square object-cover object-left"
-                  alt="Cornerstone Pub outdoor space in Port Melbourne with seating and vibrant atmosphere"
+                  className="w-full rounded-[50%] aspect-square object-cover object-right"
+                  alt=""
                   width={500}
                   height={500}
                 />
@@ -56,22 +56,72 @@ const AboutSec = () => {
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
                 Outdoor Space
               </h3>
-              <a
-                href=""
+              <button
+                onClick={() => setTogglePopup(!togglePopup)}
                 className="uppercase underline font-lexend text-brown text-lg font-semibold tracking-wider"
               >
                 See Outdoor
-              </a>
+              </button>
+
+              {/* IMAGE POPUP */}
+              {togglePopup && (
+                <div
+                  className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+                  onClick={() => setTogglePopup(false)}
+                >
+                  <div
+                    className="relative w-full max-w-2xl"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Swiper
+                      modules={[Autoplay, EffectCube]}
+                      autoplay={{ delay: 3000 }}
+                      loop
+                      effect="cube"
+                      grabCursor
+                      cubeEffect={{
+                        slideShadows: true,
+                        shadow: true,
+                        shadowOffset: 20,
+                        shadowScale: 0.94,
+                      }}
+                    >
+                      {[
+                        "/cs_outside_images/outside-1.jpg",
+                        "/cs_outside_images/outside-2.jpg",
+                        "/cs_outside_images/outside-3.jpg",
+                        "/cs_outside_images/outside-4.jpg",
+                        "/cs_outside_images/outside-5.jpg",
+                      ].map((src) => (
+                        <SwiperSlide key={src}>
+                          <img src={src} alt="" className="w-full rounded-md" />
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+
+                    <button
+                      onClick={() => setTogglePopup(false)}
+                      className="absolute -top-10 right-0 text-white text-3xl"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* END POPUP */}
             </div>
           </div>
+
           <div className="w-[1px] max-md:hidden bg-brown"></div>
-          <div className=" flex flex-col py-20 max-sm:py-5 items-center ">
+
+          <div className="flex flex-col py-20 max-sm:py-5 items-center ">
             <div className="flex flex-col items-center">
-              <div className="w-96  max-md:w-72 max-sm:w-52">
+              <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
                   src="/home/Food_5.jpg"
                   className="w-full rounded-[50%] aspect-square object-cover object-left"
-                  alt="Cornerstone Pub events and functions venue showcasing celebration and dining experience"
+                  alt=""
                   width={500}
                   height={500}
                 />
@@ -79,22 +129,24 @@ const AboutSec = () => {
               <h3 className="py-6 text-5xl max-sm:text-3xl uppercase heading-aleo">
                 Events
               </h3>
-              <a
-                href=""
+              <Link
+                href="/spaces"
                 className="uppercase font-aleo underline text-brown text-lg font-semibold tracking-wider"
               >
                 See Spaces
-              </a>
+              </Link>
             </div>
           </div>
+
           <div className="w-[1px] max-md:hidden bg-brown"></div>
-          <div className=" flex flex-col py-20 max-sm:py-5 items-center">
+
+          <div className="flex flex-col py-20 max-sm:py-5 items-center">
             <div className="flex flex-col items-center">
-              <div className="w-96  max-md:w-72 max-sm:w-52">
+              <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
                   src="/home/nightlife.jpg"
                   className="w-full rounded-[50%] aspect-square"
-                  alt="Cornerstone Pub nightlife scene with vibrant atmosphere, music, and social gathering on Friday and Saturday nights"
+                  alt=""
                   width={500}
                   height={500}
                 />
@@ -113,53 +165,56 @@ const AboutSec = () => {
         </div>
       </section>
 
-      {/* section 3 */}
       <section className="px-10 py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
         <div className="max-w-1/2 max-md:max-w-full relative ">
-          <img
-            src="/home/corner-outside-scaled.png"
-            alt="Cornerstone Pub outdoor terrace area with seating, perfect for golden hour drinks and evening dining in Port Melbourne"
-            className="rounded-md"
-          />
-          {/* <Image
-            src={sign}
-            className="absolute max-w-3xs top-32 max-md:hidden left-[45%]"
-            alt=""
-          /> */}
-          <span
-            className="
-    font-aleo
-    text-brown
-    absolute
-    -bottom-10
-    left-0
-    text-[120px]
-    max-md:hidden
-   
-  "
+          <Swiper
+            modules={[Autoplay, EffectCube]}
+            autoplay={{ delay: 3000 }}
+            loop={true}
+            effect="cube"
+            grabCursor={true}
+            cubeEffect={{
+              slideShadows: true,
+              shadow: true,
+              shadowOffset: 20,
+              shadowScale: 0.94,
+            }}
           >
+            <SwiperSlide>
+              <img
+                src="/home/cs-outside-space-img-1.jpg"
+                alt=""
+                className="rounded-md"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="/home/cs-outside-space-img-2.jpg"
+                alt=""
+                className="rounded-md"
+              />
+            </SwiperSlide>
+          </Swiper>
+
+          <span className="font-aleo text-brown absolute -bottom-10 left-0 text-[120px] max-md:hidden z-10">
             OUTDOOR
           </span>
         </div>
-        <div className="max-w-1/2  max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
+
+        <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
           <h2 className="font-aleo text-center text-7xl max-sm:text-5xl uppercase">
             Outdoor Space
           </h2>
           <p className="p-10 max-sm:p-4 text-center font-lexend">
             Set in the heart of the city, our Outdoor area offers the perfect
             setting for golden hour drinks or an easy transition into the night.
-            Join us Fridays and Saturdays from 3pm ‘til late, with curated
-            entertainment, casual bookings available throughout, and a full
-            kitchen menu served from 4pm to midnight.
+            Join us Fridays and Saturdays from 3pm ‘til late.
           </p>
           <div className="flex flex-col gap-5 justify-center items-center">
-            {/* <button className="uppercase px-10 transition-all duration-300 rounded-md bg-brown font-aleo py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs">
-              Outdoor info
-            </button> */}
             <a
               href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20websiteF"
               target="_blank"
-              className="uppercase  px-10 rounded-md transition-all duration-300 hover:bg-brown font-aleo py-1 border border-brown bg-white-cus text-brown hover:text-white w-full max-w-xs text-center"
+              className="uppercase px-10 rounded-md bg-white-cus hover:bg-brown hover:text-white transition-all duration-300 text-brown border border-brown font-aleo py-1 w-full max-w-xs text-center"
             >
               Book a Table
             </a>
@@ -167,10 +222,9 @@ const AboutSec = () => {
         </div>
       </section>
 
-      {/* section 4 */}
       <section className="px-10 pb-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
         <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
-          <h2 className="font-aleo text-center text-7xl  max-sm:text-5xl uppercase">
+          <h2 className="font-aleo text-center text-7xl max-sm:text-5xl uppercase">
             Our Food
           </h2>
           <h3 className="text-center font-aleo text-2xl pt-2 max-sm:text-xl uppercase">
@@ -178,21 +232,19 @@ const AboutSec = () => {
           </h3>
           <p className="p-10 max-sm:p-4 text-center font-lexend">
             With a vibrant new menu led by Stuart Russ, The Cornerstone brings a
-            fresh twist to modern pub dining - where bold flavours meet relaxed
-            sophistication. Every dish is thoughtfully prepared with quality
-            ingredients and a passion for simplicity, making each bite both
-            comforting and memorable.
+            fresh twist to modern pub dining.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">
             <Link
               href="/menus"
-              className="uppercase transition-all duration-300 px-10 rounded-md bg-brown py-1 border border-brown hover:bg-white-cus hover:text-brown text-white w-full max-w-xs font-aleo"
+              className="uppercase px-10 rounded-md bg-brown py-1 text-white font-aleo hover:bg-white-cus hover:text-brown border border-brown transition-all duration-300 w-full max-w-xs text-center"
             >
               SEE MENU
             </Link>
           </div>
         </div>
-        <div className="max-w-1/2 max-md:max-w-full  ">
+
+        <div className="max-w-1/2 max-md:max-w-full">
           <Swiper
             modules={[EffectFade, Autoplay]}
             effect="fade"
@@ -202,58 +254,50 @@ const AboutSec = () => {
             }}
             loop={true}
           >
-            {[food_1, food_2, food_3, food_4, food_5].map(
+            {[food_1, food_2, food_3, food_4].map(
               (foodImage, index) => (
                 <SwiperSlide key={foodImage.src}>
-                  <Image
-                    src={foodImage}
-                    alt={`Cornerstone Pub signature dish by Head Chef Stuart Russ - modern pub dining with bold flavors and quality ingredients`}
-                    className="w-full rounded-md"
-                  />
+                  <Image src={foodImage} alt="" className="w-full rounded-md" />
                 </SwiperSlide>
               )
             )}
           </Swiper>
         </div>
-        <div className="">
-          <h2 className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] z-2 max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-10 right-9">
+
+        <div>
+          <h2 className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-10 right-9">
             FOOD
           </h2>
         </div>
       </section>
 
-      {/* section 5 */}
       <section>
         <div className="h-screen">
           <Image
             src={FoodImage}
             className="w-full h-full object-cover"
-            alt="Head Chef Stuart Russ at The Cornerstone Pub creating signature dishes with fresh ingredients and culinary expertise"
+            alt=""
           />
         </div>
       </section>
 
-      {/* section 6 */}
       <div className="bg-blue">
-        <section className="px-10  py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
-          <div className="max-w-1/2 relative  max-md:max-w-full  ">
+        <section className="px-10 py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
+          <div className="max-w-1/2 max-md:max-w-full relative">
             <div className="w-full">
               <Image
                 src={functions_events}
                 className="h-[95vh] object-cover w-full"
-                alt="Cornerstone Pub rooftop venue space perfect for functions, events, and celebrations in Port Melbourne"
+                alt=""
               />
             </div>
-            <h2
-              className="absolute leading-1 uppercase top-0 max-md:hidden -left-10  
-            text-[150px] max-lg:text-[100px] font-aleo max-md:text-[80px] z-2 max-sm:text-[50px] max-sm:hidden text-brown
-            "
-            >
+            <h2 className="absolute uppercase top-0 -left-10 max-md:hidden text-[150px] max-lg:text-[100px] max-md:text-[80px] text-brown font-aleo">
               Events
             </h2>
           </div>
+
           <div className="max-w-1/2 max-md:max-w-full p-12 max-md:p-5 max-sm:p-2 text-center">
-            <h2 className="heading-aleo text-center text-7xl text-white-cus max-sm:text-5xl uppercase">
+            <h2 className="heading-aleo text-center text-7xl max-sm:text-5xl uppercase text-white-cus">
               Functions & Events
             </h2>
             <h3 className="heading-aleo text-center text-2xl pt-2 text-white-cus max-sm:text-xl uppercase">
@@ -261,15 +305,12 @@ const AboutSec = () => {
             </h3>
             <p className="p-10 max-sm:p-4 text-center text-white-cus text-lexend">
               The Cornerstone’s versatile spaces are perfect for everything from
-              relaxed catch-ups to grand celebrations. Our dedicated team
-              ensures every event runs seamlessly, with carefully curated menus,
-              premium drinks, and warm hospitality - creating memorable moments
-              that bring people together.
+              relaxed catch-ups to grand celebrations.
             </p>
             <div className="flex flex-col gap-12 justify-center items-center">
               <Link
-                href="/events"
-                className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-2 font-semibold transition-all duration-300 tracking-widest border-2 border-brown hover:bg-transparent font-aleo hover:text-brown text-white "
+                href="/spaces"
+                className="uppercase px-12 py-2 rounded-md bg-brown text-white font-semibold tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown transition-all duration-300 font-aleo"
               >
                 View Spaces
               </Link>

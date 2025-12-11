@@ -19,6 +19,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import NewYear from "../Pop-ups/NewYear";
 
 import { useState } from "react";
 
@@ -32,6 +33,7 @@ export default function Page() {
       className="font-lexend"
       style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
     >
+      <NewYear/>
       {/* <section aria-label="Hero video banner">
         <div>
           <section className="">
@@ -53,27 +55,37 @@ export default function Page() {
           >
             Functions & Events
           </h1>
+
           <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium heading-aleo">
             Melbourne’s versatile function venue for every celebration
           </p>
+
           <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
+
           <p className="text-center text-base md:text-lg leading-relaxed text-lexend">
-            At <strong>The Cornerstone</strong>, every occasion becomes
-            unforgettable. From milestone birthdays and engagements to corporate
-            functions and private parties, our stylish spaces — including a
-            vibrant outdoor area — provide the perfect backdrop for any event.
+            At <strong>The Cornerstone</strong>, every celebration becomes truly
+            unforgettable. Whether you're planning an intimate dinner, a
+            milestone birthday, an engagement, or a corporate event, our
+            beautifully curated spaces provide the perfect setting for any
+            occasion.
           </p>
+
           <p className="text-center text-base md:text-lg leading-relaxed text-lexend mt-4">
-            We cater for up to <strong>100 guests cocktail-style</strong> or
-            <strong> 60 seated</strong>, offering chef-crafted menus, premium
-            drinks, and seamless service to make your celebration effortless and
-            memorable.
+            Choose from a range of versatile rooms — including our
+            <strong> Function Room (up to 70 guests)</strong>,
+            <strong> Private Dining Room (up to 24 guests)</strong>, and
+            <strong> Private Lounge (8–10 guests)</strong>. For large-scale
+            events, our <strong>exclusive venue hire</strong> accommodates up to
+            <strong> 300 guests</strong> with access to two bars and a lounge.
           </p>
+
           <p className="text-center text-base md:text-lg leading-relaxed text-lexend mt-4">
-            Elevate your event with optional décor and photography packages —
-            including custom signage, balloon garlands, and floral styling —
-            brought together by our dedicated events team.
+            Enjoy chef-crafted menus, premium drinks, and seamless service
+            throughout every space, with optional event styling and photography
+            — including custom signage, balloon garlands, and floral
+            installations — all coordinated by our dedicated events team.
           </p>
+
           <div
             className="flex w-full gap-4 md:gap-5 justify-center items-center mt-6"
             role="group"

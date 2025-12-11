@@ -6,8 +6,11 @@ import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 export default function Page() {
   return (
     <main className="bg-blue min-h-screen">
+      <div className="h-[95vh] max-sm:h-[50vh] w-full">
+        <img src="/contact/enquiry.jpg" className="h-full object-top object-cover w-full" alt="" />
+      </div>
       <div
-        className="py-12 mt-22 md:py-20"
+        className="py-12 mt-2 md:py-20"
         style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
       >
         <div className="container-responsive">
@@ -76,7 +79,7 @@ export default function Page() {
             {/* Enquiry Form */}
             <div className="space-y-6">
               <h2 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
-              <span  className="text-brown">Enq</span>uiry
+                <span className="text-brown">Enq</span>uiry
               </h2>
               <form className="space-y-6">
                 {/* Name */}

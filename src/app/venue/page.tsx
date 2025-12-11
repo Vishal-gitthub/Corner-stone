@@ -114,7 +114,7 @@ export default function Page() {
             <div>
               <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh]">
                 <Image
-                  src="/club/image-1.webp"
+                  src="/club/function-room.jpg"
                   alt="Functions and events at The Cornerstone"
                   fill
                   className="object-cover rounded-lg image-optimized"
@@ -132,6 +132,7 @@ export default function Page() {
                 Melbourne’s versatile venue for every celebration
               </p>
               <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
+
               <div className="space-y-4 text-sm md:text-base text-blue leading-relaxed">
                 <p>
                   At <strong>The Cornerstone</strong>, every occasion is made
@@ -139,19 +140,29 @@ export default function Page() {
                   and private celebrations, our spaces offer the ideal setting
                   for every style of gathering.
                 </p>
+
                 <p>
-                  Host up to <strong>100 guests cocktail-style</strong> or{" "}
-                  <strong>60 seated</strong> in our upstairs function room or
-                  vibrant outdoor area, with tailored menus, premium drinks, and
-                  a seamless event experience from start to finish.
+                  Welcome your guests into our
+                  <strong>  Function Room</strong>—an elegant upstairs
+                  space featuring its own private bar, perfect for birthday
+                  parties, corporate events, and private celebrations. This room
+                  accommodates up to <strong>70 guests</strong>.
                 </p>
+
+                <p>
+                  Prefer something outdoors? Our vibrant outdoor area offers
+                  flexible options for both cocktail-style and seated events,
+                  supported by tailored menus, premium drinks, and a seamless
+                  event experience from start to finish.
+                </p>
+
                 <p>
                   Enhance your celebration with optional styling and photography
-                  packages - including custom signage, balloon garlands, and
-                  floral arrangements - all managed by our dedicated events
-                  team.
+                  packages— including custom signage, balloon garlands, and
+                  floral arrangements—all managed by our dedicated events team.
                 </p>
               </div>
+
               <div className="flex justify-center lg:justify-start mt-8">
                 <Link
                   href="/events#enquire-section"
@@ -166,7 +177,7 @@ export default function Page() {
       </section>
 
       {/* VENUE DETAILS SECTION */}
-      <div className="border-t-2 border-brown bg-[#faf8f6]">
+      <div className="border-t-2 border-brown hidden bg-[#faf8f6]">
         <section className="py-16 md:py-20 lg:py-24">
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
