@@ -11,7 +11,13 @@ import food_1 from "../../../../public/home/Food_1.jpg";
 import food_2 from "../../../../public/home/Food_2.jpg";
 import food_3 from "../../../../public/home/Food_3.jpg";
 import food_4 from "../../../../public/home/Food_4.jpg";
-import food_5 from "../../../../public/home/Food_5.jpg";
+// import food_6 from "../../../../public/home/Food_6.jpeg";
+// import food_7 from "../../../../public/home/Food_7.jpeg";
+// import food_8 from "../../../../public/home/Food_8.jpeg";
+// import food_9 from "../../../../public/home/Food_9.jpeg";
+// import food_10 from "../../../../public/home/Food_10.jpeg";
+// import food_11 from "../../../../public/home/Food_11.jpeg";
+
 import FoodImage from "../../../../public/home/chefImage.jpg";
 import functions_events from "../../../../public/home/pub_area.jpg";
 import Link from "next/link";
@@ -20,6 +26,7 @@ import OutdoorImage1 from "../../../../public/cs_outside_images/outside-1.jpg";
 import OutdoorImage2 from "../../../../public/cs_outside_images/outside-2.jpg";
 import OutdoorImage3 from "../../../../public/cs_outside_images/outside-3.jpg";
 import { useState } from "react";
+import FoodCarousel from "./FoodCarousel";
 
 const AboutSec = () => {
   const [togglePopup, setTogglePopup] = useState(false);
@@ -244,8 +251,8 @@ const AboutSec = () => {
           </div>
         </div>
 
-        <div className="max-w-1/2 max-md:max-w-full">
-          <Swiper
+        <div className="max-w-1/2 relative max-md:max-w-full">
+          {/* <Swiper
             modules={[EffectFade, Autoplay]}
             effect="fade"
             autoplay={{
@@ -254,20 +261,29 @@ const AboutSec = () => {
             }}
             loop={true}
           >
-            {[food_1, food_2, food_3, food_4].map(
-              (foodImage, index) => (
-                <SwiperSlide key={foodImage.src}>
-                  <Image src={foodImage} alt="" className="w-full rounded-md" />
-                </SwiperSlide>
-              )
-            )}
-          </Swiper>
-        </div>
-
-        <div>
-          <h2 className="text-[200px] max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-10 right-9">
-            FOOD
-          </h2>
+            {[
+              food_1,
+              food_2,
+              food_3,
+              food_4,
+              // food_6,
+              // food_7,
+              // food_8,
+              // food_9,
+              // food_10,
+              // food_11,
+            ].map((foodImage, index) => (
+              <SwiperSlide key={foodImage.src}>
+                <Image src={foodImage} alt="" className="w-full rounded-md" />
+              </SwiperSlide>
+            ))}
+          </Swiper> */}
+          <FoodCarousel />
+          <div>
+            <h2 className="text-[170px] z-1 max-lg:text-[150px] font-aleo max-md:text-[90px] max-sm:text-[50px] max-sm:hidden text-brown absolute bottom-0 left-16">
+              FOOD
+            </h2>
+          </div>
         </div>
       </section>
 

@@ -34,16 +34,6 @@ export default function Page() {
       style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
     >
       <NewYear/>
-      {/* <section aria-label="Hero video banner">
-        <div>
-          <section className="">
-            <video autoPlay muted loop className="h-screen w-full object-cover">
-              <source src="/events/event.mp4" />
-            </video>
-          </section>
-        </div>
-      </section> */}
-
       <section
         className="py-16 md:py-24 lg:py-32"
         aria-labelledby="events-intro-heading"

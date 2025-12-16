@@ -31,14 +31,14 @@ export default function FunctionSpacePage() {
           Style, Warmth & Versatility
         </h2>
         <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-blue/90">
-          Nestled above The Cornerstone Pub, our Function Space combines modern
+          Nestled above The Cornerstone Pub, our function spaces combine modern
           sophistication with timeless charm. Designed to adapt to your
-          occasion, it’s the ideal venue for birthdays, engagements, corporate
-          gatherings, or intimate private events.
+          occasion, they are ideal for birthdays, engagements, corporate
+          gatherings, and private celebrations.
         </p>
       </section>
 
-      {/* IMAGE GALLERY GRID */}
+      {/* IMAGE GALLERY */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-2">
         {[
           "/functions/4300237_17960.jpg",
@@ -60,36 +60,43 @@ export default function FunctionSpacePage() {
         ))}
       </section>
 
-      {/* FEATURES SECTION */}
-      <section className="py-24 container-responsive grid grid-cols-1 lg:grid-cols-3 gap-12 text-center">
-        {[
-          {
-            title: "Flexible Layouts",
-            text: "From lounge and high-table settings to elegant seated dining — our space transforms to match your event vision.",
-            icon: "🪑",
-          },
-          {
-            title: "Private Bar & Amenities",
-            text: "Enjoy exclusive access to your own private bar, modern facilities, and attentive service for a seamless experience.",
-            icon: "🍸",
-          },
-          {
-            title: "Perfect for Every Occasion",
-            text: "Host up to 100 guests cocktail-style or 60 seated — ideal for celebrations, launches, or corporate events.",
-            icon: "🎉",
-          },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="bg-white rounded-lg shadow-md py-12 px-8 hover:shadow-xl transition-all duration-300"
-          >
-            <div className="text-4xl mb-4">{item.icon}</div>
-            <h3 className="text-2xl font-semibold mb-3 text-brown font-aleo uppercase">
-              {item.title}
-            </h3>
-            <p className="text-blue/90 leading-relaxed">{item.text}</p>
-          </div>
-        ))}
+      {/* FUNCTION SPACES DETAILS */}
+      <section className="py-24 container-responsive grid grid-cols-1 lg:grid-cols-2 gap-12 text-center">
+        {/* WHISKY LOUNGE */}
+        <div className="bg-white rounded-lg shadow-md py-14 px-10 hover:shadow-xl transition-all duration-300">
+          <div className="text-4xl mb-4">🥃</div>
+          <h3 className="text-3xl font-aleo uppercase font-semibold text-brown mb-6">
+            Whisky Lounge
+          </h3>
+          <p className="mb-6 text-blue/90 text-lg leading-relaxed">
+            An intimate and refined setting, perfect for relaxed celebrations,
+            private tastings, or small corporate gatherings.
+          </p>
+          <ul className="space-y-4 text-lg text-blue/90 leading-relaxed">
+            <li>• AV connection with TV</li>
+            <li>• In-house music</li>
+            <li>• Personalised menu selection</li>
+          </ul>
+        </div>
+
+        {/* FUNCTION ROOM */}
+        <div className="bg-white rounded-lg shadow-md py-14 px-10 hover:shadow-xl transition-all duration-300">
+          <div className="text-4xl mb-4">🎤</div>
+          <h3 className="text-3xl font-aleo uppercase font-semibold text-brown mb-6">
+            Function Room
+          </h3>
+          <p className="mb-6 text-blue/90 text-lg leading-relaxed">
+            A spacious and fully equipped venue designed for impactful
+            presentations, celebrations, and large-scale events.
+          </p>
+          <ul className="space-y-4 text-lg text-blue/90 leading-relaxed">
+            <li>• Full AV included</li>
+            <li>• 85-inch TV screen</li>
+            <li>• In-house music</li>
+            <li>• Wireless microphone</li>
+            <li>• Catering packages available</li>
+          </ul>
+        </div>
       </section>
 
       {/* AMBIENCE SECTION */}
@@ -107,27 +114,27 @@ export default function FunctionSpacePage() {
             Light, Ambience & Atmosphere
           </h2>
           <p className="text-lg leading-relaxed">
-            Sunlight streams through large windows by day, while warm lighting
-            creates an inviting mood by night. Every event feels special, every
-            moment memorable.
+            Sunlight fills the space during the day, while warm lighting creates
+            a welcoming and intimate atmosphere at night — ensuring every event
+            feels memorable.
           </p>
         </div>
       </section>
 
-      {/* FOOD & DRINKS SECTION */}
+      {/* FOOD & DRINKS */}
       <section className="py-24 container-responsive grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-aleo uppercase font-bold text-brown">
             Food & Beverage Packages
           </h2>
           <p className="text-lg leading-relaxed text-blue/90">
-            Celebrate with curated menus and premium drinks featuring
-            Cornerstone’s signature dishes, local wines, craft beers, and
-            handcrafted cocktails.
+            Enjoy curated menus and premium drinks featuring Cornerstone’s
+            signature dishes, local wines, craft beers, and handcrafted
+            cocktails.
           </p>
           <p className="text-lg leading-relaxed text-blue/90">
-            Choose from grazing tables, canapé selections, or multi-course
-            dining — every option designed to delight your guests.
+            From grazing tables and canapé selections to multi-course dining,
+            every package is designed to impress your guests.
           </p>
         </div>
 
@@ -148,8 +155,8 @@ export default function FunctionSpacePage() {
             Plan Your Perfect Event
           </h2>
           <p className="text-lg md:text-xl max-w-2xl mx-auto">
-            Whether it’s an intimate dinner, a milestone birthday, or a vibrant
-            corporate gathering — our team will make every detail effortless.
+            Whether it’s an intimate gathering or a large celebration, our team
+            will take care of every detail.
           </p>
           <a
             href="/contact"

@@ -11,20 +11,19 @@ const SPACES = [
     id: "function-room",
     title: "Function Room",
     desc: "Spacious and versatile for birthdays, launches and corporate events. Configurable seating, AV-ready and easy to customise.",
-    img: "/spaces/function-room.jpg",
+    img: "/spaces/function-room.jpeg",
   },
   {
-    id: "cigar-lounge",
-    title: "Cigar Lounge",
-    desc: "A relaxed lounge with premium spirits and curated cigars. Soft lighting and deep seating for slower, quieter moments.",
-    img: "/spaces/cigar-room.jpg",
+    id: "whisky-lounge",
+    title: "Whisky Lounge",
+    desc: "A relaxed and refined lounge featuring premium spirits. Soft lighting and comfortable seating for intimate gatherings.",
+    img: "/spaces/whisky-lounge.jpg",
   },
 ];
 
 export default function SpacesPage() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-36">
-
       {/* Page Header */}
       <div className="text-center mb-14">
         <h1 className="text-4xl md:text-5xl font-bold">Our Spaces</h1>
@@ -45,8 +44,8 @@ export default function SpacesPage() {
             </div>
 
             <div className="p-6">
-              <h2 className="text-xl font-semibold">{s.title}</h2>
-              <p className="text-gray-600 text-sm mt-3">{s.desc}</p>
+              <h2 className="text-xl font-aleo font-semibold">{s.title}</h2>
+              <p className="text-gray-600 font-lexend text-sm mt-3">{s.desc}</p>
 
               <a
                 href={`/contact#${s.id}`}
@@ -59,15 +58,33 @@ export default function SpacesPage() {
         ))}
       </div>
 
-      {/* Features */}
+      {/* VENUE FEATURES */}
       <div className="mt-20 bg-gray-50 p-10 rounded-2xl shadow-sm">
-        <h3 className="text-2xl font-semibold">Venue Features</h3>
-        <ul className="mt-4 text-gray-600 space-y-2 text-sm">
-          <li>• AV equipment (projector, mic, Bluetooth audio)</li>
-          <li>• Custom menu and drinks packages</li>
-          <li>• Wheelchair accessible</li>
-          <li>• Setup support and event coordination</li>
-        </ul>
+        <h3 className="text-2xl font-semibold font-aleo mb-6">Corner Stone Features</h3>
+
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Function Room Features */}
+          <div>
+            <h4 className="font-semibold mb-3 font-aleo">Function Room</h4>
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>• Full AV included</li>
+              <li>• 85 inch TV screen</li>
+              <li>• In-house music</li>
+              <li>• Wireless microphone</li>
+              <li>• Catering packages</li>
+            </ul>
+          </div>
+
+          {/* Whisky Lounge Features */}
+          <div>
+            <h4 className="font-semibold mb-3 font-aleo">Whisky Lounge</h4>
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>• AV connection / TV</li>
+              <li>• In-house music</li>
+              <li>• Personalised menu selection</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       {/* Gallery */}
@@ -75,7 +92,7 @@ export default function SpacesPage() {
         <h3 className="text-2xl font-semibold">Gallery</h3>
 
         <div className="mt-4 columns-1 sm:columns-2 lg:columns-4 gap-4 space-y-4">
-        {[
+          {[
             "/gallery/img-1.jpg",
             "/gallery/img-2.jpg",
             "/gallery/img-3.jpg",
@@ -96,7 +113,7 @@ export default function SpacesPage() {
             <div
               key={i}
               className="relative w-full overflow-hidden rounded-lg ring-1 ring-black/5"
-              style={{ aspectRatio: "4/5" }} // keeps masonry consistent
+              style={{ aspectRatio: "4/5" }}
             >
               <Image
                 src={src}
@@ -108,7 +125,6 @@ export default function SpacesPage() {
           ))}
         </div>
       </div>
-
     </section>
   );
 }

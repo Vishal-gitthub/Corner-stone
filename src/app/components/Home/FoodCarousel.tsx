@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay, EffectCreative } from "swiper/modules";
+import { Autoplay, EffectCreative } from "swiper/modules";
 
 // Swiper core styles
 import "swiper/css";
@@ -12,6 +12,12 @@ import food_1 from "../../../../public/home/Food_1.jpg";
 import food_2 from "../../../../public/home/Food_2.jpg";
 import food_3 from "../../../../public/home/Food_3.jpg";
 import food_4 from "../../../../public/home/Food_4.jpg";
+import food_6 from "../../../../public/home/Food_6.jpeg";
+// import food_7 from "../../../../public/home/Food_7.jpeg";
+import food_8 from "../../../../public/home/Food_8.jpeg";
+import food_9 from "../../../../public/home/Food_9.jpeg";
+// import food_10 from "../../../../public/home/Food_10.jpeg";
+// import food_11 from "../../../../public/home/Food_11.jpeg";
 
 export default function FoodCarousel() {
   return (
@@ -34,7 +40,18 @@ export default function FoodCarousel() {
       }}
       loop={true}
     >
-      {[food_1, food_2, food_3, food_4].map((foodImage, index) => (
+      {[
+        food_1,
+        food_2,
+        food_3,
+        food_4,
+        food_6,
+        // food_7,
+        food_8,
+        food_9,
+        // food_10,
+        // food_11,
+      ].map((foodImage, index) => (
         <SwiperSlide key={index}>
           <div className="h-[80vh] w-full">
             <Image
