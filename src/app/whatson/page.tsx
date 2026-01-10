@@ -6,7 +6,7 @@ import { SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { Scrollbar, Autoplay } from "swiper/modules";
-import NewYear from "../Pop-ups/NewYear";
+// import NewYear from "../Pop-ups/NewYear";
 export default function Page() {
   const offerings = [
     {
@@ -66,7 +66,7 @@ export default function Page() {
 
   return (
     <div>
-      <NewYear />
+      {/* <NewYear /> */}
       <main
         style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
         className="w-full min-h-screen bg-white/70"

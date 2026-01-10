@@ -19,7 +19,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import NewYear from "../Pop-ups/NewYear";
+// import NewYear from "../Pop-ups/NewYear";
 
 import { useState } from "react";
 
@@ -33,7 +33,7 @@ export default function Page() {
       className="font-lexend"
       style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
     >
-      <NewYear/>
+      {/* <NewYear/>  */}
       <section
         className="py-16 md:py-24 lg:py-32"
         aria-labelledby="events-intro-heading"
