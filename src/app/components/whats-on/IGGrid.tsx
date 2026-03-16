@@ -12,7 +12,9 @@ const ElfsightWidget = () => {
 
     // Function to remove badge
     const removeBadge = () => {
-      const badge = document.querySelector('a[title="Free Instagram Feed widget"]');
+      const badge = document.querySelector(
+        'a[title="Free Instagram Feed widget"]',
+      );
       if (badge) {
         badge.remove();
         console.log("Elfsight badge removed.");
@@ -39,7 +41,7 @@ const ElfsightWidget = () => {
   return (
     <section>
       <div
-        className="elfsight-app-e04e028a-2e9f-4d6f-b24a-6cf6aa3080fd"
+        className="elfsight-app-a99dd180-9f87-4f15-a30c-9804d3a585e0"
         data-elfsight-app-lazy
       ></div>
     </section>

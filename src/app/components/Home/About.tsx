@@ -11,13 +11,6 @@ import food_1 from "../../../../public/home/Food_1.jpg";
 import food_2 from "../../../../public/home/Food_2.jpg";
 import food_3 from "../../../../public/home/Food_3.jpg";
 import food_4 from "../../../../public/home/Food_4.jpg";
-// import food_6 from "../../../../public/home/Food_6.jpeg";
-// import food_7 from "../../../../public/home/Food_7.jpeg";
-// import food_8 from "../../../../public/home/Food_8.jpeg";
-// import food_9 from "../../../../public/home/Food_9.jpeg";
-// import food_10 from "../../../../public/home/Food_10.jpeg";
-// import food_11 from "../../../../public/home/Food_11.jpeg";
-
 import FoodImage from "../../../../public/home/chefImage.jpg";
 import functions_events from "../../../../public/home/pub_area.jpg";
 import Link from "next/link";
@@ -36,8 +29,8 @@ const AboutSec = () => {
       className="pt-32 text-center"
     >
       <div className="max-w-7xl m-auto px-32 max-md:px-16 max-sm:px-3 pb-32">
-        <span className="uppercase text-center font-aleo max-md:text-3xl text-5xl text-brown">
-          Welcome to The Cornerstone Pub
+        <span className="uppercase text-center font-aleo max-md:text-2xl text-[42px] text-brown">
+          Welcome to The Cornerstone Pub & Social
         </span>
         <h2 className="heading-aleo text-2xl max-md:text-lg pt-5 max-w-4xl text-center m-auto">
           Discover South Melbourne’s favourite destination for good times, great
@@ -175,7 +168,7 @@ const AboutSec = () => {
       <section className="px-10 py-32 flex flex-wrap max-sm:flex-col justify-center items-center max-w-7xl relative m-auto">
         <div className="max-w-1/2 max-md:max-w-full relative ">
           <Swiper
-            modules={[Autoplay, EffectCube]}
+            modules={[Autoplay, EffectCube]} 
             autoplay={{ delay: 3000 }}
             loop={true}
             effect="cube"
@@ -234,11 +227,11 @@ const AboutSec = () => {
           <h2 className="font-aleo text-center text-7xl max-sm:text-5xl uppercase">
             Our Food
           </h2>
-          <h3 className="text-center font-aleo text-2xl pt-2 max-sm:text-xl uppercase">
+          {/* <h3 className="text-center font-aleo text-2xl pt-2 max-sm:text-xl uppercase">
             HEAD CHEF: STUART RUSS
-          </h3>
+          </h3> */}
           <p className="p-10 max-sm:p-4 text-center font-lexend">
-            With a vibrant new menu led by Stuart Russ, The Cornerstone brings a
+            With a vibrant new menu, The Cornerstone brings a
             fresh twist to modern pub dining.
           </p>
           <div className="flex flex-col gap-12 justify-center items-center">

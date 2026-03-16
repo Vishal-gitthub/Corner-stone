@@ -11,9 +11,9 @@ export default function Page() {
   const offerings = [
     {
       path: "/home/rooftopVenu.jpg",
-      heading: "Now Open 7 Days",
-      subHead: "Every Day | Midday – 10 PM",
-      desc: "We're now open all week long! Enjoy refreshing cocktails, comfort food, and great vibes — your go-to spot any day of the week.",
+      heading: "Now Open 6 Days",
+      subHead: "Midday – 10 PM",
+      desc: "Join us six days a week for great food, refreshing drinks, and relaxed rooftop vibes. Your perfect spot to unwind any day.",
     },
     {
       path: "/home/happy_hour.jpg",
@@ -61,6 +61,14 @@ export default function Page() {
       // btn: "View Menu",
       // imgSrc:
       //   "https://cornerstonepub.com.au/menu/happy_hour_Menu/15_dollar_menu.pdf_page-0001.jpg",
+    },
+    {
+      path: "/whatson/18.9_banner.png",
+      heading: "What’s On This Week",
+      subHead: "Entertainment Every Week",
+      desc: "Open Mic Night on Tuesday, Trivia Nights on Wednesday, Social Club with live music on Friday, Latin Club Night on Saturday, and our famous Sunday Roast with live music.",
+      btn: "View Events",
+      imgSrc: "https://cornerstonepub.com.au/whatson/main_meals_18.9.jpg",
     },
   ];
 
@@ -129,17 +137,17 @@ export default function Page() {
                       <p className="text-sm md:text-base text-blue leading-relaxed text-lexend">
                         {data.desc}
                       </p>
-                      {/* {data && (
-                      <a
-                        href={data.imgSrc}
-                        target="_blank"
-                        className={`${
-                          data && data.btn ? "inline-block" : "hidden"
-                        } py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium font-lexend`}
-                      >
-                        {data.btn}
-                      </a>
-                    )} */}
+                      {data && (
+                        <a
+                          href={data.imgSrc}
+                          target="_blank"
+                          className={`${
+                            data && data.btn ? "inline-block" : "hidden"
+                          } py-2 px-6 text-white text-sm bg-brown hover:bg-opacity-90 transition-all duration-300 btn-hover rounded-md font-medium font-lexend`}
+                        >
+                          {data.btn}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </SwiperSlide>
