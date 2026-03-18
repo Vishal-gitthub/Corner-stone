@@ -35,15 +35,15 @@ const Nightlife = () => {
           </div>
 
           {/* Right Content */}
-          <div className="w-1/2 relative max-md:w-full">
+          <div className="w-1/2 relative  max-md:w-full">
             {/* Main image */}
-            <div className="relative w-full h-[95vh]">
-              <Image
-                src="/home/nightlife_2.webp"
+            <div className="relative flex max-sm:items-start flex-col justify-center items-center w-full h-[95vh]">
+              <img
+                src="/home/DSC07482.jpg"
                 alt="Cornerstone Pub nightlife scene on Fridays and Saturdays with vibrant atmosphere, live music, cocktails, and social gathering in Port Melbourne"
-                fill
+                // fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                // sizes="(max-width: 100vw) 100vw, 50vw"
               />
             </div>
             {/* Overlay signs */}
@@ -55,7 +55,7 @@ const Nightlife = () => {
               alt="Unforgettable Nights sign"
               width={288} // ~w-72
               height={100}
-              className="absolute -bottom-10 -left-20 max-md:hidden"
+              className="absolute bottom-30 -left-20 max-md:hidden"
             />
           </div>
         </section>

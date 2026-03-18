@@ -144,7 +144,7 @@ const AboutSec = () => {
             <div className="flex flex-col items-center">
               <div className="w-96 max-md:w-72 max-sm:w-52">
                 <Image
-                  src="/home/nightlife.jpg"
+                  src="/home/nightlife2.webp"
                   className="w-full rounded-[50%] aspect-square"
                   alt=""
                   width={500}
