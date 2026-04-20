@@ -37,7 +37,7 @@ const Nightlife = () => {
           {/* Right Content */}
           <div className="w-1/2 relative  max-md:w-full">
             {/* Main image */}
-            <div className="relative flex max-sm:items-start flex-col justify-center items-center w-full h-[95vh]">
+            <div className="relative flex max-sm:items-start max-sm:justify- flex-col justify-center items-center w-full h-[95vh]">
               <img
                 src="/home/DSC07482.jpg"
                 alt="Cornerstone Pub nightlife scene on Fridays and Saturdays with vibrant atmosphere, live music, cocktails, and social gathering in Port Melbourne"

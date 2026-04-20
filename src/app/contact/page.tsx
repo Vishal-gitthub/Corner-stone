@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Page() {
   return (
     <main className="bg-blue min-h-screen">
       <div className="h-[95vh] max-sm:h-[50vh] w-full">
-        <img src="/contact/enquiry.jpg" className="h-full object-top object-cover w-full" alt="" />
+        <img src="/contact/Enquiry.jpg" className="h-full object-top object-cover w-full" alt="" />
       </div>
       <div
         className="py-12 mt-2 md:py-20"

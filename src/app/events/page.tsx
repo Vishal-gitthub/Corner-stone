@@ -372,6 +372,20 @@ export default function Page() {
                   className="w-full max-h-[80vh] object-contain"
                 />
               </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/menu/events_menu/Cornerstone Event Menus_page-0005.jpg"
+                  alt="Cornerstone Pub events menu page 5 - final page of event catering menu with additional options, pricing, and booking information for functions"
+                  className="w-full max-h-[80vh] object-contain"
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/menu/events_menu/Cornerstone Event Menus_page-0006.jpg"
+                  alt="Cornerstone Pub events menu page 6 - final page of event catering menu with additional options, pricing, and booking information for functions"
+                  className="w-full max-h-[80vh] object-contain"
+                />
+              </SwiperSlide>
             </Swiper>
 
             <button
