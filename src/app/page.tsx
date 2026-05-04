@@ -3,7 +3,7 @@ import Banner from "./components/Home/Banner";
 import LiveSport from "./components/Home/LiveSport";
 import Nightlife from "./components/Home/Nightlife";
 import WhatsOn from "./components/Home/Whats_on";
-
+import Popup from "./Pop-ups/NewYear";
 export default function HomePage() {
   return (
     <main>
@@ -22,6 +22,7 @@ export default function HomePage() {
       <section aria-labelledby="nightlife-heading">
         <Nightlife />
       </section>
+      <Popup />
     </main>
   );
 }
