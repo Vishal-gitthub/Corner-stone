@@ -32,16 +32,14 @@ export default function Page() {
       heading: "Friday Big Band Nights",
       subHead: "Fridays | 8PM – 11PM",
       desc: "Ease into the weekend with rotating bands, smooth rhythms, and great vibes.",
-      btn: "View Event",
-      imgSrc: "#",
+      
     },
     {
       path: "/whatson/10948067.jpg",
       heading: "Saturday Groove Sessions",
       subHead: "Saturdays | 6PM – 9PM",
       desc: "Enjoy live tunes, great food, and laid-back ambience for your perfect Saturday evening.",
-      btn: "View Event",
-      imgSrc: "#",
+     
     },
     {
       path: "/whatson/dj.jpg",
@@ -66,7 +64,7 @@ export default function Page() {
       heading: "What’s On This Week",
       subHead: "Entertainment Every Week",
       desc: "Open Mic Tuesday, Trivia Wednesday, Live Music Friday, Latin Night Saturday, and Sunday Roast.",
-      btn: "View Events",
+      btn: "View Menu",
       imgSrc: "https://cornerstonepub.com.au/whatson/main_meals_18.9.jpg",
     },
     {
