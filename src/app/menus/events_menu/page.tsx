@@ -9,6 +9,10 @@ import "swiper/css/pagination";
 
 const eventMenuPages = [
   {
+    src: "/menu/events_menu/Cornerstone Event Menus_page-0001.jpg",
+    alt: "Cornerstone Pub events menu page 1 - catering packages and function dining options for celebrations and corporate events in Port Melbourne",
+  },
+  {
     src: "/menu/events_menu/Cornerstone Event Menus_page-0002.jpg",
     alt: "Cornerstone Pub events menu page 2 - catering packages and function dining options for celebrations and corporate events in Port Melbourne",
   },
