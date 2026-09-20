@@ -53,7 +53,7 @@ export default function Page() {
       </Swiper>
 
       {/* HERO TEXT */}
-      <div className="py-16 md:py-24 lg:py-32">
+      <div className="py-16 md:py-24 lg:py-32" data-reveal>
         <div className="container-responsive text-center">
           <p className="text-xl md:text-2xl lg:text-3xl uppercase text-brown font-medium mb-4">
             The Cornerstone Pub
@@ -65,7 +65,7 @@ export default function Page() {
       </div>
 
       {/* OUR FOOD SECTION */}
-      <div className="border-t-2 border-brown bg-[#faf8f6]">
+      <div className="border-t-2 border-brown bg-[#faf8f6]" data-reveal>
         <section className="py-16 md:py-20 lg:py-24">
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">

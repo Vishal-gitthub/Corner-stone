@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 function NewYear() {
   const [open, setOpen] = useState(true);
@@ -25,15 +26,18 @@ function NewYear() {
           </button>
 
           {/* Image */}
-          <img
+          <Image
             src="/popups/MothersDay- At corner Stone pub.jpg"
-            alt="popup"
-            className="rounded-lg w-full mb-5"
+            alt="Cornerstone Pub promotion"
+            width={1131}
+            height={1600}
+            sizes="(max-width: 768px) 90vw, 448px"
+            className="mb-5 h-auto w-full rounded-lg"
           />
 
           {/* CTA */}
           <a
-            href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20websiteF"
+            href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center bg-yellow-800 hover:bg-blue-600 text-white py-2 rounded-lg transition"

@@ -1,402 +1,443 @@
-"use client";
-
-import Banner from "../components/Home/Banner";
 import Image from "next/image";
-
 import Link from "next/link";
-import type { Metadata } from "next";
-import FoodCarousel from "../components/Home/FoodCarousel";
 import FunctionEnquiryForm from "./FunctionEnquiryForm";
 
-// export const metadata: Metadata = {
-//   title: "Functions & Events | The Albion Rooftop",
-//   description:
-//     "Host unforgettable functions and events at The Albion Rooftop – VIP room, curated menus, premium beverages, décor and photography packages.",
-// };
+const spaces = [
+  {
+    name: "Function Room",
+    capacity: "Up to 70 guests",
+    use: "Larger private celebrations and corporate gatherings.",
+    image: "/club/function-room.jpg",
+    alt: "The blue-walled Function Room at The Cornerstone Pub",
+  },
+  {
+    name: "Private Dining Room",
+    capacity: "Up to 24 guests",
+    use: "Intimate meals and smaller group occasions.",
+    image: "/spaces/dining-room.jpg",
+    alt: "Private Dining Room with long tables at The Cornerstone Pub",
+  },
+  {
+    name: "Private Lounge",
+    capacity: "8–10 guests",
+    use: "Small, private get-togethers.",
+    image: "/events/VIP-Room-1.webp",
+    alt: "Private Lounge seating at The Cornerstone Pub",
+  },
+  {
+    name: "Exclusive venue hire",
+    capacity: "Up to 300 guests",
+    use: "Larger events requiring access to the venue's two bars and lounge.",
+    image: "/club/_85A7735.webp",
+    alt: "Guests gathering around the bar at The Cornerstone Pub",
+  },
+];
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-// import NewYear from "../Pop-ups/NewYear";
+const occasions = [
+  "Birthday parties",
+  "Engagement celebrations",
+  "Corporate events",
+  "Group occasions",
+];
 
-import { useState } from "react";
+const faqs = [
+  {
+    question: "What types of functions can I host at The Cornerstone?",
+    answer:
+      "The Cornerstone hosts private celebrations, birthday parties, engagement celebrations, corporate events and group occasions. Tell the functions team what you are planning so they can recommend the most suitable space.",
+  },
+  {
+    question: "Does The Cornerstone have private function rooms?",
+    answer:
+      "Yes. The venue lists a Function Room, Private Dining Room and Private Lounge. Each is suited to a different group size and style of event.",
+  },
+  {
+    question: "Can I book the whole venue?",
+    answer:
+      "Exclusive venue hire is available for events of up to 300 guests, subject to the venue's availability and event requirements.",
+  },
+  {
+    question: "Where can I view food and beverage options for a function?",
+    answer:
+      "The current functions and events menu is available online. Menu details can change, so confirm your final selections with the functions team.",
+  },
+  {
+    question: "How do I make a function enquiry?",
+    answer:
+      "Use the enquiry form below with your preferred date, guest number and event details. You can also call or email the venue.",
+  },
+];
 
-export default function Page() {
-  const [popUp, setPopUp] = useState(false);
-  const toggle = () => {
-    setPopUp(!popUp);
-  };
+const primaryButton =
+  "inline-flex min-h-12 items-center justify-center bg-brown px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#8b6702] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown";
+
+const secondaryButton =
+  "inline-flex min-h-12 items-center justify-center border border-blue/35 px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-blue transition-colors hover:border-blue hover:bg-blue hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue";
+
+export default function EventsPage() {
   return (
-    <main
-      className="font-lexend"
-      style={{ backgroundImage: "url(/home/BgTexture.jpg)" }}
-    >
-      {/* <NewYear/>  */}
-      <section
-        className="py-16 md:py-24 lg:py-32"
-        aria-labelledby="events-intro-heading"
-      >
-        <div className="container-responsive max-w-4xl text-center flex flex-col gap-4 md:gap-6">
-          <h1
-            id="events-intro-heading"
-            className="text-4xl md:text-6xl lg:text-8xl uppercase font-bold heading-aleo"
+    <main className="overflow-hidden bg-[#f8f5f2] text-blue">
+      <section className="relative pb-20 pt-36 md:pb-28 md:pt-44">
+        <div className="absolute inset-x-0 top-0 h-px bg-blue/10" aria-hidden="true" />
+        <div className="container-responsive grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+          <div className="relative z-10 lg:col-span-6 lg:pr-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+              Functions at The Cornerstone
+            </p>
+            <h1 className="mt-5 max-w-4xl text-[clamp(3.25rem,7vw,6.5rem)] font-bold uppercase leading-[0.88] tracking-[-0.045em] heading-aleo">
+              Function venue in Port Melbourne
+            </h1>
+            <p className="mt-7 max-w-xl text-base leading-8 text-blue/75 md:text-lg">
+              The Cornerstone is a pub, dining and functions venue at 1
+              Crockford Street in Port Melbourne. From private dinners to
+              larger celebrations, the team can help match your occasion to
+              the right space.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a href="#enquire-section" className={primaryButton}>
+                Enquire about a function
+              </a>
+              <Link href="/spaces" className={secondaryButton}>
+                 function spaces
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative lg:col-span-6 lg:pl-6">
+            <div className="relative min-h-[28rem] overflow-hidden md:min-h-[38rem]">
+              <Image
+                src="/spaces/function-room.jpeg"
+                alt="A private function setup at The Cornerstone Pub in Port Melbourne"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-blue/40 via-transparent to-transparent"
+                aria-hidden="true"
+              />
+            </div>
+            <div className="absolute -bottom-6 left-0 bg-blue px-5 py-4 text-white sm:left-auto sm:right-0 sm:px-7">
+              <p className="text-xs uppercase tracking-[0.25em] text-white/60">
+                Private events
+              </p>
+              <p className="mt-1 text-xl font-bold heading-aleo">
+                Spaces for 8–300 guests
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-blue/10 bg-white py-16 md:py-24">
+        <div className="container-responsive grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+              Made for gathering
+            </p>
+            <h2 className="mt-4 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-5xl">
+              Private events, group dining and venue hire
+            </h2>
+          </div>
+          <div className="lg:col-span-7 lg:col-start-6">
+            <p className="max-w-3xl text-xl leading-9 text-blue/80 md:text-2xl md:leading-10">
+              Whether you are organising a birthday, engagement, corporate
+              function or another private occasion, share your guest number,
+              preferred date and event style with the team. They can guide you
+              through the available space and current food and drinks options.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-x-8 gap-y-4 border-t border-blue/15 pt-6">
+              <Link
+                href="/menus/events_menu"
+                className="font-semibold text-brown underline decoration-brown/40 underline-offset-8 transition-colors hover:text-blue"
+              >
+                View functions menu
+              </Link>
+              <Link
+                href="/food"
+                className="font-semibold text-brown underline decoration-brown/40 underline-offset-8 transition-colors hover:text-blue"
+              >
+                Explore pub dining
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-blue py-20 text-white md:py-28">
+        <div className="container-responsive">
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+            <div className="lg:col-span-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+                Spaces and capacities
+              </p>
+              <h2 className="mt-4 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-6xl">
+                Choose a setting that fits your event
+              </h2>
+            </div>
+            <p className="leading-7 text-white/70 lg:col-span-4 lg:col-start-9">
+              Capacities below reflect the venue information currently
+              published on this website. Confirm configuration, accessibility,
+              minimum spend and availability as part of your enquiry.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-x-6 gap-y-12 md:grid-cols-2">
+            {spaces.map((space, index) => (
+              <article
+                key={space.name}
+                className={index % 2 === 1 ? "md:mt-20" : undefined}
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={space.image}
+                    alt={space.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 hover:scale-[1.025]"
+                  />
+                </div>
+                <div className="grid gap-4 border-t border-white/25 pt-5 sm:grid-cols-[1fr_auto] sm:items-start">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brown">
+                      {space.capacity}
+                    </p>
+                    <h3 className="mt-2 text-3xl font-bold heading-aleo">
+                      {space.name}
+                    </h3>
+                  </div>
+                  <p className="max-w-xs text-sm leading-6 text-white/65 sm:text-right">
+                    {space.use}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <Link
+            href="/spaces"
+            className="mt-14 inline-flex border-b border-brown pb-1 font-semibold text-brown transition-colors hover:border-white hover:text-white"
           >
-            Functions & Events
-          </h1>
+            See photos and an overview of the function spaces
+          </Link>
+        </div>
+      </section>
 
-          <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium heading-aleo">
-            Melbourne’s versatile function venue for every celebration
+      <section className="relative min-h-[34rem] md:min-h-[44rem]">
+        <Image
+          src="/club/LoungePhoto2.jpg"
+          alt="The warmly lit dining room at The Cornerstone Pub"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue/90 via-blue/45 to-transparent" />
+        <div className="container-responsive relative flex min-h-[34rem] items-center py-16 text-white md:min-h-[44rem]">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+              From dinner to celebration
+            </p>
+            <h2 className="mt-5 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-6xl">
+              One venue. Several ways to gather.
+            </h2>
+            <p className="mt-6 max-w-lg text-lg leading-8 text-white/80">
+              Private dining, intimate get-togethers and larger events can each
+              take their place within The Cornerstone.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#efe9e2] py-16 md:py-20" aria-label="Function types">
+        <div className="container-responsive">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+            Occasions at The Cornerstone
           </p>
+          <div className="mt-10 grid border-y border-blue/15 sm:grid-cols-2 lg:grid-cols-4">
+            {occasions.map((occasion, index) => (
+              <div
+                key={occasion}
+                className="flex min-h-32 items-center gap-4 border-b border-blue/15 px-3 py-7 last:border-b-0 sm:[&:nth-child(3)]:border-b-0 sm:[&:nth-child(4)]:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0 lg:px-6"
+              >
+                <span className="text-xs tabular-nums text-brown" aria-hidden="true">
+                  0{index + 1}
+                </span>
+                <p className="text-xl font-bold heading-aleo">{occasion}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
+      <section className="bg-white py-20 md:py-28">
+        <div className="container-responsive grid gap-14 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+              Planning your occasion
+            </p>
+            <h2 className="mt-4 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-6xl">
+              A clear path from idea to event
+            </h2>
+            <p className="mt-6 max-w-lg text-lg leading-8 text-blue/70">
+              Start with the essentials and the functions team can help you
+              work through the available space and current options.
+            </p>
+          </div>
 
-          <p className="text-center text-base md:text-lg leading-relaxed text-lexend">
-            At <strong>The Cornerstone</strong>, every celebration becomes truly
-            unforgettable. Whether you're planning an intimate dinner, a
-            milestone birthday, an engagement, or a corporate event, our
-            beautifully curated spaces provide the perfect setting for any
-            occasion.
-          </p>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <h3 className="sr-only">How function enquiries work</h3>
+            <ol className="divide-y divide-blue/15 border-y border-blue/15">
+              <li className="grid gap-4 py-7 sm:grid-cols-[4rem_1fr]">
+                <span className="text-3xl text-brown heading-aleo" aria-hidden="true">
+                  01
+                </span>
+                <div>
+                  <strong className="text-xl heading-aleo">Share the basics.</strong>
+                  <p className="mt-2 leading-7 text-blue/70">
+                    Tell us the date, guest number and occasion.
+                  </p>
+                </div>
+              </li>
+              <li className="grid gap-4 py-7 sm:grid-cols-[4rem_1fr]">
+                <span className="text-3xl text-brown heading-aleo" aria-hidden="true">
+                  02
+                </span>
+                <div>
+                  <strong className="text-xl heading-aleo">Discuss the fit.</strong>
+                  <p className="mt-2 leading-7 text-blue/70">
+                    The functions team can confirm an appropriate space,
+                    availability and package details.
+                  </p>
+                </div>
+              </li>
+              <li className="grid gap-4 py-7 sm:grid-cols-[4rem_1fr]">
+                <span className="text-3xl text-brown heading-aleo" aria-hidden="true">
+                  03
+                </span>
+                <div>
+                  <strong className="text-xl heading-aleo">Confirm your event.</strong>
+                  <p className="mt-2 leading-7 text-blue/70">
+                    Finalise your arrangements directly with the venue.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <a href="#enquire-section" className={`${primaryButton} mt-8`}>
+              Start your enquiry
+            </a>
+          </div>
+        </div>
+      </section>
 
-          <p className="text-center text-base md:text-lg leading-relaxed text-lexend mt-4">
-            Choose from a range of versatile rooms — including our
-            <strong> Function Room (up to 70 guests)</strong>,
-            <strong> Private Dining Room (up to 24 guests)</strong>, and
-            <strong> Private Lounge (8–10 guests)</strong>. For large-scale
-            events, our <strong>exclusive venue hire</strong> accommodates up to
-            <strong> 300 guests</strong> with access to two bars and a lounge.
-          </p>
+      <section className="bg-[#f8f5f2] py-20 md:py-28">
+        <div className="container-responsive">
+          <div className="grid gap-8 md:grid-cols-2 md:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+                Inside The Cornerstone
+              </p>
+              <h2 className="mt-4 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-6xl">
+                The venue in motion
+              </h2>
+            </div>
+            <p className="max-w-lg leading-7 text-blue/70 md:justify-self-end">
+              A closer look at the atmosphere, gathering spaces and live-event
+              setting inside the Port Melbourne venue.
+            </p>
+          </div>
 
-          <p className="text-center text-base md:text-lg leading-relaxed text-lexend mt-4">
-            Enjoy chef-crafted menus, premium drinks, and seamless service
-            throughout every space, with optional event styling and photography
-            — including custom signage, balloon garlands, and floral
-            installations — all coordinated by our dedicated events team.
-          </p>
+          <div className="mt-12 grid auto-rows-[18rem] gap-4 md:grid-cols-12 md:auto-rows-[22rem]">
+            <div className="relative overflow-hidden md:col-span-7 md:row-span-2">
+              <Image
+                src="/club/_85A7725.webp"
+                alt="Guests gathering inside The Cornerstone Pub"
+                fill
+                sizes="(max-width: 768px) 100vw, 60vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative overflow-hidden md:col-span-5">
+              <Image
+                src="/club/_85A7873.webp"
+                alt="Live music and guests at The Cornerstone Pub"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative overflow-hidden md:col-span-5">
+              <Image
+                src="/gallery/img-14.jpg"
+                alt="The Cornerstone menu and illuminated venue sign"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div
-            className="flex w-full gap-4 md:gap-5 justify-center items-center mt-6"
-            role="group"
-            aria-label="Event enquiries"
-          >
-            <Link
-              href="/whatson"
-              className="py-3 px-6 md:px-10 hover:text-white font-aleo text-blue bg-transparent border-2 border-brown hover:bg-brown transition-all duration-300 btn-hover rounded-md font-medium"
-              aria-label="See what's on"
+      <section className="border-t border-blue/10 bg-white py-20 md:py-28">
+        <div className="container-responsive grid gap-12 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+              Helpful details
+            </p>
+            <h2 className="mt-4 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-6xl">
+              Functions FAQs
+            </h2>
+          </div>
+
+          <div className="border-t border-blue/20 lg:col-span-7 lg:col-start-6">
+            {faqs.map((faq, index) => (
+              <details key={faq.question} className="group border-b border-blue/20">
+                <summary className="flex cursor-pointer list-none items-start gap-5 py-6 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brown [&::-webkit-details-marker]:hidden">
+                  <span className="mt-1 text-xs tabular-nums text-brown" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                  <h3 className="flex-1 text-xl font-bold leading-7 heading-aleo md:text-2xl">
+                    {faq.question}
+                  </h3>
+                  <span
+                    className="mt-1 text-2xl leading-none text-brown transition-transform duration-300 group-open:rotate-45"
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="max-w-2xl pb-7 pl-9 leading-7 text-blue/70">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brown py-16 text-white md:py-20">
+        <div className="container-responsive grid gap-8 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue">
+              Ready when you are
+            </p>
+            <h2 className="mt-4 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-6xl">
+              Tell us what you are planning
+            </h2>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:justify-end">
+            <a
+              href="#enquire-section"
+              className="inline-flex min-h-12 items-center justify-center bg-blue px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-blue focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
-              What&apos;s On
-            </Link>
+              Enquire now
+            </a>
           </div>
         </div>
       </section>
 
       <FunctionEnquiryForm />
-
-      {/* <section
-        className="bg-blue py-16 md:py-24 lg:py-32"
-        aria-labelledby="spaces-heading"
-      >
-        <div className="container-responsive">
-          <h2
-            id="spaces-heading"
-            className="text-center text-3xl md:text-5xl lg:text-6xl text-white font-bold mb-12 md:mb-16 heading-aleo"
-          >
-            Event Spaces
-          </h2>
-
-          <div className="space-y-16 md:space-y-20">
-            <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <figure className="order-2 lg:order-1">
-                <Image
-                  src="/events/VIP-Room-1.webp"
-                  alt="VIP Room at The Albion Rooftop"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto rounded-lg image-optimized"
-                />
-              </figure>
-              <div className="order-1 lg:order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold heading-aleo">
-                  VIP Room
-                </h3>
-                <p className="text-xl md:text-2xl text-white font-medium">
-                  Capacity: 40 guests standing
-                </p>
-                <p className="text-white text-base md:text-lg leading-relaxed">
-                  The VIP Room hosts groups of up to 40 guests standing with
-                  mini bar, fireplace, private entrance and bathrooms. This
-                  elegant space is ideal for intimate birthday and hens
-                  celebrations, or indulging VIP guests for an exclusive
-                  closed-door event.
-                </p>
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Mini Bar
-                  </span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Fireplace
-                  </span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Private Entrance
-                  </span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Private Bathrooms
-                  </span>
-                </div>
-              </div>
-            </article>
-
-            <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <figure className="order-1">
-                <Image
-                  src="/events/VIP-Room-1.webp"
-                  alt="VIP Room seating and bar area"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto rounded-lg image-optimized"
-                />
-              </figure>
-              <div className="order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold heading-aleo">
-                  Premium Experience
-                </h3>
-                <p className="text-xl md:text-2xl text-white font-medium">
-                  Exclusive VIP Service
-                </p>
-                <p className="text-white text-base md:text-lg leading-relaxed">
-                  Experience luxury like never before with our premium VIP
-                  service. Dedicated staff, personalized attention, and
-                  exclusive amenities ensure your event is nothing short of
-                  extraordinary.
-                </p>
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Dedicated Staff
-                  </span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Premium Service
-                  </span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Exclusive Access
-                  </span>
-                </div>
-              </div>
-            </article>
-
-            <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <figure className="order-2 lg:order-1">
-                <Image
-                  src="/events/VIP-Room-1.webp"
-                  alt="Private VIP Room entrance and ambiance"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto rounded-lg image-optimized"
-                />
-              </figure>
-              <div className="order-1 lg:order-2 flex flex-col gap-4 md:gap-6">
-                <h3 className="text-4xl md:text-5xl lg:text-7xl text-white font-bold heading-aleo">
-                  Perfect for
-                </h3>
-                <p className="text-xl md:text-2xl text-white font-medium">
-                  Intimate Celebrations
-                </p>
-                <p className="text-white text-base md:text-lg leading-relaxed">
-                  Whether it&apos;s a milestone birthday, hens party, or
-                  corporate celebration, our VIP space provides the perfect
-                  intimate setting for your special occasion with unmatched
-                  privacy and elegance.
-                </p>
-                <div className="flex flex-wrap gap-3 mt-4">
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Birthday Parties
-                  </span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Hens Celebrations
-                  </span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Corporate Events
-                  </span>
-                  <span className="px-3 py-1 bg-brown/20 text-white text-sm rounded-full">
-                    Private Functions
-                  </span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section> */}
-
-      <section className="relative" aria-label="Social supper image">
-        <div className="w-full h-[50vh] md:h-[70vh] lg:h-screen">
-          <Image
-            src="/events/12760.jpg"
-            className="object-cover"
-            fill
-            sizes="100vw"
-            alt="Social supper event at The Cornerstone Pub featuring guests enjoying dining, drinks, and social gathering in Port Melbourne"
-            priority
-          />
-        </div>
-      </section>
-
-      <section
-        className="py-16 md:py-24 lg:py-32"
-        aria-labelledby="decor-heading"
-      >
-        <div className="container-responsive max-w-4xl text-center flex flex-col gap-6 md:gap-8">
-          <h2
-            id="decor-heading"
-            className="text-3xl md:text-5xl lg:text-6xl uppercase font-bold heading-aleo"
-          >
-            PHOTOGRAPHY & <br className="hidden md:block" /> EVENT DÉCOR HIRE
-          </h2>
-          <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
-            Elevate Your Event
-          </p>
-          <div className="w-24 h-1 bg-brown mx-auto my-4"></div>
-          <div className="space-y-4 text-base md:text-lg leading-relaxed">
-            <p>
-              Add the perfect finishing touches to your event at The Cornerstone
-              with our optional photography and décor packages. Capture every
-              memory with a professional photographer, ensuring your celebration
-              is beautifully documented from start to finish. <br /> <br />{" "}
-              Enhance your styling with our décor hire options - including
-              elegant archways, custom signage, statement balloon displays,
-              floral arrangements, and more. Whether you prefer a subtle,
-              sophisticated touch or a full decorative setup, our team will help
-              bring your vision to life with flawless coordination and striking
-              presentation.
-            </p>
-          </div>
-          <div className="flex w-full gap-4 md:gap-5 justify-center items-center mt-6">
-            <Link
-              href="/contact?type=decor"
-              className="py-3 px-6 md:px-10 text-white hover:text-blue font-aleo bg-brown hover:bg-transparent border-2 border-brown transition-all duration-300 btn-hover rounded-md font-medium"
-              aria-label="Enquire about décor and photography packages"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="food-heading"
-        className="py-16 md:py-24 lg:py-32"
-      >
-        <div className="container-responsive">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="text-center lg:text-left space-y-6">
-              <h2
-                id="food-heading"
-                className="text-4xl md:text-5xl lg:text-7xl uppercase font-bold heading-aleo"
-              >
-                Our Food
-              </h2>
-              <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
-                Head Chef: STUART RUSS
-              </p>
-              <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
-              <p className="text-base md:text-lg leading-relaxed">
-                With a vibrant new menu crafted by Stuart Russ, The Cornerstone
-                offers a modern twist on pub dining, where bold flavors meet
-                relaxed sophistication. Made with high-quality ingredients and
-                expert care, each dish is designed to be both satisfying and
-                effortlessly enjoyable.
-              </p>
-              <div className="flex justify-center lg:justify-start mt-8">
-                <Link
-                  href="/menus"
-                  className="uppercase px-8 md:px-12 py-3 md:py-4 bg-brown border-2 border-brown hover:bg-transparent hover:text-brown text-white transition-all duration-300 btn-hover font-aleo rounded-md font-medium"
-                  aria-label="View our menu"
-                >
-                  See Menu
-                </Link>
-              </div>
-            </div>
-            <div className="order-first lg:order-last">
-              <FoodCarousel />
-            </div>
-          </div>
-        </div>
-      </section>
-      <div className="fixed right-5 bottom-5">
-        <button className=" animate-bounce">
-          <a
-            href="/menu/events_menu/Cornerstone Event Menus.pdf"
-            download="Cornerstone_Events_Menu.pdf"
-            className="py-4 px-12 text-white font-semibold  bg-brown"
-          >
-            Explore the Menu
-          </a>
-        </button>
-      </div>
-      <div className={`${popUp ? "hidden" : "block"}`}>
-        <div className="fixed inset-0 bg-opacity-95 flex items-center justify-center z-50 overflow-auto">
-          <div className="max-w-5xl w-full bg-white p-4 flex relative justify-center rounded-lg">
-            <Swiper
-              spaceBetween={30}
-              navigation={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Navigation, Pagination]}
-            >
-              <SwiperSlide>
-                <img
-                  src="/menu/events_menu/Cornerstone Event Menus_page-0001.jpg"
-                  alt="Cornerstone Pub events menu page 1 - function and event catering packages with canapés, grazing tables, and dining options for celebrations in Port Melbourne"
-                  className="w-full max-h-[80vh] object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="/menu/events_menu/Cornerstone Event Menus_page-0002.jpg"
-                  alt="Cornerstone Pub events menu page 2 - event catering menu featuring chef-crafted dishes and beverage packages for functions and corporate events"
-                  className="w-full max-h-[80vh] object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="/menu/events_menu/Cornerstone Event Menus_page-0003.jpg"
-                  alt="Cornerstone Pub events menu page 3 - complete event menu with canapé selections, mains, desserts, and premium beverage options for celebrations"
-                  className="w-full max-h-[80vh] object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="/menu/events_menu/Cornerstone Event Menus_page-0004.jpg"
-                  alt="Cornerstone Pub events menu page 4 - final page of event catering menu with additional options, pricing, and booking information for functions"
-                  className="w-full max-h-[80vh] object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="/menu/events_menu/Cornerstone Event Menus_page-0005.jpg"
-                  alt="Cornerstone Pub events menu page 5 - final page of event catering menu with additional options, pricing, and booking information for functions"
-                  className="w-full max-h-[80vh] object-contain"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="/menu/events_menu/Cornerstone Event Menus_page-0006.jpg"
-                  alt="Cornerstone Pub events menu page 6 - final page of event catering menu with additional options, pricing, and booking information for functions"
-                  className="w-full max-h-[80vh] object-contain"
-                />
-              </SwiperSlide>
-            </Swiper>
-
-            <button
-              onClick={toggle}
-              className="absolute bg-brown m-4 text-white z-2 top-0 px-4 py-2 rounded-lg right-0"
-            >
-              CLOSE
-            </button>
-          </div>
-        </div>
-      </div>
     </main>
   );
 }

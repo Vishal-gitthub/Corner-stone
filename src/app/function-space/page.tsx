@@ -6,7 +6,7 @@ export default function FunctionSpacePage() {
   return (
     <main className="bg-[#f8f6f3] text-blue">
       {/* HERO SECTION */}
-      <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden" data-reveal>
         <Image
           src="/functions/4300237_17960.jpg"
           alt="Cornerstone Function Space"
@@ -26,7 +26,7 @@ export default function FunctionSpacePage() {
       </section>
 
       {/* INTRO */}
-      <section className="py-24 container-responsive text-center">
+      <section className="py-24 container-responsive text-center" data-reveal>
         <h2 className="text-3xl md:text-5xl font-aleo uppercase font-semibold text-brown mb-6">
           Style, Warmth & Versatility
         </h2>

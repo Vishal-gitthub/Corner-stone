@@ -5,6 +5,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
+import MotionProvider from "@/components/motion/MotionProvider";
+import { localBusinessJsonLd } from "@/lib/site";
 
 // Font config
 const geistSans = Geist({
@@ -19,16 +21,37 @@ const geistMono = Geist_Mono({
 
 // ---- ✅ SEO METADATA ---- //
 export const metadata: Metadata = {
-  title: "The Cornerstone Pub | Port Melbourne's Favourite Pub & Event Venue",
+  metadataBase: new URL("https://cornerstonepub.com.au"),
+  title: {
+    default: "The Cornerstone Pub | Port Melbourne Pub, Dining & Function Venue",
+    template: "%s | The Cornerstone Pub",
+  },
   description:
-    "The Cornerstone Pub in Port Melbourne offers craft beer, delicious pub food, live sports, and a relaxed, welcoming vibe. Ideal for casual dining, groups, and events.",
-  keywords:
-    "Port Melbourne pub, craft beer, pub food, live sports, group dining, functions, pub events",
+    "The Cornerstone Pub is a Port Melbourne pub and dining venue serving lunch, dinner, drinks, live entertainment and private function spaces in the heart of Port Melbourne.",
+  keywords: [
+    "Port Melbourne pub",
+    "pub in Port Melbourne",
+    "Port Melbourne dining",
+    "function venue Port Melbourne",
+    "private dining Port Melbourne",
+    "pub food Port Melbourne",
+    "bar Port Melbourne",
+    "events Port Melbourne",
+  ],
   authors: [{ name: "The Cornerstone Pub" }],
   creator: "The Cornerstone Pub",
   publisher: "The Cornerstone Pub",
-  viewport: "width=device-width, initial-scale=1",
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -40,31 +63,28 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "The Cornerstone Pub | Port Melbourne",
+    title: "The Cornerstone Pub | Port Melbourne Pub, Dining & Events",
     description:
-      "Craft beer, classic pub food, sports on screen, and event spaces. The Cornerstone is your go-to pub in Port Melbourne.",
+      "Pub dining, drinks, weekly events and function spaces in Port Melbourne at 1 Crockford Street.",
     url: "https://cornerstonepub.com.au",
     siteName: "The Cornerstone Pub",
     type: "website",
     locale: "en_AU",
-    images: [
-      {
-        url: "https://cornerstonepub.com.au/logo.png", // Replace with actual image URL
-        width: 1200,
-        height: 630,
-        alt: "The Cornerstone Pub in Port Melbourne",
-      },
-    ],
+    images: [{ url: "/home/corner-outside-scaled.png", alt: "The Cornerstone Pub in Port Melbourne" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Cornerstone Pub | Port Melbourne",
     description:
-      "Port Melbourne's favourite pub for food, beer, and good times. Perfect for casual meals, group gatherings, or catching the game.",
-    site: "@cornerstonepub", // Update if available
-    images: ["https://cornerstonepub.com.au/logo.png"],
+      "A Port Melbourne pub serving food, drinks and events, with private dining and function spaces for gatherings of all kinds.",
+    images: ["/home/corner-outside-scaled.png"],
   },
+};
+
+export const viewport = {
   themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -74,36 +94,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="min-h-screen bg-white-cus text-blue antialiased">
+      <body className="min-h-screen bg-white-cus text-blue antialiased motion-body">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Restaurant",
-              name: "The Cornerstone Pub",
-              image: "https://cornerstonepub.com.au/logo.png",
-              url: "https://cornerstonepub.com.au",
-              telephone: "+61-(03) 9645 1405",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "123 Port Melbourne St",
-                addressLocality: "Port Melbourne",
-                addressRegion: "VIC",
-                postalCode: "3207",
-                addressCountry: "AU",
-              },
-              openingHours: "Mo-Su 11:00-23:00",
-              servesCuisine:
-                "Pub Food, Australian, Wine Bar, Seafood, Steakhouse, Irish, Italian",
-              priceRange: "$$",
-            }),
+            __html: JSON.stringify(localBusinessJsonLd).replace(/</g, "\\u003c"),
           }}
-        ></script>
-
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        />
+        <MotionProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

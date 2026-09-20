@@ -1,130 +1,32 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const SPACES = [
-  {
-    id: "private-dining",
-    title: "Private Dining Room",
-    desc: "An intimate, elegant room ideal for celebrations and business dinners. Warm lighting and tailored menus create a cosy, private atmosphere.",
-    img: "/spaces/dining-room.jpg",
-  },
-  {
-    id: "function-room",
-    title: "Function Room",
-    desc: "Spacious and versatile for birthdays, launches and corporate events. Configurable seating, AV-ready and easy to customise.",
-    img: "/spaces/function-room.jpeg",
-  },
-  {
-    id: "whisky-lounge",
-    title: "Whisky Lounge",
-    desc: "A relaxed and refined lounge featuring premium spirits. Soft lighting and comfortable seating for intimate gatherings.",
-    img: "/spaces/whisky-lounge.jpg",
-  },
+const spaces = [
+  { name: "Private Dining Room", capacity: "Up to 24 guests", description: "A private setting for smaller group meals and celebrations.", image: "/spaces/dining-room.jpg" },
+  { name: "Function Room", capacity: "Up to 70 guests", description: "A larger private room for celebrations, group events and corporate functions.", image: "/spaces/function-room.jpeg" },
+  { name: "Private Lounge", capacity: "8–10 guests", description: "A smaller setting for intimate get-togethers.", image: "/spaces/whisky-lounge.jpg" },
 ];
 
 export default function SpacesPage() {
-  return (
-    <section className="max-w-7xl mx-auto px-6 py-36">
-      {/* Page Header */}
-      <div className="text-center mb-14">
-        <h1 className="text-4xl md:text-5xl font-bold">Our Spaces</h1>
-        <p className="text-gray-600 mt-3 max-w-xl mx-auto">
-          Designed for private dining, celebrations and relaxed gatherings.
-        </p>
+  return <main className="bg-[#f8f5f2] px-6 py-28 text-blue md:py-36">
+    <section className="mx-auto max-w-7xl">
+      <header className="mx-auto max-w-3xl text-center">
+        <p className="text-sm font-medium uppercase tracking-[0.22em] text-brown">Functions at The Cornerstone</p>
+        <h1 className="mt-4 text-4xl font-bold uppercase heading-aleo md:text-6xl">Function rooms and private dining</h1>
+        <p className="mt-6 text-lg leading-relaxed text-blue/80">Explore the private spaces available for functions at The Cornerstone in Port Melbourne. Capacity, layout, package and accessibility requirements should be confirmed with the functions team.</p>
+      </header>
+
+      <div className="mt-14 grid gap-8 md:grid-cols-3">
+        {spaces.map((space) => <article key={space.name} className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-blue/10">
+          <div className="relative h-64"><Image src={space.image} alt={`${space.name} at The Cornerstone Pub`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" /></div>
+          <div className="p-6"><h2 className="text-2xl font-bold heading-aleo">{space.name}</h2><p className="mt-2 font-medium text-brown">{space.capacity}</p><p className="mt-4 leading-relaxed text-blue/80">{space.description}</p><a href="#enquire" className="mt-6 inline-block font-medium text-brown underline underline-offset-4">Ask about this space</a></div>
+        </article>)}
       </div>
 
-      {/* Spaces */}
-      <div className="grid gap-10 md:grid-cols-3">
-        {SPACES.map((s) => (
-          <div
-            key={s.id}
-            className="rounded-2xl shadow-lg overflow-hidden ring-1 ring-black/5 bg-white"
-          >
-            <div className="relative h-56">
-              <Image src={s.img} alt={s.title} fill className="object-cover" />
-            </div>
-
-            <div className="p-6">
-              <h2 className="text-xl font-aleo font-semibold">{s.title}</h2>
-              <p className="text-gray-600 font-lexend text-sm mt-3">{s.desc}</p>
-
-              <a
-                href={`/contact#${s.id}`}
-                className="mt-5 inline-block px-4 py-2 text-sm bg-brown text-white rounded-full hover:bg-brown/70 transition"
-              >
-                Enquire Now
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* VENUE FEATURES */}
-      <div className="mt-20 bg-gray-50 p-10 rounded-2xl shadow-sm">
-        <h3 className="text-2xl font-semibold font-aleo mb-6">Corner Stone Features</h3>
-
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Function Room Features */}
-          <div>
-            <h4 className="font-semibold mb-3 font-aleo">Function Room</h4>
-            <ul className="text-gray-600 space-y-2 text-sm">
-              <li>• Full AV included</li>
-              <li>• 85 inch TV screen</li>
-              <li>• In-house music</li>
-              <li>• Wireless microphone</li>
-              <li>• Catering packages</li>
-            </ul>
-          </div>
-
-          {/* Whisky Lounge Features */}
-          <div>
-            <h4 className="font-semibold mb-3 font-aleo">Whisky Lounge</h4>
-            <ul className="text-gray-600 space-y-2 text-sm">
-              <li>• AV connection / TV</li>
-              <li>• In-house music</li>
-              <li>• Personalised menu selection</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Gallery */}
-      <div className="mt-20">
-        <h3 className="text-2xl font-semibold">Gallery</h3>
-
-        <div className="mt-4 columns-1 sm:columns-2 lg:columns-4 gap-4 space-y-4">
-          {[
-            "/gallery/img-1.jpg",
-            "/gallery/img-2.jpg",
-            "/gallery/img-3.jpg",
-            "/gallery/img-4.jpg",
-            "/gallery/img-5.jpg",
-            "/gallery/img-6.jpg",
-            "/gallery/img-7.jpg",
-            "/gallery/img-8.jpg",
-            "/gallery/img-9.jpg",
-            "/gallery/img-10.jpg",
-            "/gallery/img-11.jpg",
-            "/gallery/img-12.jpg",
-            "/gallery/img-13.jpg",
-            "/gallery/img-14.jpg",
-            "/gallery/img-15.jpg",
-            "/gallery/img-16.jpg",
-          ].map((src, i) => (
-            <div
-              key={i}
-              className="relative w-full overflow-hidden rounded-lg ring-1 ring-black/5"
-              style={{ aspectRatio: "4/5" }}
-            >
-              <Image
-                src={src}
-                alt={`Gallery ${i + 1}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      <section className="mt-16 grid gap-8 rounded-2xl bg-blue p-8 text-white md:grid-cols-[1.1fr_.9fr] md:p-12" id="enquire">
+        <div><h2 className="text-3xl font-bold uppercase heading-aleo md:text-5xl">Find the right space for your group</h2><p className="mt-5 text-lg leading-relaxed text-white/80">The Functions page explains the available capacities and how to make an enquiry. Use the enquiry form to confirm seated or standing layouts, food and drinks, facilities, minimum spend and availability for your date.</p></div>
+        <div className="flex flex-wrap content-center gap-4 md:justify-end"><Link href="/events#enquire-section" className="rounded-md bg-brown px-6 py-3 font-medium text-white hover:bg-white hover:text-brown">Make a function enquiry</Link><Link href="/menus/events_menu" className="rounded-md border border-white px-6 py-3 font-medium text-white hover:bg-white hover:text-blue">View functions menu</Link></div>
+      </section>
     </section>
-  );
+  </main>;
 }

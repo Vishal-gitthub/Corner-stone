@@ -22,7 +22,7 @@ export default function SwiperEvents() {
           <figure className="order-2 lg:order-1">
             <Image
               src="/events/VIP-Room-1.webp"
-              alt="VIP Room at The Albion Rooftop"
+              alt="Private function space at The Cornerstone Pub"
               width={600}
               height={400}
               className="w-full h-auto rounded-lg"

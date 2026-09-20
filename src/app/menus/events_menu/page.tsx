@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -40,6 +41,7 @@ export default function page() {
       className="pt-24 max-md:pt-16 bg-contain bg-fixed"
       style={{ backgroundImage: "url(/menu/menuBg.png)" }}
     >
+      <h1 className="sr-only">The Cornerstone Pub functions and events menu</h1>
       <div className="w-[96vw] max-lg:w-[72vw] max-md:w-[84vw] max-sm:w-[94vw] m-auto pb-24">
         <Swiper
           spaceBetween={24}
@@ -65,11 +67,9 @@ export default function page() {
         >
           {eventMenuPages.map((page) => (
             <SwiperSlide key={page.src}>
-              <img
-                src={page.src}
-                alt={page.alt}
-                className="w-full max-h-[96vh] max-md:max-h-[72vh] object-contain mx-auto"
-              />
+              <div className="relative h-[72vh] md:h-[80vh]">
+                <Image src={page.src} alt={page.alt} fill sizes="(max-width: 768px) 94vw, (max-width: 1024px) 72vw, 32vw" className="object-contain" />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 export default function FunctionEnquiryForm() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -32,6 +33,7 @@ export default function FunctionEnquiryForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus("sending");
 
     try {
       const response = await fetch("/api/enquiry", {
@@ -45,7 +47,7 @@ export default function FunctionEnquiryForm() {
       const result = await response.json();
 
       if (response.ok) {
-        alert("Your enquiry has been sent successfully!");
+        setStatus("sent");
         setFormData({
           firstName: "",
           lastName: "",
@@ -61,11 +63,12 @@ export default function FunctionEnquiryForm() {
           celebrationDescription: "",
         });
       } else {
-        alert("Failed to send enquiry: " + result.message);
+        console.error("Failed to send enquiry:", result.message);
+        setStatus("error");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("An error occurred. Please try again later.");
+      setStatus("error");
     }
   };
 
@@ -77,12 +80,12 @@ export default function FunctionEnquiryForm() {
     >
       <div className="container-responsive max-w-4xl">
         <header className="text-center mb-8 md:mb-12">
-          <h1
+          <h2
             id="function-enquiry-heading"
             className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 md:mb-6 heading-aleo"
           >
             FUNCTION ENQUIRY
-          </h1>
+          </h2>
           <p className="text-white text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed text-lexend">
             Our dedicated events team is ready to make your vision a reality,
             offering customized packages, exceptional service, and meticulous
@@ -90,7 +93,7 @@ export default function FunctionEnquiryForm() {
           </p>
           <div className="text-white space-y-1 md:space-y-2">
             <p className="text-lg md:text-xl font-medium text-lexend">
-              (03) 9645 1405
+              <a href="tel:+61396451405" className="hover:text-brown">(03) 9645 1405</a>
             </p>
             <a
               className="text-base md:text-lg text-lexend"
@@ -349,10 +352,15 @@ export default function FunctionEnquiryForm() {
           <div className="text-center pt-6 md:pt-8">
             <button
               type="submit"
+              disabled={status === "sending"}
               className="bg-brown font-aleo text-white px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-medium uppercase hover:bg-opacity-90 transition-all duration-300 btn-hover focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue rounded-md"
             >
-              SUBMIT
+              {status === "sending" ? "SENDING…" : "SUBMIT"}
             </button>
+            <p aria-live="polite" className="mt-4 text-sm text-white">
+              {status === "sent" && "Thanks—your function enquiry has been sent."}
+              {status === "error" && "We couldn't send the enquiry. Please call or email the venue instead."}
+            </p>
           </div>
         </form>
       </div>

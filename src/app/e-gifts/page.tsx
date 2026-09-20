@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Page = () => {
   return (
@@ -29,11 +30,11 @@ const Page = () => {
                 <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle,rgba(255,255,255,0.15),transparent_60%)] animate-[spin_6s_linear_infinite]" />
                 {/* Logo */}
                 <div className="relative w-40 z-10">
-                  <img src="/logo.png" alt="Brand Logo" />
+                  <Image src="/logo.png" alt="The Cornerstone Pub" width={160} height={58} className="h-auto w-full" />
                 </div>
               </div>
               <div className="z-10">
-                <h1 className="text-2xl font-semibold">Exclusive Gift Card</h1>
+                <p className="text-2xl font-semibold">Cornerstone e-gift</p>
                 <p className="text-gray-200">Give the gift of choice 🎁</p>
                 <p className="text-sm text-gray-400">
                   Tap to flip and reveal details
@@ -46,14 +47,9 @@ const Page = () => {
               <div>
                 <div className="h-12 bg-black/50 rounded-md mb-4" />
                 <div className="space-y-2">
-                  <p>
-                    <strong>Value:</strong> $100
-                  </p>
-                  <p>
-                    <strong>Valid Until:</strong> Dec 31, 2026
-                  </p>
+                  <p>Purchase and delivery details are provided securely by Square.</p>
                   <div className="bg-white/10 py-2 px-4 rounded-md text-center tracking-[0.3em] font-mono">
-                    XXXX-XXXX-XXXX
+                    THE CORNERSTONE
                   </div>
                 </div>
               </div>

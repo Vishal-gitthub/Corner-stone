@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Stagger, { StaggerItem } from "@/components/motion/Stagger";
+import MotionButton from "@/components/motion/MotionButton";
+import TextReveal from "@/components/motion/TextReveal";
 import Social_supper from "../../../../public/home/social_supper.webp";
 import Saturday from "../../../../public/home/Food_5.jpg";
 import rooftop from "../../../../public/home/happy_hour.jpg";
@@ -15,7 +17,6 @@ interface EventCard {
   schedule: string;
   description: string;
   alt: string;
-  hasMenuButton?: boolean;
 }
 
 // Constants
@@ -23,27 +24,26 @@ const EVENTS: EventCard[] = [
   {
     image: Social_supper,
     title: "Midweek Mingle",
-    schedule: "Wednesdays | Midday – 11 PM",
+    schedule: "Wednesdays",
     description:
-      "Unwind midweek with refreshing cocktails, comfort food, and live beats — the perfect way to recharge before the weekend!",
+      "A midweek social session with food and drinks available at the venue. Check the current event details before visiting.",
     alt: "Midweek Mingle at Cornerstone Pub - Wednesdays from midday to 11 PM with cocktails, comfort food, and live music",
   },
   {
     image: Saturday,
     title: "Trivia nights",
-    schedule: "Wednesday | 6:30 PM – 10 PM",
+    schedule: "Wednesday | 7 PM",
     description:
-      "Gather your friends for an unforgettable dining experience every Wednesday evening, featuring chef specials and great vibes till late.",
+      "Bring your group for Wednesday trivia with food and drinks available at the venue.",
     alt: "Trivia nights at Cornerstone Pub - Wednesday evenings from 6:30 PM to 10 PM with chef specials and great dining experience",
   },
   {
     image: rooftop,
     title: "Happy Hours",
-    schedule: "Weekdays | 5-7 PM",
+    schedule: "Weekdays | 5 PM–7 PM",
     description:
-      "Turn weekdays into weekends! Join us 5–7pm for $5 pots, $10 pints, $8 wines & spirits at Cornerstone. Great drinks, better company.",
+      "A weekday drinks offer listed by the venue. Check current details before visiting, as promotions can change.",
     alt: "Happy Hours at Cornerstone Pub Port Melbourne - Weekdays 5-7 PM with discounted drinks including $5 pots, $10 pints, $8 wines and spirits",
-    hasMenuButton: false,
   },
 ];
 
@@ -51,36 +51,31 @@ const BUTTON_BASE_CLASSES =
   "uppercase rounded-md bg-brown py-1 transition-all duration-300 font-semibold font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white";
 
 const WhatsOn = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <div>
       <div
         // style={{ backgroundImage: `url(${bgTexture.src})` }}
         className="py-32 text-center"
       >
-        <h3 className="text-5xl max-sm:text-4xl text-center heading-aleo">
+        <TextReveal as="h3" className="text-5xl max-sm:text-4xl text-center heading-aleo">
           WHAT&apos;S ON
-        </h3>
+        </TextReveal>
 
         <section>
           <div className="py-20">
-            <div className="flex justify-center flex-wrap w-full items-center">
+            <Stagger className="flex justify-center flex-wrap w-full items-center">
               {EVENTS.map((event, index) => (
-                <div
+                <StaggerItem
                   key={index}
-                  className="flex flex-col flex-1 items-center text-center"
+                  className="flex flex-col flex-1 items-center text-center motion-card"
                 >
-                  <div className="w-72 max-md:w-64 max-sm:w-52 relative aspect-square">
+                  <div className="w-72 max-md:w-64 max-sm:w-52 relative aspect-square overflow-hidden rounded-[50%]">
                     <Image
                       src={event.image}
-                      className="rounded-[50%] object-cover"
+                      className="rounded-[50%] object-cover image-optimized transition-transform duration-700"
                       alt={event.alt}
                       fill
+                      sizes="(max-width: 640px) 208px, (max-width: 768px) 256px, 288px"
                     />
                   </div>
                   <h3 className="py-3 heading-aleo text-3xl max-sm:text-2xl uppercase">
@@ -91,47 +86,22 @@ const WhatsOn = () => {
                   </h5>
                   <div className="text-lg max-sm:text-base w-3/4 max-md:w-full text-lexend text-blue">
                     <p>{event.description}</p>
-                    {event.hasMenuButton && (
-                      <button
-                        onClick={toggleMenu}
-                        className={`${BUTTON_BASE_CLASSES} px-5 max-sm:px-6 mt-3`}
-                      >
-                        Happy Hour Menu
-                      </button>
-                    )}
                   </div>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         </section>
 
-        {/* Happy Hour Menu Modal */}
-        {isMenuOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-50 overflow-auto">
-            <div className="max-w-3xl w-full bg-white p-4 flex relative justify-center rounded-lg m-4">
-              <img
-                src="/menu/happy_hour_Menu/15 dollar menu.pdf_page-0001.jpg"
-                alt="Cornerstone Pub Happy Hour menu - weekday specials from 5-7 PM featuring discounted drinks, $5 pots, $10 pints, $8 wines and spirits"
-                className="w-full max-h-[80vh] object-contain"
-              />
-              <button
-                onClick={toggleMenu}
-                className="absolute bg-brown m-4 text-white z-10 top-0 px-4 py-2 rounded-lg right-0"
-              >
-                CLOSE
-              </button>
-            </div>
-          </div>
-        )}
-
-        <div>
-          <Link
-            href="/whatson"
-            className={`${BUTTON_BASE_CLASSES} px-12 max-sm:px-6 py-3`}
-          >
-            See all Events
-          </Link>
+        <div data-reveal>
+          <MotionButton>
+            <Link
+              href="/whatson"
+              className={`${BUTTON_BASE_CLASSES} px-12 max-sm:px-6 py-3 btn-hover inline-block`}
+            >
+              See all Events
+            </Link>
+          </MotionButton>
         </div>
       </div>
     </div>

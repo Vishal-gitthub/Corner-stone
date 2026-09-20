@@ -1,41 +1,52 @@
+"use client";
+
 import Image from "next/image";
+import Reveal from "@/components/motion/Reveal";
+import MotionButton from "@/components/motion/MotionButton";
 
 const LiveSport = () => {
   return (
     <div>
-      <div className="min-h-[80vh] md:h-screen relative w-full">
-        <Image
-          src="/home/tables.jpg"
-          className="w-full object-cover h-full"
-          alt="Cornerstone Pub vibrant outdoor space with guests enjoying live sports on big screens, socializing, and dining in Port Melbourne"
-          fill
-        />
-
-        {/* Centered Content Box */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl px-6">
-          <div className="bg-white-cus/80 text-center py-10 px-6 md:py-14 md:px-8 rounded shadow-lg">
-            <h1 className="text-4xl md:text-5xl mb-6 heading-aleo">
-              Unwind & Connect
-            </h1>
-            <p className="mb-4 text-lexend text-base md:text-xl text-blue">
-              Relax with friends, enjoy great vibes, and make every moment
-              memorable in our vibrant outdoor space.
-            </p>
-            <p className="mb-6 text-lexend text-base md:text-xl text-blue">
-              Space is designed for laughter, conversation, and unforgettable
-              memories - the perfect place to celebrate life’s little moments or
-              special occasions.
-            </p>
-            <a
-              href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
-              target="_blank"
-              className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
-            >
-              Book a table
-            </a>
-          </div>
+      <div className="min-h-[80vh] md:h-screen relative w-full overflow-hidden">
+        <div data-parallax className="absolute inset-0">
+          <Image
+            src="/home/tables.jpg"
+            className="w-full object-cover h-full"
+            alt="Cornerstone Pub vibrant outdoor space with guests enjoying live sports on big screens, socializing, and dining in Port Melbourne"
+            fill
+            sizes="100vw"
+          />
         </div>
-        <section className="mb-8 md:mb-16  w-full absolute bottom-0">
+
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl px-6 z-10">
+          <Reveal>
+            <div className="bg-white-cus/80 text-center py-10 px-6 md:py-14 md:px-8 rounded shadow-lg motion-card">
+              <h2 className="text-4xl md:text-5xl mb-6 heading-aleo" data-reveal>
+                Unwind & Connect
+              </h2>
+              <p className="mb-4 text-lexend text-base md:text-xl text-blue">
+                Relax with friends, enjoy great vibes, and make every moment
+                memorable in our vibrant outdoor space.
+              </p>
+              <p className="mb-6 text-lexend text-base md:text-xl text-blue">
+                Space is designed for laughter, conversation, and unforgettable
+                memories - the perfect place to celebrate life’s little moments or
+                special occasions.
+              </p>
+              <MotionButton>
+                <a
+                  href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-semibold font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white btn-hover inline-block"
+                >
+                  Book a table
+                </a>
+              </MotionButton>
+            </div>
+          </Reveal>
+        </div>
+        <section className="mb-8 md:mb-16  w-full absolute bottom-0 z-10">
           <div className="bg-gradient-to-r from-gold/10 via-gold/5 to-gold/10 rounded-2xl">
             <div className="relative flex overflow-hidden">
               <div className="flex gap-8 animate-marquee-slow">
@@ -84,7 +95,6 @@ const LiveSport = () => {
           </div>
         </section>
       </div>
-      {/* Marquee Section */}
     </div>
   );
 };

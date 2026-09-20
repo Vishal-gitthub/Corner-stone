@@ -1,10 +1,9 @@
 "use client";
-import Drinks from "../../../public/menu/drinks.jpg";
 import Link from "next/link";
 export default function page() {
   return (
     <div className="w-full m-auto text-center">
-      <div className="py-32 max-sm:pt-32 max-sm:pb-16">
+      <div className="py-32 max-sm:pt-32 max-sm:pb-16" data-reveal>
         <h1 className=" font-aleo text-7xl max-md:text-4xl max-sm:text-3xl text-blue">
           Hungry? Thirsty? <span className="text-brown"> Maybe both? </span>
         </h1>
@@ -16,11 +15,11 @@ export default function page() {
         </p>
       </div>
       <div className=" flex items-center pb-56 justify-center h-full w-full">
-        <div className="flex  gap-10 flex-wrap justify-center items-center">
+        <div className="flex  gap-10 flex-wrap justify-center items-center" data-stagger>
           <Link
             href="/menus/drinks"
             target="_blank"
-            className=" hover:scale-[1.07] transition-all duration-300 outline-1 outline-blue hover:p-1"
+            className="motion-card hover:scale-[1.07] transition-all duration-300 outline-1 outline-blue hover:p-1"
           >
             <div
               style={{ backgroundImage: "url(/menu/drinks.jpg)" }}
@@ -34,7 +33,7 @@ export default function page() {
           <Link
             href="/menus/foods"
             target="_blank"
-            className=" hover:scale-[1.07] transition-all duration-300 outline-1 hover:p-1"
+            className="motion-card hover:scale-[1.07] transition-all duration-300 outline-1 hover:p-1"
           >
             <div
               style={{ backgroundImage: "url(/menu/foods.jpg)" }}
@@ -48,7 +47,7 @@ export default function page() {
           <Link
             href="/menus/events_menu"
             target="_blank"
-            className=" hover:scale-[1.07] transition-all duration-300 outline-1 hover:p-1"
+            className="motion-card hover:scale-[1.07] transition-all duration-300 outline-1 hover:p-1"
           >
             <div
               style={{ backgroundImage: "url(/events/12760.jpg)" }}
