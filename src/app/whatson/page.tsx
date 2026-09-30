@@ -12,39 +12,39 @@ const weeklyEvents = [
   {
     image: "/home/happy_hour.jpg",
     title: "Happy hour",
-    time: "Weekdays, 5pm–7pm",
+    time: "Weekdays, 5PM – 7PM",
     description:
       "A weekday drinks offer at The Cornerstone. Check with the venue if you need confirmation for a particular public holiday or date.",
   },
   {
     image: "/home/social_supper.jpg",
     title: "Trivia nights",
-    time: "Wednesdays, 7pm",
+    time: "Wednesdays, 6:30 PM",
     description:
       "Bring your group for Wednesday trivia with food and drinks available at the venue.",
   },
   {
     image: "/club/band.webp",
     title: "Friday live music",
-    time: "Fridays, 8pm–11pm",
+    time: "Fridays, 8PM – 11PM",
     description: "Friday evening live entertainment at The Cornerstone.",
   },
   {
     image: "/whatson/10948067.jpg",
     title: "Saturday groove sessions",
-    time: "Saturdays, 6pm–9pm",
+    time: "Saturdays, 6PM – 9PM",
     description: "Live tunes and a relaxed Saturday evening atmosphere.",
   },
   {
     image: "/whatson/dj.jpg",
     title: "DJ Saturday nights",
-    time: "Saturdays, from 9pm",
+    time: "Saturdays, from 9PM",
     description: "Saturday DJ sets for a later-night social experience.",
   },
   {
     image: "/whatson/SundayChillSessions.jpg",
     title: "Sunday chill sessions",
-    time: "Sundays, 3pm–6pm",
+    time: "Sundays, 3PM – 6PM",
     description: "A Sunday afternoon session with food and drinks available.",
   },
   {
@@ -64,12 +64,12 @@ const faqs = [
   },
   {
     question: "Is there trivia at The Cornerstone?",
-    answer: "Trivia is listed for Wednesday evenings at 7pm.",
+    answer: "Trivia is listed for Wednesday evenings at 7PM.",
   },
   {
     question: "Does The Cornerstone have happy hour?",
     answer:
-      "Happy hour is listed on weekdays from 5pm to 7pm. Offers can change, so confirm the details with the venue.",
+      "Happy hour is listed on weekdays from 5PM to 7PM. Offers can change, so confirm the details with the venue.",
   },
   {
     question: "Should I book for an event?",
