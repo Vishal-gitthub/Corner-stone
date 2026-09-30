@@ -32,7 +32,7 @@ const EVENTS: EventCard[] = [
   {
     image: Saturday,
     title: "Trivia nights",
-    schedule: "Wednesday | 7 PM",
+    schedule: "Wednesday | 6:30 PM",
     description:
       "Bring your group for Wednesday trivia with food and drinks available at the venue.",
     alt: "Trivia nights at Cornerstone Pub - Wednesday evenings from 6:30 PM to 10 PM with chef specials and great dining experience",

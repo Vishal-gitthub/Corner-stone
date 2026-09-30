@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     question: "Is there trivia at The Cornerstone?",
-    answer: "Trivia is listed for Wednesday evenings at 7PM.",
+    answer: "Trivia is listed for Wednesday evenings at 6:30 PM.",
   },
   {
     question: "Does The Cornerstone have happy hour?",
