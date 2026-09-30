@@ -53,7 +53,7 @@ export default function FoodCarousel() {
         // food_11,
       ].map((foodImage, index) => (
         <SwiperSlide key={index}>
-          <div className="h-[80vh] w-full">
+          <div className="h-[80vh] mt-10 w-full">
             <Image
               src={foodImage}
               alt={`Cornerstone Pub signature dish by Head Chef Stuart Russ - modern Australian pub cuisine with bold flavors and seasonal ingredients in Port Melbourne`}

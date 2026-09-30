@@ -1,11 +1,14 @@
 "use client";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
+
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { StaticImageData } from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { Autoplay, EffectCreative, EffectFade } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-creative";
+import "swiper/css/effect-fade";
 
 import Image1 from "../../../public/Venue/img-1.jpg";
 import Image2 from "../../../public/Venue/img-2.jpg";
@@ -15,8 +18,88 @@ import Image5 from "../../../public/Venue/img-4.jpg";
 import Image6 from "../../../public/Venue/img-5.jpg";
 import FoodCarousel from "../components/Home/FoodCarousel";
 
+const spaces = [
+  {
+    name: "The Main Bar",
+    detail:
+      "Your all-day corner for a quick drink, a long lunch or the start of a big night.",
+    image: Image1,
+  },
+  {
+    name: "The Function Room",
+    detail:
+      "A private upstairs setting with its own bar for celebrations of up to 70 guests.",
+    image: Image2,
+  },
+  {
+    name: "The Cigar Lounge",
+    detail:
+      "A richly styled retreat for slow conversations, premium pours and a little indulgence.",
+    image: Image3,
+  },
+  {
+    name: "The Outdoor Area",
+    detail:
+      "Fresh air, flexible seating and an easy-going backdrop for shared plates and sunny sessions.",
+    image: Image4,
+  },
+];
+
+const faqs = [
+  {
+    question: "Do I need to book a table?",
+    answer:
+      "Bookings are recommended for dining, weekends and larger groups. Walk-ins are welcome when space allows, and our team will always do their best to find you a spot.",
+  },
+  {
+    question: "Can I hire a space for a private event?",
+    answer:
+      "Absolutely. Our function room accommodates up to 70 guests and works beautifully for birthdays, engagements, corporate gatherings and celebrations. Visit our events page to send an enquiry.",
+  },
+  {
+    question: "What kind of food does The Cornerstone serve?",
+    answer:
+      "Our kitchen serves modern pub favourites, seasonal plates and shareable dishes designed to suit everything from a relaxed lunch to a full celebration. Menus change, so check the current food menu before you visit.",
+  },
+  {
+    question: "Is there outdoor seating?",
+    answer:
+      "Yes. Our outdoor area is made for long afternoons and lively evenings, with options for both seated dining and cocktail-style events. Availability can vary with weather and bookings.",
+  },
+  {
+    question: "Where can I find you?",
+    answer:
+      "You will find The Cornerstone at 1 Crockford Street, Port Melbourne. We are close to the waterfront and easy to reach for local dinners, drinks and events.",
+  },
+];
+
+function SectionIntro({
+  eyebrow,
+  title,
+  copy,
+}: {
+  eyebrow: string;
+  title: string;
+  copy: string;
+}) {
+  return (
+    <div className="max-w-3xl">
+      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-brown">
+        {eyebrow}
+      </p>
+      <h2 className="font-aleo text-4xl font-bold uppercase leading-[0.95] text-blue md:text-6xl">
+        {title}
+      </h2>
+      <p className="mt-6 max-w-2xl text-base leading-8 text-blue/80 md:text-lg">
+        {copy}
+      </p>
+    </div>
+  );
+}
+
 export default function Page() {
-  const images: StaticImageData[] = [
+  const [openFaq, setOpenFaq] = useState(0);
+  const heroImages: StaticImageData[] = [
     Image1,
     Image2,
     Image3,
@@ -24,217 +107,334 @@ export default function Page() {
     Image5,
     Image6,
   ];
+
   return (
-    <main style={{ backgroundImage: `url(/home/BgTexture.jpg)` }}>
-      {/* HERO SWIPER */}
-      <Swiper
-        spaceBetween={30}
-        effect={"fade"}
-        modules={[EffectFade, Autoplay]}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        loop={true}
+    <main className="overflow-hidden bg-[#f7f4ee] text-blue">
+      <section
+        className="relative isolate h-[680px] mt-24 text-white md:h-[800px]"
+        aria-label="The Cornerstone venue"
       >
-        {images.map((slideImage, index) => (
-          <SwiperSlide key={`cornerstone-slide-${index}`}>
-            <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-screen">
-              <Image
-                src={slideImage}
-                alt={`Cornerstone slide ${index + 1}`}
-                fill
-                className="object-cover"
-                sizes="100vw"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {/* HERO TEXT */}
-      <div className="py-16 md:py-24 lg:py-32" data-reveal>
-        <div className="container-responsive text-center">
-          <p className="text-xl md:text-2xl lg:text-3xl uppercase text-brown font-medium mb-4">
-            The Cornerstone Pub
-          </p>
-          <h1 className="text-3xl md:text-4xl font-aleo lg:text-5xl uppercase font-bold leading-tight">
-            Where good food, great company & unforgettable moments meet
-          </h1>
-        </div>
-      </div>
-
-      {/* OUR FOOD SECTION */}
-      <div className="border-t-2 border-brown bg-[#faf8f6]" data-reveal>
-        <section className="py-16 md:py-20 lg:py-24">
-          <div className="container-responsive">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* TEXT */}
-              <div className="text-center lg:text-left space-y-6">
-                <h2 className="text-4xl md:text-5xl lg:text-7xl heading-aleo uppercase text-blue font-bold">
-                  Our Food
-                </h2>
-                <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
-                  Head Chef: Stuart Russ
-                </p>
-                <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
-                <div className="space-y-4 text-base md:text-lg text-blue leading-relaxed">
-                  <p>
-                    Experience a vibrant new menu crafted by{" "}
-                    <strong>Head Chef Stuart Russ</strong>, where bold flavours
-                    and seasonal ingredients redefine modern pub dining.
-                  </p>
-                  <p>
-                    Each dish is designed with care - blending quality produce,
-                    creative flair, and that relaxed sophistication The
-                    Cornerstone is known for.
-                  </p>
-                  <p>
-                    From fresh share plates to hearty mains, every bite pairs
-                    beautifully with our curated list of craft beers, premium
-                    wines, and signature cocktails.
-                  </p>
-                </div>
-              </div>
-
-              {/* IMAGE */}
-              <div className="order-first lg:order-last">
-                <FoodCarousel />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* FUNCTIONS & EVENTS */}
-      <section className="py-16 md:py-20 lg:py-24">
-        <div className="container-responsive">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* IMAGE */}
-            <div>
-              <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh]">
+        <Swiper
+          className="!absolute !inset-0 !h-full !w-full"
+          modules={[EffectFade, Autoplay]}
+          effect="fade"
+          autoplay={{ delay: 3800, disableOnInteraction: false }}
+          loop
+        >
+          {heroImages.map((image, index) => (
+            <SwiperSlide key={`cornerstone-hero-${index}`} className="!h-full">
+              <div className="relative h-full w-full">
                 <Image
-                  src="/club/function-room.jpg"
-                  alt="Functions and events at The Cornerstone"
+                  src={image}
+                  alt={`The Cornerstone Pub venue, slide ${index + 1}`}
                   fill
-                  className="object-cover rounded-lg image-optimized"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority={index === 0}
+                  className="object-cover"
+                  sizes="100vw"
                 />
               </div>
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,28,41,.9),rgba(9,28,41,.38),rgba(9,28,41,.18))]" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="relative z-10 mx-auto flex h-full max-w-[1200px] items-end px-4 pb-16 sm:px-8 md:pb-24 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl"
+          >
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.32em] text-[#e1b331]">
+              1 Crockford Street · Port Melbourne
+            </p>
+            <h1 className="font-aleo text-5xl font-bold uppercase leading-[0.9] md:text-8xl">
+              More than a pub.
+              <br />
+              <span className="text-[#e1b331]">Find your corner.</span>
+            </h1>
+            <p className="mt-7 max-w-xl text-base leading-7 text-white/85 md:text-xl md:leading-8">
+              A warm, generous Port Melbourne venue for long lunches, late-night
+              drinks, good food and the kind of celebrations that stay with you.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="btn-hover border-2 border-[#e1b331] bg-[#e1b331] px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue"
+              >
+                Book a table
+              </Link>
+              <Link
+                href="/events#enquire-section"
+                className="btn-hover border-2 border-white/70 px-7 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white hover:border-[#e1b331] hover:text-[#e1b331]"
+              >
+                Plan an event
+              </Link>
             </div>
+          </motion.div>
+        </div>
+        <div className="absolute bottom-6 right-6 z-10 hidden text-right text-xs uppercase tracking-[0.25em] text-white/60 md:block">
+          Good food · good people · good times
+        </div>
+      </section>
 
-            {/* TEXT */}
-            <div className="text-center lg:text-left space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl heading-aleo uppercase text-blue font-bold">
-                Functions & Events
-              </h2>
-              <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium heading-aleo">
-                Melbourne’s versatile venue for every celebration
-              </p>
-              <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
-
-              <div className="space-y-4 text-sm md:text-base text-blue leading-relaxed">
-                <p>
-                  At <strong>The Cornerstone</strong>, every occasion is made
-                  memorable. From birthdays and engagements to corporate events
-                  and private celebrations, our spaces offer the ideal setting
-                  for every style of gathering.
-                </p>
-
-                <p>
-                  Welcome your guests into our
-                  <strong>  Function Room</strong>—an elegant upstairs
-                  space featuring its own private bar, perfect for birthday
-                  parties, corporate events, and private celebrations. This room
-                  accommodates up to <strong>70 guests</strong>.
-                </p>
-
-                <p>
-                  Prefer something outdoors? Our vibrant outdoor area offers
-                  flexible options for both cocktail-style and seated events,
-                  supported by tailored menus, premium drinks, and a seamless
-                  event experience from start to finish.
-                </p>
-
-                <p>
-                  Enhance your celebration with optional styling and photography
-                  packages— including custom signage, balloon garlands, and
-                  floral arrangements—all managed by our dedicated events team.
+      <section
+        className="border-b border-blue/10 bg-[#f7f4ee] py-20 md:py-28"
+        data-reveal
+      >
+        <div className="container-responsive grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-end">
+          <SectionIntro
+            eyebrow="The Cornerstone experience"
+            title="Come for the food. Stay for the feeling."
+            copy="There is a particular kind of ease to The Cornerstone. It is the hum of the room, the first cold drink, plates arriving for the table and a night that quietly gets better as it goes. Every space has its own mood, but the welcome is the same."
+          />
+          <div className="grid grid-cols-2 gap-px overflow-hidden border border-blue/15 bg-blue/15">
+            {[
+              ["01", "A generous menu"],
+              ["02", "Five ways to gather"],
+              ["03", "Drinks worth lingering over"],
+              ["04", "Port Melbourne hospitality"],
+            ].map(([number, label]) => (
+              <div key={number} className="bg-[#f7f4ee] p-6 md:p-8">
+                <span className="font-aleo text-3xl text-brown">{number}</span>
+                <p className="mt-8 text-sm font-semibold uppercase leading-5 tracking-[0.1em] text-blue md:text-base">
+                  {label}
                 </p>
               </div>
-
-              <div className="flex justify-center lg:justify-start mt-8">
-                <Link
-                  href="/events#enquire-section"
-                  className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
-                >
-                  Enquire Now
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* VENUE DETAILS SECTION */}
-      <div className="border-t-2 border-brown hidden bg-[#faf8f6]">
-        <section className="py-16 md:py-20 lg:py-24">
-          <div className="container-responsive">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* TEXT */}
-              <div className="text-center lg:text-left space-y-6">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl heading-aleo uppercase text-blue font-bold">
-                  Cornerstone Cigar Room
-                </h2>
-                <p className="text-lg md:text-xl lg:text-2xl uppercase text-brown font-medium">
-                  Port Melbourne’s refined retreat for those who appreciate the
-                  art of a fine cigar.
-                </p>
-                <div className="w-24 h-1 bg-brown mx-auto lg:mx-0 my-4"></div>
-                <div className="space-y-4 text-sm md:text-base text-blue leading-relaxed">
-                  <p>
-                    Tucked away within The Cornerstone, our Cigar Room blends
-                    old-world charm with modern comfort. Rich tones, plush
-                    seating, and warm ambient lighting create a relaxed yet
-                    sophisticated atmosphere designed for unwinding.
-                  </p>
-                  <p>
-                    Enjoy a curated selection of quality cigars, premium
-                    whiskies, and hand-crafted cocktails — all served with the
-                    attentive hospitality we’re known for.
-                  </p>
-                  <p>
-                    Whether it’s quiet reflection, conversation among friends,
-                    or a post-dinner indulgence, this is where moments are meant
-                    to be savored.
-                  </p>
-                </div>
-                <div className="flex justify-center lg:justify-start mt-8">
-                  <Link
-                    href="/events#enquire-section"
-                    className="uppercase px-12 max-sm:px-6 rounded-md bg-brown py-3 transition-all duration-300 font-aleo tracking-widest border-2 border-brown hover:bg-transparent hover:text-brown text-white "
-                  >
-                    Plan Your Event
-                  </Link>
-                </div>
-              </div>
-
-              {/* IMAGE */}
-              <div className="order-first lg:order-last">
-                <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh]">
+      <section className="bg-blue py-20 text-white md:py-28" data-reveal>
+        <div className="container-responsive">
+          <div className="mb-10 flex flex-col justify-between gap-6 md:mb-14 md:flex-row md:items-end">
+            <div>
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#e1b331]">
+                Explore the venue
+              </p>
+              <h2 className="font-aleo text-4xl font-bold uppercase leading-none md:text-6xl">
+                Choose your corner
+              </h2>
+            </div>
+            <p className="max-w-sm text-sm leading-7 text-white/65">
+              One address, several ways to spend an evening. Swipe through the
+              spaces that make The Cornerstone feel like more than one place.
+            </p>
+          </div>
+          <Swiper
+            modules={[EffectCreative, Autoplay]}
+            effect="creative"
+            grabCursor
+            creativeEffect={{
+              prev: { shadow: true, translate: ["-20%", 0, -1] },
+              next: { translate: ["100%", 0, 0] },
+            }}
+            autoplay={{ delay: 3200, disableOnInteraction: false }}
+            loop
+            spaceBetween={20}
+            breakpoints={{
+              0: { slidesPerView: 1.1 },
+              768: { slidesPerView: 2.15 },
+            }}
+          >
+            {spaces.map((space, index) => (
+              <SwiperSlide key={space.name}>
+                <div className="group relative aspect-[0.82] overflow-hidden">
                   <Image
-                    src="/events/12760.jpg"
-                    alt="Cornerstone Function Space setup"
+                    src={space.image}
+                    alt={space.name}
                     fill
-                    className="object-contain rounded-lg image-optimized"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 90vw, 45vw"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue via-blue/20 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+                    <span className="text-sm text-[#e1b331]">0{index + 1}</span>
+                    <h3 className="mt-2 font-aleo text-3xl font-bold uppercase">
+                      {space.name}
+                    </h3>
+                    <p className="mt-3 max-w-sm text-sm leading-6 text-white/75">
+                      {space.detail}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28" data-reveal>
+        <div className="container-responsive grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+          <div className="relative min-h-[560px] overflow-hidden md:min-h-[680px]">
+            <Image
+              src={Image5}
+              alt="Dining and social spaces at The Cornerstone"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 45vw"
+            />
+            <div className="absolute bottom-5 left-5 max-w-[240px] bg-[#f7f4ee] p-5 md:bottom-8 md:left-8">
+              <p className="font-aleo text-xl font-bold uppercase">
+                The art of staying awhile
+              </p>
+              <p className="mt-2 text-xs leading-5 text-blue/70">
+                Unhurried afternoons and evenings with nowhere else to be.
+              </p>
             </div>
           </div>
-        </section>
-      </div>
+          <div>
+            <SectionIntro
+              eyebrow="From the kitchen"
+              title="Food made for the middle of the table"
+              copy="Head Chef Stuart Russ brings bold, seasonal flavour to a menu that knows what a pub meal should feel like: generous, familiar and just a little unexpected. Come hungry, order for the table and leave room for another round."
+            />
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link
+                href="/food"
+                className="btn-hover bg-brown px-7 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white"
+              >
+                See the food menu
+              </Link>
+              <Link
+                href="/drinks"
+                className="btn-hover border border-blue px-7 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-blue hover:bg-blue hover:text-white"
+              >
+                Explore drinks
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="container-responsive mt-16 md:mt-24">
+          <FoodCarousel />
+        </div>
+      </section>
+
+      <section
+        className="border-y border-blue/10 bg-[#eee8dc] py-20 md:py-28"
+        data-reveal
+      >
+        <div className="container-responsive grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
+          <div className="order-2 lg:order-1">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-brown">
+              Made for your people
+            </p>
+            <h2 className="font-aleo text-4xl font-bold uppercase leading-[.95] text-blue md:text-6xl">
+              Your best nights start here.
+            </h2>
+            <p className="mt-6 max-w-xl text-base leading-8 text-blue/80 md:text-lg">
+              From milestone birthdays to end-of-year dinners, our events team
+              will help you shape the right atmosphere, menu and drinks package.
+              Bring the guest list. We will handle the details.
+            </p>
+            <div className="mt-8 grid max-w-xl grid-cols-2 gap-4 border-t border-blue/20 pt-6 text-sm uppercase tracking-[0.1em] text-blue">
+              <p>
+                <strong className="block font-aleo text-3xl text-brown">
+                  70
+                </strong>{" "}
+                guests upstairs
+              </p>
+              <p>
+                <strong className="block font-aleo text-3xl text-brown">
+                  1
+                </strong>{" "}
+                dedicated events team
+              </p>
+            </div>
+            <Link
+              href="/events#enquire-section"
+              className="btn-hover mt-9 inline-block bg-blue px-7 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white"
+            >
+              Start planning
+            </Link>
+          </div>
+          <div className="relative order-1 aspect-[.84] lg:order-2">
+            <Image
+              src="/club/function-room.jpg"
+              alt="The Cornerstone function room set for an event"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 38vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f7f4ee] py-20 md:py-28" data-reveal>
+        <div className="container-responsive grid gap-12 lg:grid-cols-[.75fr_1.25fr]">
+          <SectionIntro
+            eyebrow="Good to know"
+            title="Your questions, answered"
+            copy="Everything you need to know before your next visit to The Cornerstone."
+          />
+          <div className="border-t border-blue/20">
+            {faqs.map((faq, index) => {
+              const isOpen = openFaq === index;
+              return (
+                <div key={faq.question} className="border-b border-blue/20">
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    onClick={() => setOpenFaq(isOpen ? -1 : index)}
+                    className="flex w-full items-center justify-between gap-6 py-6 text-left text-base font-semibold uppercase tracking-[0.04em] text-blue md:text-lg"
+                  >
+                    <span>{faq.question}</span>
+                    <span
+                      className={`font-aleo text-3xl font-normal text-brown transition-transform ${isOpen ? "rotate-45" : ""}`}
+                      aria-hidden="true"
+                    >
+                      +
+                    </span>
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="max-w-2xl pb-6 pr-10 text-sm leading-7 text-blue/75 md:text-base">
+                          {faq.answer}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-blue py-20 text-center text-white md:py-28">
+        <Image
+          src={Image6}
+          alt="An evening at The Cornerstone"
+          fill
+          className="object-cover opacity-25"
+          sizes="100vw"
+        />
+        <div className="relative mx-auto max-w-3xl px-4">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#e1b331]">
+            See you soon
+          </p>
+          <h2 className="font-aleo text-5xl font-bold uppercase leading-[.9] md:text-7xl">
+            Make it a Cornerstone night.
+          </h2>
+          <p className="mx-auto mt-6 max-w-lg text-white/75">
+            Come as you are, stay as long as you like. We are ready when you
+            are.
+          </p>
+          <Link
+            href="/contact"
+            className="btn-hover mt-8 inline-block border-2 border-[#e1b331] bg-[#e1b331] px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue"
+          >
+            Find us in Port Melbourne
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

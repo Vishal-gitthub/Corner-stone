@@ -10,7 +10,7 @@ export default function page() {
       <div data-reveal>
         <div className="max-w-7xl mx-auto" data-stagger>
           <Image
-            src="/menu/FoodsMenu/Cornerstone Menu May 26_page-0002.jpg"
+            src="/menu/FoodsMenu/Cornerstone Menu Oct 26_page-0001.jpg"
             width={4960}
             height={3510}
             sizes="100vw"
@@ -18,7 +18,7 @@ export default function page() {
             alt="Cornerstone Pub food menu by Head Chef Stuart Russ - modern Australian pub cuisine with share plates, mains, and seasonal dishes in Port Melbourne"
           />
           <Image
-            src="/menu/FoodsMenu/Cornerstone Menu May 26_page-0001.jpg"
+            src="/menu/FoodsMenu/Cornerstone Menu Oct 26_page-0002.jpg"
             width={4960}
             height={3510}
             sizes="100vw"
