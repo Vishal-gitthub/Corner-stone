@@ -7,6 +7,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { modalBackdrop, modalContent } from "@/lib/motion/variants";
 import MotionButton from "@/components/motion/MotionButton";
+import { business, openingHoursForDay, WEEKDAYS } from "@/lib/site";
 
 export default function Footer() {
   const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
@@ -100,19 +101,19 @@ export default function Footer() {
                 <h3 className="text-lg md:text-xl text-white font-medium mb-2 heading-aleo">
                   Visit Us
                 </h3>
-                <p className="text-white text-lexend">
-                  1 Crockford Street, Port Melbourne, 3207
-                </p>
+                <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-white text-lexend hover:text-brown">
+                  <address className="not-italic">{business.formattedAddress}</address>
+                </a>
               </div>
               <div>
                 <h3 className="text-lg md:text-xl text-white font-medium mb-2 heading-aleo">
                   Contact
                 </h3>
                 <p className="text-white text-lexend">
-                  <a href="tel:+61396451405">(03) 9645 1405</a>
+                  <a href={business.telephoneHref}>{business.displayTelephone}</a>
                   <br />
-                  <a href="mailto:bookings@cornerstonepub.com.au">
-                    bookings@cornerstonepub.com.au
+                  <a href={`mailto:${business.email}`}>
+                    {business.email}
                   </a>
                 </p>
               </div>
@@ -146,55 +147,18 @@ export default function Footer() {
 
               {/* Days Grid */}
               <div className="grid grid-cols-2 gap-x-10 gap-y-4 text-white">
-                <div>
-                  <p className="text-lg font-medium heading-aleo">MONDAY</p>
-                  <p className="text-sm md:text-base text-lexend">
-                    Midday – 10 PM
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-lg font-medium heading-aleo">TUESDAY</p>
-                  <p className="text-sm md:text-base text-lexend">
-                    Midday – 10 PM
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-lg font-medium heading-aleo">WEDNESDAY</p>
-                  <p className="text-sm md:text-base text-lexend">
-                    Midday – 10 PM
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-lg font-medium heading-aleo">THURSDAY</p>
-                  <p className="text-sm md:text-base text-lexend">
-                    Midday – 10 PM
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-lg font-medium heading-aleo">FRIDAY</p>
-                  <p className="text-sm md:text-base text-lexend">
-                    Midday – Midnight
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-lg font-medium heading-aleo">SATURDAY</p>
-                  <p className="text-sm md:text-base text-lexend">
-                    Midday – Midnight
-                  </p>
-                </div>
+                {WEEKDAYS.slice(0, 6).map((day) => (
+                  <div key={day}>
+                    <p className="text-lg font-medium heading-aleo">{day.toUpperCase()}</p>
+                    <p className="text-sm md:text-base text-lexend">{openingHoursForDay(day)}</p>
+                  </div>
+                ))}
               </div>
 
               {/* Sunday */}
               <div className="mt-4 text-center text-white">
                 <p className="text-lg font-medium heading-aleo">SUNDAY</p>
-                <p className="text-sm md:text-base text-lexend">
-                  Midday – 10 PM
-                </p>
+                <p className="text-sm md:text-base text-lexend">{openingHoursForDay("Sunday")}</p>
               </div>
             </div>
           </div>

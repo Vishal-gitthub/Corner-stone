@@ -3,51 +3,81 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
   <url>
-    <loc>https://cornerstonepub.com.au/</loc>
+    <loc>https://www.thecornerstonepub.com.au/</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cornerstonepub.com.au/club</loc>
+    <loc>https://www.thecornerstonepub.com.au/venue</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cornerstonepub.com.au/contact</loc>
+    <loc>https://www.thecornerstonepub.com.au/food</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.thecornerstonepub.com.au/drinks</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thecornerstonepub.com.au/spaces</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thecornerstonepub.com.au/contact</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cornerstonepub.com.au/events</loc>
+    <loc>https://www.thecornerstonepub.com.au/events</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cornerstonepub.com.au/whatson</loc>
+    <loc>https://www.thecornerstonepub.com.au/whatson</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cornerstonepub.com.au/menus</loc>
+    <loc>https://www.thecornerstonepub.com.au/menus</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cornerstonepub.com.au/menus/foods</loc>
+    <loc>https://www.thecornerstonepub.com.au/menus/foods</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cornerstonepub.com.au/menus/drinks</loc>
+    <loc>https://www.thecornerstonepub.com.au/menus/drinks</loc>
     <lastmod>2025-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thecornerstonepub.com.au/menus/events_menu</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.thecornerstonepub.com.au/e-gifts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.thecornerstonepub.com.au/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 </urlset>

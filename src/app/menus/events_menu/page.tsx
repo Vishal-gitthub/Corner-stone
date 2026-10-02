@@ -39,7 +39,7 @@ export default function page() {
   return (
     <div
       className="pt-24 max-md:pt-16 bg-contain bg-fixed"
-      style={{ backgroundImage: "url(/menu/menuBg.png)" }}
+      style={{ backgroundImage: "url(/menu/menuBg-optimized.webp)" }}
     >
       <h1 className="sr-only">The Cornerstone Pub functions and events menu</h1>
       <div className="w-[96vw] max-lg:w-[72vw] max-md:w-[84vw] max-sm:w-[94vw] m-auto pb-24">

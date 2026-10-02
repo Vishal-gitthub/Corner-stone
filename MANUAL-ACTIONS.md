@@ -6,7 +6,7 @@
 - Review and verify the current opening hours, holiday hours and booking links inside Google Business Profile.
 - Submit the updated XML sitemap to Google Search Console after deployment and request indexing for the highest-value pages.
 - Confirm the canonical domain is correct and that legacy-domain redirects are configured at the DNS/server level.
-- Test both `http` and `https`, `www` and non-`www`, and representative paths on `thecornerstonepub.com.au`. Configure a single-hop, path-preserving 301/308 to `https://cornerstonepub.com.au`; then inspect the old function-pack PDF URL separately.
+- Test both `http` and `https`, `www` and non-`www`, and representative paths on all connected domains. Keep a single-hop, path-preserving 301/308 to `https://www.thecornerstonepub.com.au`; then inspect the old function-pack PDF URL separately.
 - Confirm the live deployment has `EMAIL_USER` and `EMAIL_PASS` configured, then submit both the contact and function forms and verify delivery, sender alignment and spam placement.
 
 ## HIGH

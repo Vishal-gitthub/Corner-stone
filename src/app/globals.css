@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Lexend+Deca:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-brown:#A47A02;
   --color-white-cus: #f8f8f8;
   --color-blue: #133249;
-  --font-aleo: 'Aleo', serif;
-  --font-lexend: 'Lexend Deca', sans-serif;
+  --font-aleo: var(--font-aleo-loaded), serif;
+  --font-lexend: var(--font-lexend-loaded), sans-serif;
 }
 
 /* Global Styles */

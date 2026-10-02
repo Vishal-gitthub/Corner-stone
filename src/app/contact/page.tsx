@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import { business, formatOpeningTime } from "@/lib/site";
 
 export default function Page() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -31,7 +32,7 @@ export default function Page() {
     <main className="bg-blue min-h-screen">
       <div className="h-[95vh] max-sm:h-[50vh] w-full overflow-hidden" data-reveal>
         <Image
-          src="/contact/Enquiry.jpg"
+          src="/contact/enquiry-optimized.webp"
           width={4571}
           height={3047}
           sizes="100vw"
@@ -50,38 +51,48 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12" data-stagger>
             {/* Contact Info */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
-                Cont<span className="text-brown">act</span>
+              <h1 aria-label="Contact" className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
+                <span aria-hidden="true">Cont<span className="text-brown">act</span></span>
               </h1>
+              <p className="max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
+                Contact The Cornerstone Pub in Port Melbourne to plan a visit, make a
+                booking or ask about a private function. You&apos;ll find us at {business.formattedAddress}.
+              </p>
               <div className="space-y-4">
                 <div>
                   <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">
                     Phone
                   </h2>
-                  <a href="tel:+61396451405" className="text-white text-base md:text-lg text-lexend hover:text-brown">(03) 9645 1405</a>
+                  <a href={business.telephoneHref} className="text-white text-base md:text-lg text-lexend hover:text-brown">{business.displayTelephone}</a>
                 </div>
                 <div>
                   <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">
                     Email
                   </h2>
-                  <a href="mailto:bookings@cornerstonepub.com.au" className="text-white text-base md:text-lg text-lexend hover:text-brown">bookings@cornerstonepub.com.au</a>
+                  <a href={`mailto:${business.email}`} className="text-white text-base md:text-lg text-lexend hover:text-brown">{business.email}</a>
                 </div>
                 <div>
                   <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">
                     Address
                   </h2>
-                  <address className="not-italic text-white text-base md:text-lg text-lexend">
-                    1 Crockford Street, <br /> Port Melbourne, 3207
-                  </address>
+                  <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-white text-base md:text-lg text-lexend hover:text-brown">
+                    <address className="not-italic">{business.formattedAddress}</address>
+                  </a>
                 </div>
                 <div>
                   <h2 className="text-white text-lg md:text-xl font-medium mb-2 heading-aleo">Opening hours</h2>
-                  <p className="text-white text-base md:text-lg text-lexend">Monday–Thursday and Sunday: midday–10pm<br />Friday–Saturday: midday–midnight</p>
+                  <div className="text-white text-base md:text-lg text-lexend">
+                    {business.openingHours.map((hours) => (
+                      <p key={hours.days.join("-")}>
+                        {hours.label}: {formatOpeningTime(hours.opens)}–{formatOpeningTime(hours.closes)}
+                      </p>
+                    ))}
+                  </div>
                   <p className="mt-2 text-sm text-white/75">Kitchen and public-holiday hours may differ; contact the venue to confirm.</p>
                 </div>
                 <div>
                   <a
-                    href="https://maps.app.goo.gl/g97kv5vxhA6FeNdo6"
+                    href={business.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block text-brown hover:text-white transition-colors duration-300 text-base md:text-lg font-medium text-lexend"
@@ -108,16 +119,22 @@ export default function Page() {
                   </a>
                 </div>
                 <div className="flex flex-wrap gap-3 pt-2">
-                  <a href="https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website" target="_blank" rel="noopener noreferrer" className="rounded-md bg-brown px-5 py-3 font-medium text-white hover:bg-white hover:text-brown">Book a table</a>
+                  <a href={business.bookingUrl} target="_blank" rel="noopener noreferrer" className="rounded-md bg-brown px-5 py-3 font-medium text-white hover:bg-white hover:text-brown">Book a table</a>
                   <Link href="/events#enquire-section" className="rounded-md border border-white px-5 py-3 font-medium text-white hover:bg-white hover:text-blue">Function enquiry</Link>
                 </div>
+                <nav aria-label="Explore The Cornerstone" className="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-sm text-white/90">
+                  <Link href="/food" className="underline decoration-white/40 underline-offset-4 hover:text-brown">Explore our food</Link>
+                  <Link href="/drinks" className="underline decoration-white/40 underline-offset-4 hover:text-brown">View drinks</Link>
+                  <Link href="/events" className="underline decoration-white/40 underline-offset-4 hover:text-brown">Plan a function</Link>
+                  <Link href="/whatson" className="underline decoration-white/40 underline-offset-4 hover:text-brown">See what&apos;s on</Link>
+                </nav>
               </div>
             </div>
 
             {/* Enquiry Form */}
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
-                <span className="text-brown">Enq</span>uiry
+              <h2 aria-label="Enquiry" className="text-4xl md:text-6xl lg:text-8xl uppercase text-white font-bold heading-aleo">
+                <span aria-hidden="true"><span className="text-brown">Enq</span>uiry</span>
               </h2>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 {/* Name */}

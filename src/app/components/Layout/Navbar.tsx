@@ -132,8 +132,6 @@ const Navbar = () => {
 
                 height={64}
 
-                priority
-
                 className="w-full h-auto"
 
               />

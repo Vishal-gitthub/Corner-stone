@@ -48,7 +48,7 @@ export default function SwiperEvents() {
           <figure>
             <Image
               src="/events/VIP-Room-1.webp"
-              alt="Premium VIP Experience"
+              alt="Private lounge seating at The Cornerstone Pub"
               width={600}
               height={400}
               className="w-full h-auto rounded-lg"
@@ -74,7 +74,7 @@ export default function SwiperEvents() {
           <figure className="order-2 lg:order-1">
             <Image
               src="/events/VIP-Room-1.webp"
-              alt="Private VIP Room"
+              alt="Private lounge seating at The Cornerstone Pub"
               width={600}
               height={400}
               className="w-full h-auto rounded-lg"

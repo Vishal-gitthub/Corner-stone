@@ -15,7 +15,7 @@ export default function page() {
             height={3510}
             sizes="100vw"
             className="image-optimized w-full"
-            alt="Cornerstone Pub food menu by Head Chef Stuart Russ - modern Australian pub cuisine with share plates, mains, and seasonal dishes in Port Melbourne"
+            alt="The Cornerstone Pub food menu, page 1"
           />
           <Image
             src="/menu/FoodsMenu/Cornerstone Menu Oct 26_page-0002.jpg"
@@ -23,7 +23,7 @@ export default function page() {
             height={3510}
             sizes="100vw"
             className="image-optimized w-full"
-            alt="Cornerstone Pub food menu by Head Chef Stuart Russ - modern Australian pub cuisine with share plates, mains, and seasonal dishes in Port Melbourne"
+            alt="The Cornerstone Pub food menu, page 2"
           />
         </div>
       </div>

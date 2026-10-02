@@ -26,9 +26,9 @@ These business facts should be confirmed by the owner before being treated as fi
 ## Time-sensitive checks before deployment
 
 - Confirm every weekly offer on `/whatson`: weekday happy hour 5–7pm, Wednesday trivia at 7pm, Friday band 8–11pm, Saturday music 6–9pm, Saturday DJ from 9pm, Sunday session 3–6pm and the $18.90 lunch menu.
-- Confirm whether “Whisky Lounge” and “Private Lounge” are the same room and select one public name.
+- The public room name has been normalised to Private Lounge across current function content.
 - Confirm kitchen hours separately from venue hours.
-- Confirm AV, microphone, 85-inch TV, styling and photography claims on the spaces/functions pages.
+- Previously unverified room-equipment and customisation claims have been removed from public function-space copy.
 - Confirm parking, public transport and step-free accessibility; these were not added because the repository contains no reliable source.
 - Confirm the displayed PDFs and menu images are current; the asset folder contains multiple generations.
 

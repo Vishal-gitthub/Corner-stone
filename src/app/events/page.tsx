@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import FunctionEnquiryForm from "./FunctionEnquiryForm";
+import { eventsFaqs as faqs } from "@/lib/faqs";
 
 const spaces = [
   {
@@ -27,44 +28,28 @@ const spaces = [
   {
     name: "Exclusive venue hire",
     capacity: "Up to 300 guests",
-    use: "Larger events requiring access to the venue's two bars and lounge.",
+    use: "Large celebrations and private events requiring the full venue.",
     image: "/club/_85A7735.webp",
     alt: "Guests gathering around the bar at The Cornerstone Pub",
   },
 ];
 
 const occasions = [
-  "Birthday parties",
-  "Engagement celebrations",
-  "Corporate events",
-  "Group occasions",
-];
-
-const faqs = [
   {
-    question: "What types of functions can I host at The Cornerstone?",
-    answer:
-      "The Cornerstone hosts private celebrations, birthday parties, engagement celebrations, corporate events and group occasions. Tell the functions team what you are planning so they can recommend the most suitable space.",
+    title: "Birthday parties",
+    copy: "Choose a private room for a focused celebration or ask about a larger setting when the guest list grows. Share your numbers and preferred style so the team can suggest a suitable space.",
   },
   {
-    question: "Does The Cornerstone have private function rooms?",
-    answer:
-      "Yes. The venue lists a Function Room, Private Dining Room and Private Lounge. Each is suited to a different group size and style of event.",
+    title: "Engagement celebrations",
+    copy: "Bring family and friends together for drinks, dining or a larger private event. The room options make it easier to match the atmosphere to the size of your celebration.",
   },
   {
-    question: "Can I book the whole venue?",
-    answer:
-      "Exclusive venue hire is available for events of up to 300 guests, subject to the venue's availability and event requirements.",
+    title: "Corporate functions",
+    copy: "Plan a team gathering, client occasion or corporate event around the appropriate room and current menu options. Include the event format and timing in your enquiry.",
   },
   {
-    question: "Where can I view food and beverage options for a function?",
-    answer:
-      "The current functions and events menu is available online. Menu details can change, so confirm your final selections with the functions team.",
-  },
-  {
-    question: "How do I make a function enquiry?",
-    answer:
-      "Use the enquiry form below with your preferred date, guest number and event details. You can also call or email the venue.",
+    title: "Private dining and group bookings",
+    copy: "The Private Dining Room suits groups of up to 24, while the Private Lounge offers a more intimate setting for 8–10 guests. Larger group occasions can use the Function Room.",
   },
 ];
 
@@ -98,7 +83,7 @@ export default function EventsPage() {
                 Enquire about a function
               </a>
               <Link href="/spaces" className={secondaryButton}>
-                 function spaces
+                View function spaces
               </Link>
             </div>
           </div>
@@ -178,8 +163,8 @@ export default function EventsPage() {
             </div>
             <p className="leading-7 text-white/70 lg:col-span-4 lg:col-start-9">
               Capacities below reflect the venue information currently
-              published on this website. Confirm configuration, accessibility,
-              minimum spend and availability as part of your enquiry.
+              published on this website. Confirm the most suitable room,
+              configuration and availability as part of your enquiry.
             </p>
           </div>
 
@@ -254,23 +239,65 @@ export default function EventsPage() {
           <p className="text-center text-xs font-semibold uppercase tracking-[0.3em] text-brown">
             Occasions at The Cornerstone
           </p>
-          <div className="mt-10 grid border-y border-blue/15 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid border-y border-blue/15 md:grid-cols-2">
             {occasions.map((occasion, index) => (
-              <div
-                key={occasion}
-                className="flex min-h-32 items-center gap-4 border-b border-blue/15 px-3 py-7 last:border-b-0 sm:[&:nth-child(3)]:border-b-0 sm:[&:nth-child(4)]:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0 lg:px-6"
+              <article
+                key={occasion.title}
+                className="border-b border-blue/15 px-3 py-8 md:odd:border-r md:[&:nth-child(3)]:border-b-0 md:[&:nth-child(4)]:border-b-0 md:px-8"
               >
-                <span className="text-xs tabular-nums text-brown" aria-hidden="true">
-                  0{index + 1}
-                </span>
-                <p className="text-xl font-bold heading-aleo">{occasion}</p>
-              </div>
+                <div className="flex items-start gap-4">
+                  <span className="mt-1 text-xs tabular-nums text-brown" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-2xl font-bold heading-aleo">{occasion.title}</h3>
+                    <p className="mt-3 max-w-xl leading-7 text-blue/70">{occasion.copy}</p>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       <section className="bg-white py-20 md:py-28">
+        <div className="container-responsive grid gap-12 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+              Food and beverage options
+            </p>
+            <h2 className="mt-4 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-6xl">
+              Plan the menu around your occasion
+            </h2>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <p className="text-lg leading-8 text-blue/75">
+              The current functions menu publishes platter, set-menu, drinks
+              and corporate-meeting options. Review it before enquiring, then
+              tell the team about your event format and guest numbers so they
+              can discuss the choices currently available.
+            </p>
+            <p className="mt-5 leading-7 text-blue/70">
+              For the wider venue offering, explore the current pub food and
+              drinks pages. Menu details can change, so confirm your selections
+              directly with the functions team.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href="/menus/events_menu" className={primaryButton}>
+                View current functions menu
+              </Link>
+              <Link href="/food" className={secondaryButton}>
+                Explore food
+              </Link>
+              <Link href="/drinks" className={secondaryButton}>
+                Explore drinks
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-blue/10 bg-white py-20 md:py-28">
         <div className="container-responsive grid gap-14 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
@@ -307,7 +334,7 @@ export default function EventsPage() {
                   <strong className="text-xl heading-aleo">Discuss the fit.</strong>
                   <p className="mt-2 leading-7 text-blue/70">
                     The functions team can confirm an appropriate space,
-                    availability and package details.
+                    availability and the current options for your occasion.
                   </p>
                 </div>
               </li>
@@ -326,6 +353,32 @@ export default function EventsPage() {
             <a href="#enquire-section" className={`${primaryButton} mt-8`}>
               Start your enquiry
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-blue py-16 text-white md:py-20">
+        <div className="container-responsive grid gap-8 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brown">
+              Port Melbourne location
+            </p>
+            <h2 className="mt-4 text-4xl font-bold uppercase leading-[0.95] tracking-tight heading-aleo md:text-5xl">
+              Functions at 1 Crockford Street
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/75">
+              The Cornerstone Pub is located at 1 Crockford Street, Port
+              Melbourne VIC 3207. Include your preferred date and guest number
+              when you contact the team about venue hire.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:justify-end">
+            <a href="#enquire-section" className="inline-flex min-h-12 items-center justify-center bg-brown px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-blue">
+              Make a function enquiry
+            </a>
+            <Link href="/contact" className="inline-flex min-h-12 items-center justify-center border border-white/50 px-6 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-blue">
+              Contact the venue
+            </Link>
           </div>
         </div>
       </section>
@@ -368,7 +421,7 @@ export default function EventsPage() {
             </div>
             <div className="relative overflow-hidden md:col-span-5">
               <Image
-                src="/gallery/img-14.jpg"
+                src="/gallery/img-14-optimized.webp"
                 alt="The Cornerstone menu and illuminated venue sign"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"

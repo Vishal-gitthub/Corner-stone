@@ -28,7 +28,7 @@ function NewYear() {
           {/* Image */}
           <Image
             src="/popups/MothersDay- At corner Stone pub.jpg"
-            alt="Cornerstone Pub promotion"
+            alt="Mother's Day event artwork for The Cornerstone Pub"
             width={1131}
             height={1600}
             sizes="(max-width: 768px) 90vw, 448px"

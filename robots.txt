@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://cornerstonepub.com.au/sitemap.xml
+Sitemap: https://www.thecornerstonepub.com.au/sitemap.xml

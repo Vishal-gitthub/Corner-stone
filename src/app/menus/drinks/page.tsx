@@ -5,7 +5,7 @@ export default function page() {
   return (
     <div
       className="relative bg-contain bg-fixed"
-      style={{ backgroundImage: "url(/menu/menuBg.png)" }}
+      style={{ backgroundImage: "url(/menu/menuBg-optimized.webp)" }}
     >
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Menus", href: "/menus" }, { label: "Drinks menu" }]} />
       <h1 className="sr-only">The Cornerstone Pub drinks menu</h1>

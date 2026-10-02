@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { business } from "@/lib/site";
 
 // export const metadata = {
 //   title: "Privacy Policy — Cornerstone Pub Port Melbourne",
@@ -298,19 +299,23 @@ export default function PrivacyPolicyPage() {
 
             <div className="rounded-lg border bg-gray-50 p-6 space-y-1 text-gray-800">
               <p className="font-semibold text-lg font-serif">
-                Cornerstone Pub Port Melbourne
+                {business.name}
               </p>
-              <p>1 Crockford Street, Port Melbourne, VIC</p>
+              <p>
+                <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+                  {business.formattedAddress}
+                </a>
+              </p>
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:admin@cornerstonepub.com.au"
+                  href={`mailto:${business.email}`}
                   className="text-blue-600 underline"
                 >
-                  admin@cornerstonepub.com.au
+                  {business.email}
                 </a>
               </p>
-              <p>Phone: (03) 9645 1405</p>
+              <p>Phone: <a href={business.telephoneHref} className="text-blue-600 underline">{business.displayTelephone}</a></p>
             </div>
           </div>
         </section>

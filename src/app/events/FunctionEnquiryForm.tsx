@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { business } from "@/lib/site";
 
 export default function FunctionEnquiryForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -93,13 +94,13 @@ export default function FunctionEnquiryForm() {
           </p>
           <div className="text-white space-y-1 md:space-y-2">
             <p className="text-lg md:text-xl font-medium text-lexend">
-              <a href="tel:+61396451405" className="hover:text-brown">(03) 9645 1405</a>
+              <a href={business.telephoneHref} className="hover:text-brown">{business.displayTelephone}</a>
             </p>
             <a
               className="text-base md:text-lg text-lexend"
-              href="mailto:bookings@cornerstonepub.com.au"
+              href={`mailto:${business.email}`}
             >
-              bookings@cornerstonepub.com.au
+              {business.email}
             </a>
           </div>
         </header>

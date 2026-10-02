@@ -10,13 +10,14 @@ import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/effect-fade";
 
-import Image1 from "../../../public/Venue/img-1.jpg";
-import Image2 from "../../../public/Venue/img-2.jpg";
-import Image3 from "../../../public/Venue/cigar-lounge.jpg";
-import Image4 from "../../../public/Venue/img-3.jpg";
-import Image5 from "../../../public/Venue/img-4.jpg";
-import Image6 from "../../../public/Venue/img-5.jpg";
+import Image1 from "../../../public/Venue/img-1-optimized.webp";
+import Image2 from "../../../public/Venue/img-2-optimized.webp";
+import Image3 from "../../../public/Venue/lounge-optimized.webp";
+import Image4 from "../../../public/Venue/img-3-optimized.webp";
+import Image5 from "../../../public/Venue/img-4-optimized.webp";
+import Image6 from "../../../public/Venue/img-5-optimized.webp";
 import FoodCarousel from "../components/Home/FoodCarousel";
+import { venueFaqs as faqs } from "@/lib/faqs";
 
 const spaces = [
   {
@@ -42,34 +43,6 @@ const spaces = [
     detail:
       "Fresh air, flexible seating and an easy-going backdrop for shared plates and sunny sessions.",
     image: Image4,
-  },
-];
-
-const faqs = [
-  {
-    question: "Do I need to book a table?",
-    answer:
-      "Bookings are recommended for dining, weekends and larger groups. Walk-ins are welcome when space allows, and our team will always do their best to find you a spot.",
-  },
-  {
-    question: "Can I hire a space for a private event?",
-    answer:
-      "Absolutely. Our function room accommodates up to 70 guests and works beautifully for birthdays, engagements, corporate gatherings and celebrations. Visit our events page to send an enquiry.",
-  },
-  {
-    question: "What kind of food does The Cornerstone serve?",
-    answer:
-      "Our kitchen serves modern pub favourites, seasonal plates and shareable dishes designed to suit everything from a relaxed lunch to a full celebration. Menus change, so check the current food menu before you visit.",
-  },
-  {
-    question: "Is there outdoor seating?",
-    answer:
-      "Yes. Our outdoor area is made for long afternoons and lively evenings, with options for both seated dining and cocktail-style events. Availability can vary with weather and bookings.",
-  },
-  {
-    question: "Where can I find you?",
-    answer:
-      "You will find The Cornerstone at 1 Crockford Street, Port Melbourne. We are close to the waterfront and easy to reach for local dinners, drinks and events.",
   },
 ];
 
@@ -126,7 +99,7 @@ export default function Page() {
               <div className="relative h-full w-full">
                 <Image
                   src={image}
-                  alt={`The Cornerstone Pub venue, slide ${index + 1}`}
+                  alt="Interior and event spaces at The Cornerstone Pub in Port Melbourne"
                   fill
                   priority={index === 0}
                   className="object-cover"

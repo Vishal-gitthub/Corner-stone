@@ -1,8 +1,11 @@
-"use client";
 import Link from "next/link";
+import PageSchema from "@/components/seo/PageSchema";
+
 export default function page() {
   return (
-    <div className="w-full m-auto text-center">
+    <>
+      <PageSchema path="/menus" title="Food, Drinks & Function Menus" description="View the current food, drinks and event menus for The Cornerstone Pub in Port Melbourne, with downloadable menu PDFs." breadcrumbs={[{ label: "Home", href: "/" }, { label: "Menus" }]} />
+      <div className="w-full m-auto text-center">
       <div className="py-32 max-sm:pt-32 max-sm:pb-16" data-reveal>
         <h1 className=" font-aleo text-7xl max-md:text-4xl max-sm:text-3xl text-blue">
           Hungry? Thirsty? <span className="text-brown"> Maybe both? </span>
@@ -50,7 +53,7 @@ export default function page() {
             className="motion-card hover:scale-[1.07] transition-all duration-300 outline-1 hover:p-1"
           >
             <div
-              style={{ backgroundImage: "url(/events/12760.jpg)" }}
+              style={{ backgroundImage: "url(/events/12760-optimized.webp)" }}
               className="w-96 h-96 max-sm:w-64 max-sm:h-64 flex items-center justify-center object-cover bg-right bg-cover bg-no-repeat"
             >
               <div className="bg-black/20 h-full w-full flex items-center justify-center  text-white max-sm:text-3xl font-aleo text-6xl">
@@ -60,6 +63,7 @@ export default function page() {
           </Link>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

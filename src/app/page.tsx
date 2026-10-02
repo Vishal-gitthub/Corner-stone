@@ -1,24 +1,29 @@
-import type { Metadata } from "next";
 import AboutSec from "./components/Home/About";
 import Banner from "./components/Home/Banner";
 import LiveSport from "./components/Home/LiveSport";
 import Nightlife from "./components/Home/Nightlife";
 import WhatsOn from "./components/Home/Whats_on";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/site";
+import PageSchema from "@/components/seo/PageSchema";
 
-export const metadata: Metadata = {
-  title: "Port Melbourne Pub, Dining, Drinks & Events",
+export const metadata = pageMetadata({
+  title: "Port Melbourne Pub, Restaurant, Bar & Functions | The Cornerstone",
   description:
-    "The Cornerstone Pub is a Port Melbourne pub serving lunch, dinner, drinks, live entertainment and private function rooms in the heart of Port Melbourne.",
-  alternates: {
-    canonical: "/",
-  },
-};
+    "The Cornerstone is a Port Melbourne pub for lunch, dinner, drinks, live music and private functions at 1 Crockford Street. View menus and book a table.",
+  path: "/",
+});
 
 // import Popup from "./Pop-ups/NewYear";
 export default function HomePage() {
   return (
-    <main>
+    <>
+      <PageSchema
+        path="/"
+        title="Port Melbourne Pub, Restaurant, Bar & Functions | The Cornerstone"
+        description="The Cornerstone is a Port Melbourne pub for lunch, dinner, drinks, live music and private functions at 1 Crockford Street. View menus and book a table."
+      />
+      <main>
       <section aria-label="Hero video banner" data-reveal>
         <Banner />
       </section>
@@ -46,6 +51,7 @@ export default function HomePage() {
         <Nightlife />
       </section>
       {/* <Popup /> */}
-    </main>
+      </main>
+    </>
   );
 }

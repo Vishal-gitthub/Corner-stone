@@ -19,6 +19,16 @@ import food_9 from "../../../../public/home/Food_9.jpeg";
 // import food_10 from "../../../../public/home/Food_10.jpeg";
 // import food_11 from "../../../../public/home/Food_11.jpeg";
 
+const foodImages = [
+  { src: food_1, alt: "Grilled steak with broccolini at The Cornerstone Pub" },
+  { src: food_2, alt: "Filled pasta dish served at The Cornerstone Pub" },
+  { src: food_3, alt: "Mixed vegetable dish with a drink at The Cornerstone Pub" },
+  { src: food_4, alt: "Glazed chicken wings served at The Cornerstone Pub" },
+  { src: food_6, alt: "Bite-sized savoury tartlets at The Cornerstone Pub" },
+  { src: food_8, alt: "Seafood bites served at The Cornerstone Pub" },
+  { src: food_9, alt: "Individual salad bowls at The Cornerstone Pub" },
+];
+
 export default function FoodCarousel() {
   return (
     <Swiper
@@ -40,23 +50,13 @@ export default function FoodCarousel() {
       }}
       loop={true}
     >
-      {[
-        food_1,
-        food_2,
-        food_3,
-        food_4,
-        food_6,
-        // food_7,
-        food_8,
-        food_9,
-        // food_10,
-        // food_11,
-      ].map((foodImage, index) => (
-        <SwiperSlide key={index}>
+      {foodImages.map((foodImage) => (
+        <SwiperSlide key={foodImage.src.src}>
           <div className="h-[80vh] mt-10 w-full">
             <Image
-              src={foodImage}
-              alt={`Cornerstone Pub signature dish by Head Chef Stuart Russ - modern Australian pub cuisine with bold flavors and seasonal ingredients in Port Melbourne`}
+              src={foodImage.src}
+              alt={foodImage.alt}
+              sizes="(max-width: 768px) 100vw, 80vw"
               className="w-full rounded-tl-lg h-full object-contain"
             />
           </div>

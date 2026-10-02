@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Reveal from "@/components/motion/Reveal";
 import MotionButton from "@/components/motion/MotionButton";
+import Link from "next/link";
 
 const LiveSport = () => {
   return (
@@ -10,9 +11,9 @@ const LiveSport = () => {
       <div className="min-h-[80vh] md:h-screen relative w-full overflow-hidden">
         <div data-parallax className="absolute inset-0">
           <Image
-            src="/home/tables.jpg"
+            src="/home/tables-optimized.webp"
             className="w-full object-cover h-full"
-            alt="Cornerstone Pub vibrant outdoor space with guests enjoying live sports on big screens, socializing, and dining in Port Melbourne"
+            alt="Function Room arranged with long dining tables at The Cornerstone Pub"
             fill
             sizes="100vw"
           />
@@ -22,16 +23,15 @@ const LiveSport = () => {
           <Reveal>
             <div className="bg-white-cus/80 text-center py-10 px-6 md:py-14 md:px-8 rounded shadow-lg motion-card">
               <h2 className="text-4xl md:text-5xl mb-6 heading-aleo" data-reveal>
-                Unwind & Connect
+                Outdoor dining and social drinks
               </h2>
               <p className="mb-4 text-lexend text-base md:text-xl text-blue">
-                Relax with friends, enjoy great vibes, and make every moment
-                memorable in our vibrant outdoor space.
+                Meet in our Port Melbourne outdoor space for casual dining,
+                afternoon drinks and time with friends.
               </p>
               <p className="mb-6 text-lexend text-base md:text-xl text-blue">
-                Space is designed for laughter, conversation, and unforgettable
-                memories - the perfect place to celebrate life’s little moments or
-                special occasions.
+                View the current menus before you visit, or book a table for your
+                next lunch, dinner or social catch-up.
               </p>
               <MotionButton>
                 <a
@@ -43,6 +43,9 @@ const LiveSport = () => {
                   Book a table
                 </a>
               </MotionButton>
+              <Link href="/menus" className="mt-4 inline-block font-aleo uppercase text-brown underline underline-offset-4">
+                View current menus
+              </Link>
             </div>
           </Reveal>
         </div>

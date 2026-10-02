@@ -1,45 +1,55 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const ElfsightWidget = () => {
-  useEffect(() => {
-    // Load Elfsight script
-    const script = document.createElement("script");
-    script.src = "https://elfsightcdn.com/platform.js";
-    script.async = true;
-    document.body.appendChild(script);
+  const widgetRef = useRef<HTMLElement>(null);
 
-    // Function to remove badge
-    const removeBadge = () => {
-      const badge = document.querySelector(
-        'a[title="Free Instagram Feed widget"]',
-      );
-      if (badge) {
-        badge.remove();
-        console.log("Elfsight badge removed.");
-      }
+  useEffect(() => {
+    const widget = widgetRef.current;
+    if (!widget) return;
+
+    let script: HTMLScriptElement | null = null;
+    let badgeObserver: MutationObserver | null = null;
+
+    const loadWidget = () => {
+      if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) return;
+
+      script = document.createElement("script");
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      badgeObserver = new MutationObserver(() => {
+        const badge = document.querySelector('a[title="Free Instagram Feed widget"]');
+        if (badge) {
+          badge.remove();
+          badgeObserver?.disconnect();
+        }
+      });
+      badgeObserver.observe(widget, { childList: true, subtree: true });
     };
 
-    // Try immediately
-    removeBadge();
-
-    // Observe DOM changes in case Elfsight injects badge later
-    const observer = new MutationObserver(removeBadge);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // Backup interval
-    const interval = setInterval(removeBadge, 1000);
+    const viewportObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          loadWidget();
+          viewportObserver.disconnect();
+        }
+      },
+      { rootMargin: "400px" },
+    );
+    viewportObserver.observe(widget);
 
     return () => {
-      observer.disconnect();
-      clearInterval(interval);
-      document.body.removeChild(script);
+      viewportObserver.disconnect();
+      badgeObserver?.disconnect();
+      if (script?.parentNode) script.parentNode.removeChild(script);
     };
   }, []);
 
   return (
-    <section>
+    <section ref={widgetRef} aria-label="The Cornerstone Pub social updates">
       <div
         className="elfsight-app-a99dd180-9f87-4f15-a30c-9804d3a585e0"
         data-elfsight-app-lazy

@@ -1,27 +1,28 @@
 // app/layout.tsx or app/RootLayout.tsx
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Aleo, Lexend_Deca } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
 import MotionProvider from "@/components/motion/MotionProvider";
-import { localBusinessJsonLd } from "@/lib/site";
+import { sitewideJsonLd, SITE_URL } from "@/lib/site";
+import StructuredData from "@/components/seo/StructuredData";
 
 // Font config
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lexend = Lexend_Deca({
+  variable: "--font-lexend-loaded",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const aleo = Aleo({
+  variable: "--font-aleo-loaded",
   subsets: ["latin"],
 });
 
 // ---- ✅ SEO METADATA ---- //
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cornerstonepub.com.au"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "The Cornerstone Pub | Port Melbourne Pub, Dining & Function Venue",
     template: "%s | The Cornerstone Pub",
@@ -41,17 +42,6 @@ export const metadata: Metadata = {
   authors: [{ name: "The Cornerstone Pub" }],
   creator: "The Cornerstone Pub",
   publisher: "The Cornerstone Pub",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -66,7 +56,7 @@ export const metadata: Metadata = {
     title: "The Cornerstone Pub | Port Melbourne Pub, Dining & Events",
     description:
       "Pub dining, drinks, weekly events and function spaces in Port Melbourne at 1 Crockford Street.",
-    url: "https://cornerstonepub.com.au",
+    url: SITE_URL,
     siteName: "The Cornerstone Pub",
     type: "website",
     locale: "en_AU",
@@ -93,17 +83,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en-AU" className={`${lexend.variable} ${aleo.variable}`}>
       <body className="min-h-screen bg-white-cus text-blue antialiased motion-body">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessJsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
+        <StructuredData data={sitewideJsonLd} />
         <MotionProvider>
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <div className="flex-1">{children}</div>
           <Footer />
         </MotionProvider>
       </body>
