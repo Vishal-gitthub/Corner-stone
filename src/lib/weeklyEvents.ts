@@ -30,9 +30,10 @@ export const weeklyEvents: WeeklyEvent[] = [
     id: "trivia",
     name: "Trivia night",
     day: "Wednesdays",
+    time: "6:30 PM",
     shortDescription:
-      "Bring your group for Wednesday trivia with food and drinks available. The published start time is being verified, so confirm it with the venue before visiting.",
-    image: "/home/social_supper.webp",
+      "Join us every Wednesday from 6:30 PM at Cornerstone Port Pub for trivia, laughs, and friendly competition.",
+    image: "/club/_85A7735.webp",
     active: true,
     bookingUrl: BOOKING_URL,
     featuredOnHome: true,
@@ -41,7 +42,7 @@ export const weeklyEvents: WeeklyEvent[] = [
     id: "friday-live-music",
     name: "Friday live music",
     day: "Fridays",
-    time: "8pm–11pm",
+    time: "8PM - 11 PM",
     shortDescription: "Friday evening live entertainment at The Cornerstone.",
     image: "/club/band.webp",
     active: true,
@@ -73,7 +74,8 @@ export const weeklyEvents: WeeklyEvent[] = [
     name: "Sunday chill sessions",
     day: "Sundays",
     time: "3pm–6pm",
-    shortDescription: "A Sunday afternoon session with food and drinks available.",
+    shortDescription:
+      "A Sunday afternoon session with food and drinks available.",
     image: "/whatson/SundayChillSessions.jpg",
     active: true,
     bookingUrl: BOOKING_URL,
@@ -83,7 +85,7 @@ export const weeklyEvents: WeeklyEvent[] = [
     name: "Lunch menu offer",
     day: "Every day",
     shortDescription:
-      "A $15.00 lunch-menu offer is currently listed by the venue. Check the current menu before visiting.",
+      "Enjoy Our $15 Express Lunch Special, Available Weekdays from 12 PM to 3 PM",
     image: "/home/Food_4.jpg",
     active: true,
     bookingUrl: BOOKING_URL,
@@ -97,7 +99,9 @@ export const homepageWeeklyEvents = activeWeeklyEvents.filter(
 );
 
 export function eventSchedule(event: WeeklyEvent) {
-  return event.time ? `${event.day}, ${event.time}` : `${event.day} — confirm time`;
+  return event.time
+    ? `${event.day}, ${event.time}`
+    : `${event.day} — confirm time`;
 }
 
 export function getWeeklyEvent(id: WeeklyEvent["id"]) {

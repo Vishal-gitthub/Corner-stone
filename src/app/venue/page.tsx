@@ -10,11 +10,11 @@ import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/effect-fade";
 
-import Image1 from "../../../public/Venue/img-1-optimized.webp";
-import Image2 from "../../../public/Venue/img-2-optimized.webp";
+import Image1 from "../../../public/home/pub_area.jpg";
+import Image2 from "../../../public/club/function-room.jpg";
 import Image3 from "../../../public/Venue/lounge-optimized.webp";
-import Image4 from "../../../public/Venue/img-3-optimized.webp";
-import Image5 from "../../../public/Venue/img-4-optimized.webp";
+import Image4 from "../../../public/home/cs-outside-space-img-1.jpg";
+import Image5 from "../../../public/home/Food_2.jpg";
 import Image6 from "../../../public/Venue/img-5-optimized.webp";
 import FoodCarousel from "../components/Home/FoodCarousel";
 import { venueFaqs as faqs } from "@/lib/faqs";
@@ -323,7 +323,7 @@ export default function Page() {
           </div>
           <div className="relative order-1 aspect-[.84] lg:order-2">
             <Image
-              src="/club/function-room.jpg"
+              src="/club/band.webp"
               alt="The Cornerstone function room set for an event"
               fill
               className="object-cover"

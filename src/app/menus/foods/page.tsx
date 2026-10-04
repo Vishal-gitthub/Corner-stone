@@ -34,7 +34,7 @@ export default function page() {
             download="Menu Cornerstone Oct 2026.pdf"
             className="py-4 px-12 text-white font-semibold bg-brown btn-hover"
           >
-            Grab the Menu
+           Cornerstone Food Menu
           </a>
         </button>
       </div>
