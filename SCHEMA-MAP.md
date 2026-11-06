@@ -1,13 +1,13 @@
 # Structured Data Map
 
-All schema uses the canonical host `https://www.thecornerstonepub.com.au`.
+All schema uses the canonical host `https://cornerstonepub.com.au`.
 
 ## Shared entities
 
 | Entity | Stable ID | Where emitted | Notes |
 |---|---|---|---|
-| `BarOrPub`, `FoodEstablishment` | `https://www.thecornerstonepub.com.au/#venue` | Once per HTML page from the root layout | Verified name, canonical URL, image, logo, telephone, email, postal address, menu URLs, booking capability, social URLs and opening hours. |
-| `WebSite` | `https://www.thecornerstonepub.com.au/#website` | Once per HTML page from the root layout | References `#venue` as publisher and declares `en-AU`. |
+| `BarOrPub`, `FoodEstablishment` | `https://cornerstonepub.com.au/#venue` | Once per HTML page from the root layout | Verified name, canonical URL, image, logo, telephone, email, postal address, menu URLs, booking capability, social URLs and opening hours. |
+| `WebSite` | `https://cornerstonepub.com.au/#website` | Once per HTML page from the root layout | References `#venue` as publisher and declares `en-AU`. |
 
 Page schema references these IDs instead of redefining the venue.
 

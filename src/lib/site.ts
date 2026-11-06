@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://www.thecornerstonepub.com.au";
+export const SITE_URL = "https://cornerstonepub.com.au";
 export const BOOKING_URL =
   "https://www.opentable.com.au/r/the-cornerstone-reservations-port-melbourne?restref=304496&lang=en-AU&ot_source=Restaurant%20website";
 export const MAPS_URL = "https://maps.app.goo.gl/g97kv5vxhA6FeNdo6";

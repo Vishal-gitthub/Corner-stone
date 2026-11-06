@@ -3,12 +3,12 @@ import { existsSync } from "node:fs";
 import { createServer } from "node:net";
 import { resolve } from "node:path";
 
-const PRIMARY_ORIGIN = "https://www.thecornerstonepub.com.au";
+const PRIMARY_ORIGIN = "https://cornerstonepub.com.au";
 const PRIMARY_HOST = new URL(PRIMARY_ORIGIN).hostname;
 const OBSOLETE_HOSTS = new Set([
-  "cornerstonepub.com.au",
   "www.cornerstonepub.com.au",
   "thecornerstonepub.com.au",
+  "www.thecornerstonepub.com.au",
 ]);
 const DEVELOPMENT_HOSTS = new Set(["localhost", "127.0.0.1", "0.0.0.0"]);
 const findings = [];

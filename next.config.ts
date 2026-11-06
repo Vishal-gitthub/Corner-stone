@@ -5,20 +5,20 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "cornerstonepub.com.au" }],
-        destination: "https://www.thecornerstonepub.com.au/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
         has: [{ type: "host", value: "www.cornerstonepub.com.au" }],
-        destination: "https://www.thecornerstonepub.com.au/:path*",
+        destination: "https://cornerstonepub.com.au/:path*",
         permanent: true,
       },
       {
         source: "/:path*",
         has: [{ type: "host", value: "thecornerstonepub.com.au" }],
-        destination: "https://www.thecornerstonepub.com.au/:path*",
+        destination: "https://cornerstonepub.com.au/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.thecornerstonepub.com.au" }],
+        destination: "https://cornerstonepub.com.au/:path*",
         permanent: true,
       },
       { source: "/club", destination: "/venue", permanent: true },

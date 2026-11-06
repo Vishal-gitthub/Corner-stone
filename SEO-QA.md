@@ -31,7 +31,7 @@ The audit requires an existing `.next` production build. It does not run `next b
 
 ## Auditing another environment
 
-Set `SEO_AUDIT_ORIGIN` to audit an already-running preview or deployment while still requiring canonical metadata to use `https://www.thecornerstonepub.com.au`.
+Set `SEO_AUDIT_ORIGIN` to audit an already-running preview or deployment while still requiring canonical metadata to use `https://cornerstonepub.com.au`.
 
 PowerShell:
 
