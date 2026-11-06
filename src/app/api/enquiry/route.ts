@@ -37,7 +37,6 @@ export async function POST(req: Request) {
 
 
 
-    console.log("PROD DEBUG - USER exists:", !!process.env.EMAIL_USER, "PASS exists:", !!process.env.EMAIL_PASS);
   // Create reusable transporter object using SMTP transport (Hostinger Webmail SMTP settings)
   const transporter = nodemailer.createTransport({
     host: "smtp.hostinger.com", // Hostinger SMTP server
