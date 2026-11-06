@@ -152,7 +152,8 @@ export default function FunctionEnquiryForm() {
                 name="country"
                 value={formData.country}
                 onChange={handleInputChange}
-                className="form-input appearance-none cursor-pointer"
+                className="form-input appearance-none bg-black cursor-pointer"
+
               >
                 <option value="Australia">Australia</option>
                 <option value="New Zealand">New Zealand</option>
